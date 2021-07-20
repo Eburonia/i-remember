@@ -103,12 +103,26 @@ nav > div {
 
 
 /* content div */ 
+#content-div {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    background-color: yellow;
+}
 
+#my-decks {
+    width: 500px;
+    margin: 50px auto;
+    background-color: red;
+    
+}
 
 /* footer */
 
 footer {
+    float: left;
     text-align: center;
+    width: 100%;
 }
 
 #socials-follow {
