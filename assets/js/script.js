@@ -10,4 +10,13 @@ $('#navbar-toggle-button').on('click', function() {
 
 });
 
+
+
+
+$('#btn-add-deck').on('click', function() {
+
+    $('#my-decks-summary').append("<div class=\"my-decks-item\"><div class=\"my-decks-btn my-decks-play\">play</div><div class=\"my-decks-btn my-decks-desc\">description</div><div class=\"my-decks-btn my-decks-edit\">edit</div></div>");
+
+});
+
         
