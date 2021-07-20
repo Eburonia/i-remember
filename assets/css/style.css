@@ -158,6 +158,17 @@ nav > div {
     margin-right: 0;
 }
 
+#btn-add-deck {
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+#btn-delete-deck {
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
 
 
 
