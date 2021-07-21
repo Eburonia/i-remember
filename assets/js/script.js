@@ -6,7 +6,7 @@ let deck = [];
 deck[0] = [[],[]];
 
 /* assign deckname description */
-deck[0][0] = "a";
+deck[0][0] = 'a';
 
 /* declare cards */
 deck[0][1] = [[],[]];
@@ -23,6 +23,8 @@ deck[0][2][0] = 'House';
 deck[0][2][1] = 'Huis';
 
 addDecksToSummaryOnScreen();
+
+
 
 
 
@@ -51,39 +53,31 @@ function addDecksToSummaryOnScreen() {
 
 function createNewDeck() {
 
-    //let deckName = prompt('Add new deck name', '');
+    /* add new deckname */
+    let deckName = prompt('Add new deck name', '');
 
-        let a = String(deck[0][0]);
-        let c = "b";
+    /* check whether deckname already exists */
+    for(let i = 0; i < deck.length; i++) {
 
-        if(a == c) {
+        if(deck[i][0] === deckName) {
             alert('Deckname already exist!');
-          
+
+            /* in case deckname already exists, exit function */
+            return;
         }
-        else
-        {
+    }
 
-           
-        }
-       
-
-    
-
-      
-
-            deck[deck.length] = [[],[]];
-            deck[deck.length - 1] = deckName
+    /* in case deckname does not exists, create new deck in array*/
+    deck[deck.length] = [[],[]];
+    deck[deck.length - 1] = deckName;
         
-            $('#my-decks-summary').append(`<div class="my-decks-item">
-            <div class="my-decks-btn my-decks-play">play</div>
-            <div class="my-decks-btn my-decks-desc">${deck[deck.length - 1]}</div>
-            <div class="my-decks-btn my-decks-edit">edit</div></div>`);
+    /* create new deck in summary deck.html */
+    $('#my-decks-summary').append(`<div class="my-decks-item">
+    <div class="my-decks-btn my-decks-play">play</div>
+    <div class="my-decks-btn my-decks-desc">${deck[deck.length - 1]}</div>
+    <div class="my-decks-btn my-decks-edit">edit</div></div>`);
 
-        
-
-    
-
-}
+    }
 
 
 
@@ -99,15 +93,25 @@ $(document).on('click', '.my-decks-desc', function() {
 $('#btn-delete-deck').on('click', function() {
 
     for(let i = 0; i < deck.length; i++) {
-
-
-        if(document.getElementsByClassName('my-decks-desc')[i].style.backgroundColor == "red") {
-            alert(decks);
-        }
         
-    }
+        if(document.getElementsByClassName('my-decks-desc')[i].style.backgroundColor === 'red') {
+            
+            let conf = confirm('Do you want to delete this deck?');
+            
+            if(conf === true) {
+                deck.splice(i, 1);
+                $('#my-decks-summary').empty();
+                addDecksToSummaryOnScreen();
+            }
+            
+            else
+            {
+                break;
+            }
 
-    
+        }
+
+    }
 
 });
 
