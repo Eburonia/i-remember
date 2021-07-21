@@ -194,6 +194,8 @@ footer {
 }
 
 #copyright {
+    font-size: 12px;
+    letter-spacing: 1px;
     display: block;
     margin: 20px 0;
 }
