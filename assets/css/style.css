@@ -103,18 +103,49 @@ nav > div {
 
 
 /* main content */ 
+
+.deck-field {
+    display: inline-block;
+    background-color: red;
+    margin: 5px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    }
+
+
+.deck-title {
+    margin: 5px;
+    padding: 10px 5px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    width: 488px;
+    font-weight: 600;
+}
+
+.deck-play, .deck-edit {
+    text-align: center;
+    width: 60px;
+}
+
+.deck-descr {
+    width: 340px;
+}
+
+
+
+
 #content-div {
     width: 100%;
     float: left;
     box-sizing: border-box;
+    background-color: lightgray;
     
 }
 
 #my-decks {
     width: 500px;
     margin: 50px auto;
-
-    
+    background-color: yellow;
 }
 
 .my-decks-btn {
