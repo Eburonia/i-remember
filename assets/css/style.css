@@ -170,10 +170,13 @@ nav > div {
 }
 
 
-#add-card-btn, #save-deck-btn {
+#add-card-btn, #save-deck-btn, #close-deck-btn {
     padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
 }
 
 #content-div {
