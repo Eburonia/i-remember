@@ -1,6 +1,30 @@
 
 
 loadDecksOnScreen();
+checkLocalMemoryItemsExist();
+
+
+
+
+function checkLocalMemoryItemsExist() {
+
+    if(localStorage.getItem('deck10') === null) {
+      alert('does not exist');
+    }
+    else
+    {
+      alert('does exist');
+    }
+  
+  
+  }
+  
+
+
+
+
+
+
 
 // loading a summary of all 10 decks on the screen
 function loadDecksOnScreen() {
@@ -114,23 +138,54 @@ function loadDeck(deckNumber) {
     
             `);
 
-
+    // add deck description to screen
     for(let i in deckContent) {
 
         if(deckContent.charAt(i) === '}') {
             
             let deckDescription = deckContent.slice(0, i);
             $('.deck-title').text(deckDescription);
-
-            //alert(deckDescription);
         }
     }
+
+    let startPosition;
+    let endPosition;
+
+    // add card front side description
+    for(let i in deckContent) {
+
+        if(deckContent.charAt(i) === '}') {
+
+            startPosition = i;
+        }
+
+        if(deckContent.charAt(i) === '#') {
+
+            endPosition = i;
+        }
+
+        
+    }
+
+    startPosition++;
+
+    let cardFrontAndBackSideDescription = deckContent.slice(startPosition, endPosition);
+    let cardFrontSideDescription;
+    let cardBackSideDescription;
+
+    cardFrontSideDescription = cardFrontAndBackSideDescription.slice(0, cardFrontAndBackSideDescription.indexOf(','));
+    cardBackSideDescription = cardFrontAndBackSideDescription.slice(cardFrontAndBackSideDescription.indexOf(',')+1, cardFrontAndBackSideDescription.length);
+    
+
+    $('.cards-title-front').text(cardFrontSideDescription);
+    $('.cards-title-back').text(cardBackSideDescription);
 
 
 
 
 
 }
+
 
 
 // add card button
@@ -155,12 +210,15 @@ $(document).on('click', '#save-deck-btn', function(){
     saveData = saveData + $('.deck-title').text() + '}\n';
     saveData = saveData + $('.cards-title-front').text() + ', ' + $('.cards-title-back').text() + '#\n';
 
-    for(let i = 0; i < numberOfCards; i++) {
 
-        saveData = saveData + $('.cards-front').eq(i).text() + ', ' + $('.cards-back').eq(i).text() + ';\n';      
-    }
+    if(numberOfCards != 0) {
+        
+        for(let i = 0; i < numberOfCards; i++) {
+            saveData = saveData + $('.cards-front').eq(i).text() + ', ' + $('.cards-back').eq(i).text() + ';\n';      
+        }
   
-    saveData = saveData.slice(0, saveData.length-2);
+        saveData = saveData.slice(0, saveData.length-2);
+        }
 
     let saveUnderDeckName = 'deck' + $('.deck-storage-number').text();
 
@@ -168,7 +226,7 @@ $(document).on('click', '#save-deck-btn', function(){
 
     localStorage.setItem(saveUnderDeckName, saveData);
 
-    alert(localStorage.getItem(saveUnderDeckName));
+    //alert(localStorage.getItem(saveUnderDeckName));
 
 });
 
