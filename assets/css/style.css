@@ -106,31 +106,60 @@ nav > div {
 
 .deck-field {
     display: inline-block;
-    background-color: red;
+    background-color: lightgray;
     margin: 5px;
     padding: 10px 5px;
     box-sizing: border-box;
+    border-radius: 8px;
     }
 
+.cards-field {
+    display: inline-block;
+    background-color: lightgray;
+    margin: 5px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
 
-.deck-title {
+.cards-front, .cards-back {
+    width: 46%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.deck-title, .cards-title {
     margin: 5px;
     padding: 10px 5px;
     padding-left: 10px;
     box-sizing: border-box;
     width: 488px;
     font-weight: 600;
+    color: whitesmoke;
+    background-color: gray;
+}
+
+.cards-title {
+    width: 47%;
 }
 
 .deck-play, .deck-edit {
     text-align: center;
     width: 60px;
+    cursor: pointer;
 }
 
 .deck-descr {
     width: 340px;
+    padding-left: 10px;
+    cursor: pointer;
 }
 
+
+#add-card-btn {
+    padding: 5px 10px;
+    font-size: 16px;
+}
 
 
 
@@ -142,10 +171,22 @@ nav > div {
     
 }
 
+
+
+
 #my-decks {
     width: 500px;
     margin: 50px auto;
-    background-color: yellow;
+    margin-bottom: 0;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+}
+
+#buttons-div {
+    width: 500px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    box-sizing: border-box;
 }
 
 .my-decks-btn {
