@@ -123,12 +123,25 @@ nav > div {
 }
 
 .cards-front, .cards-back {
-    width: 46%;
+    width: 40%;
     padding-left: 10px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
-.deck-title, .cards-title {
+.cards-delete {
+    width: 5%;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    background-color: lightgray;
+    margin: 5px;
+    padding: 10px 5px;
+    border-radius: 8px;
+}
+
+.deck-title, .cards-title-front, .cards-title-back, .deck-storage-number {
     margin: 5px;
     padding: 10px 5px;
     padding-left: 10px;
@@ -137,9 +150,10 @@ nav > div {
     font-weight: 600;
     color: whitesmoke;
     background-color: gray;
+    cursor: pointer;
 }
 
-.cards-title {
+.cards-title-front, .cards-title-back {
     width: 47%;
 }
 
@@ -156,12 +170,11 @@ nav > div {
 }
 
 
-#add-card-btn {
+#add-card-btn, #save-deck-btn {
     padding: 5px 10px;
     font-size: 16px;
+    cursor: pointer;
 }
-
-
 
 #content-div {
     width: 100%;
