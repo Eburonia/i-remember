@@ -35,15 +35,15 @@ function editDeck(deckNumber) {
     // empty the my-decks div
     $('#my-decks').empty();
 
-
-
     // if deck does not exist, create empty deck on screen
     if(localStorage.getItem('deck' + deckNumber) == null) {
+
+     
 
         // add title bar 
         $('#my-decks').append(`
     
-        <div class="cards-field deck-storage-number">${deckNumber+1}</div>
+        <div class="cards-field deck-storage-number">${deckNumber}</div>
         <div class="cards-field deck-title">-</div>
         <div class="cards-field cards-title-front">-</div>
         <div class="cards-field cards-title-back">-</div>
@@ -57,22 +57,81 @@ function editDeck(deckNumber) {
             <div class="cards-field cards-back">-</div>
             <div class="cards-delete">X</div>
     
+        
+
     `);
+
+    
 
         // if deck does exist, load from localstorage
         }
-        else {
-            alert('not-empty');
+
+    else {
+        
+            loadDeck(deckNumber);
         }
+
 
         // add buttons 
         $('#buttons-div').append(`
 
             <button id="add-card-btn">add card</button>
             <button id="save-deck-btn">save deck</button>
+            <button id="close-deck-btn">close deck</button>
 
         `);
 }
+
+
+// load the deck content onto screen
+function loadDeck(deckNumber) {
+
+
+
+    let deck = 'deck' + (deckNumber);
+
+ 
+
+    let deckContent = localStorage.getItem(deck);
+
+  
+    
+    // remove line breaks
+    deckContent = deckContent.replace(/(?:\r\n|\r|\n)/g, '');
+
+    // remove whitespaces
+    deckContent = deckContent.replace(/\s/g, '');
+
+    //alert('hier');
+
+            // add title bar 
+            $('#my-decks').append(`
+    
+            <div class="cards-field deck-storage-number">${deckNumber}</div>
+            <div class="cards-field deck-title">-</div>
+            <div class="cards-field cards-title-front">-</div>
+            <div class="cards-field cards-title-back">-</div>
+    
+            `);
+
+
+    for(let i in deckContent) {
+
+        if(deckContent.charAt(i) === '}') {
+            
+            let deckDescription = deckContent.slice(0, i);
+            $('.deck-title').text(deckDescription);
+
+            //alert(deckDescription);
+        }
+    }
+
+
+
+
+
+}
+
 
 // add card button
 $(document).on('click', '#add-card-btn', function(){
@@ -93,26 +152,40 @@ $(document).on('click', '#save-deck-btn', function(){
     let saveData = '';
     let numberOfCards = $('.cards-front').length;
 
-    saveData = saveData + '{' + $('.deck-title').text() + '}\n';
-    saveData = saveData + '#' + $('.cards-title-front').text() + ', ' + $('.cards-title-back').text() + '#\n';
+    saveData = saveData + $('.deck-title').text() + '}\n';
+    saveData = saveData + $('.cards-title-front').text() + ', ' + $('.cards-title-back').text() + '#\n';
 
     for(let i = 0; i < numberOfCards; i++) {
 
         saveData = saveData + $('.cards-front').eq(i).text() + ', ' + $('.cards-back').eq(i).text() + ';\n';      
     }
   
-
     saveData = saveData.slice(0, saveData.length-2);
-
-    alert(saveData);
 
     let saveUnderDeckName = 'deck' + $('.deck-storage-number').text();
 
-    alert('deck saved into local storage');
+    alert('deck saved under ' + saveUnderDeckName);
 
     localStorage.setItem(saveUnderDeckName, saveData);
 
     alert(localStorage.getItem(saveUnderDeckName));
+
+});
+
+
+// close deck button
+$(document).on('click', '#close-deck-btn', function() {
+
+    // empty the my-decks div
+    $('#my-decks').empty();
+
+    // remove the buttons
+    $('#add-card-btn').remove();
+    $('#save-deck-btn').remove();
+    $('#close-deck-btn').remove();
+    
+    // load the deck summary on screen
+    loadDecksOnScreen();
 
 });
 
@@ -149,7 +222,10 @@ $(document).on('click', '.cards-delete', function() {
 // edit deck button 
 $(document).on('click', '.deck-edit', function() {
 
-    editDeck($('.deck-edit').index(this));
+    let x = $('.deck-edit').index(this);
+    x++;
+
+    editDeck(x);
 
 });
 
