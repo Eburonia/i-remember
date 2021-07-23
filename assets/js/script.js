@@ -1,30 +1,20 @@
 
-
 loadDecksOnScreen();
-checkLocalMemoryItemsExist();
 
+//CheckIfDecksExistInLocalMemory();
 
+function CheckIfDecksExistInLocalMemory() {
 
+    let deckInLocalStorage;
 
-function checkLocalMemoryItemsExist() {
+    for(let i = 1; i < 10; i++) {
+        deckInLocalStorage = 'deck' + i;
 
-    if(localStorage.getItem('deck10') === null) {
-      alert('does not exist');
+       // alert(localStorage.getItem(deckInLocalStorage));
     }
-    else
-    {
-      alert('does exist');
-    }
-  
-  
-  }
-  
 
-
-
-
-
-
+    alert(localStorage.getItem('deck11'));
+}
 
 // loading a summary of all 10 decks on the screen
 function loadDecksOnScreen() {
@@ -52,7 +42,6 @@ function loadDecksOnScreen() {
 }
 
 
-
 // load cards in deck on screen
 function editDeck(deckNumber) {
 
@@ -63,7 +52,6 @@ function editDeck(deckNumber) {
     if(localStorage.getItem('deck' + deckNumber) == null) {
 
      
-
         // add title bar 
         $('#my-decks').append(`
     
@@ -110,16 +98,10 @@ function editDeck(deckNumber) {
 // load the deck content onto screen
 function loadDeck(deckNumber) {
 
-
-
     let deck = 'deck' + (deckNumber);
-
- 
 
     let deckContent = localStorage.getItem(deck);
 
-  
-    
     // remove line breaks
     deckContent = deckContent.replace(/(?:\r\n|\r|\n)/g, '');
 
@@ -163,8 +145,6 @@ function loadDeck(deckNumber) {
 
             endPosition = i;
         }
-
-        
     }
 
     startPosition++;
@@ -181,11 +161,95 @@ function loadDeck(deckNumber) {
     $('.cards-title-back').text(cardBackSideDescription);
 
 
+    // add cards to summary
+    for(let i in deckContent) {
+
+        if(deckContent.charAt(i) === '#') {
+            startPosition = i;
+        }
+
+    }
+
+    startPosition++;
+    
+    let cardsContent = deckContent.slice(startPosition, deckContent.length);
+    //alert(cardsContent);
+
+    let cards = cardsContent.split(';');
+
+    for(let i in cards) {
+
+    //  alert(cards[i]);
+
+    // split the card into front side and back side
+        
+        //alert(cards[i]);
+
+        let frontside = cards[i].slice(0, cards[i].indexOf(','));
+        let backside = cards[i].slice(cards[i].indexOf(',')+1, cards[i].length);
 
 
+
+      
+            
+        
+                $('#my-decks').append(`
+                <div class="cards-field cards-front">${frontside}</div>
+                <div class="cards-field cards-back">${backside}</div>
+                <div class="cards-delete">X</div>
+                `);
+            
+  
+                
+
+            
+
+   
+  
+   
+
+    }
 
 }
 
+
+
+
+
+// edit deck button 
+$(document).on('click', '.deck-edit', function() {
+
+    let x = $('.deck-edit').index(this);
+    x++;
+
+    editDeck(x);
+
+});
+
+
+// delete card
+$(document).on('click', '.cards-delete', function() {
+
+    // determine index to be deleted
+    let x = $('.cards-delete').index(this);
+
+    // delete the fields at index
+    $('.cards-front').eq(x).remove();
+    $('.cards-back').eq(x).remove();
+    $('.cards-delete').eq(x).remove();
+
+    //alert(x);
+
+    // make sure there is only 1 card in a deck with unassigned values
+    if($('.cards-front').length === 0) {
+        $('#my-decks').append(`
+            <div class="cards-field cards-front">-</div>
+            <div class="cards-field cards-back">-</div>
+            <div class="cards-delete">X</div>
+        `);
+    }
+
+});
 
 
 // add card button
@@ -222,7 +286,7 @@ $(document).on('click', '#save-deck-btn', function(){
 
     let saveUnderDeckName = 'deck' + $('.deck-storage-number').text();
 
-    alert('deck saved under ' + saveUnderDeckName);
+    alert('deck saved');
 
     localStorage.setItem(saveUnderDeckName, saveData);
 
@@ -263,29 +327,10 @@ $(document).on('click', '.cards-field', function() {
 
 });
 
-// delete card
-$(document).on('click', '.cards-delete', function() {
-
-    // determine index to be deleted
-    let x = $('.cards-delete').index(this);
-
-    // delete the fields at index
-    $('.cards-front').eq(x).remove();
-    $('.cards-back').eq(x).remove();
-    $('.cards-delete').eq(x).remove();
-
-});
 
 
-// edit deck button 
-$(document).on('click', '.deck-edit', function() {
 
-    let x = $('.deck-edit').index(this);
-    x++;
 
-    editDeck(x);
-
-});
 
 
 
