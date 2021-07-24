@@ -1,5 +1,6 @@
-/* style.css */
+/* assets/css/style.css */
 /* Author: Maurice Vossen */
+/* June 2021 */
 
 /* set default settings */
 * {
@@ -9,63 +10,83 @@
     color: #707070;
 }
 
+/* background color whole page */
 body {
     background-color: #D5D8CF;
 }
 
 /* navbar */
+/* exists */
 nav {
    display: flex;
 }
 
+/* exists */
 nav > div {
     box-sizing: border-box;
     padding: 30px;
     display: table-cell;
 }
 
+/* exists */
 #navbar-left {
-
     background-color: #D5D8CF;
     display: table-cell;
     float: left;
     width: 400px;
 }
 
+/* exists */
 #navbar-right {
     background-color: #D5D8CF;
     float: right;
     width: 100%;
 }
 
-#navbar-right > ul{
+/* exists */
+#navbar-right > ul {
     float: right;
 }
 
+/* exists */
 #navbar-right > ul > li {
     font-size: 18px;
     display: inline;
     padding: 0 15px;
 }
 
+/* exists */
 #navbar-right > ul > li > a {
     text-decoration: none;
 }
 
+/* exists */
 #navbar-right > ul > li > a:hover {
     text-decoration: underline;
 }
 
-/* navigation bar toggle button */
+/* toggle hamburger button */
+/* exists */
 #navbar-toggle-button {
     float: right;
     visibility: hidden;
-    width: auto;
-    padding: 5px 10px;
-    height: 30px;
+    padding: 5px;
+    width: 40px;
+    overflow: auto;
 }
 
+.hamburger-div {
+    border: 1px solid #707070;
+    width: 60%;
+    padding: 0;
+    margin: 3px auto;
+    overflow: auto;
+}
+
+
+
 /* toggle menu */
+/* exists */
 #toggle-menu {
     width: 100%;
     float: left;
@@ -73,11 +94,13 @@ nav > div {
     visibility: hidden;
 }
 
+/* exists */
 #toggle-menu > ul {
     width: auto;
     box-sizing: border-box;
-    }
+}
 
+/* exists */
 #toggle-menu > ul > li {
     font-size: 20px;
     display: block;
@@ -86,24 +109,31 @@ nav > div {
     text-align: center;
     margin: 4px;
     background-color: #959890;
-    }
+}
 
+/* exists */
 #toggle-menu > ul > li > a {
     color: whitesmoke;
     text-decoration: none;
-    }
+}
+
+
+
+
+
 
 /* logo */
+/* exists */
 #iremember-logo {
     border: 0px solid #707070;
     width: 300px;
     height: 100px;
     object-fit: cover;
-    }
+}
 
 
-/* main content */ 
-
+/* main content - deck summary */
+/* exists */
 .deck-field {
     display: inline-block;
     background-color: lightgray;
@@ -111,8 +141,26 @@ nav > div {
     padding: 10px 5px;
     box-sizing: border-box;
     border-radius: 8px;
-    }
+}
 
+/* exists */ 
+.deck-play, .deck-edit {
+    text-align: center;
+    width: 60px;
+    cursor: pointer;
+    background-color: #f04a64;
+    color: whitesmoke;
+}
+
+/* exists */
+.deck-descr {
+    width: 340px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+
+/* main content - cards summary */
 .cards-field {
     display: inline-block;
     background-color: lightgray;
@@ -157,19 +205,6 @@ nav > div {
     width: 47%;
 }
 
-.deck-play, .deck-edit {
-    text-align: center;
-    width: 60px;
-    cursor: pointer;
-}
-
-.deck-descr {
-    width: 340px;
-    padding-left: 10px;
-    cursor: pointer;
-}
-
-
 #add-card-btn, #save-deck-btn, #close-deck-btn {
     padding: 5px 10px;
     font-size: 16px;
@@ -184,11 +219,7 @@ nav > div {
     float: left;
     box-sizing: border-box;
     background-color: lightgray;
-    
 }
-
-
-
 
 #my-decks {
     width: 500px;
@@ -205,73 +236,16 @@ nav > div {
     box-sizing: border-box;
 }
 
-.my-decks-btn {
-    box-sizing: border-box;
-    font-size: 18px;
-    padding: 5px 10px;
-    border-radius: 10px;
-    float: left;
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-
-}
-
-
-#my-decks-title {
-    font-size: 18px;
-    box-sizing: border-box;
-    background-color: #707070;
-    color: whitesmoke;
-    padding: 5px 10px;
-    font-weight: 600;
-    border-radius: 10px;
-}
-
-.my-decks-play {
-    background-color: #707070;
-    color: whitesmoke;
-    margin-left: 0;
-}
-
-.my-decks-desc {
-    background-color: #707070;
-    color: whitesmoke;
-    width: 376px;
-}
-
-.my-decks-edit {
-    background-color: #707070;
-    color: whitesmoke;
-    margin-right: 0;
-}
-
-#btn-add-deck {
-    margin-top: 20px;
-    padding: 5px 10px;
-    font-size: 16px;
-}
-
-#btn-delete-deck {
-    margin-top: 20px;
-    padding: 5px 10px;
-    font-size: 16px;
-}
-
-#btn-save-decks {
-    margin-top: 20px;
-    padding: 5px 10px;
-    font-size: 16px;
-}
 
 /* footer */
-
+/* exists */
 footer {
     float: left;
     text-align: center;
     width: 100%;
 }
 
+/* exists */
 #socials-follow {
     display: block;
     margin-top: 20px;
@@ -280,17 +254,26 @@ footer {
     font-weight: 600;
 }
 
+/* exists */
 .socials {
     font-size: 24px;
     margin: 0 20px;
 }
 
+.socials > a > i:hover {
+    color: #f04a64;
+    transition: 1s;
+}
+
+/* exists */
 #copyright {
     font-size: 12px;
     letter-spacing: 1px;
     display: block;
     margin: 20px 0;
 }
+
+
 
 /* media queries for deck.html only */
 
@@ -328,7 +311,6 @@ footer {
         position: absolute;
         right: 20px;
         top: 20px;
-        
     }
 
     #toggle-menu {
