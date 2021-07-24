@@ -3,6 +3,7 @@ loadDecksOnScreen();
 
 //CheckIfDecksExistInLocalMemory();
 
+
 function CheckIfDecksExistInLocalMemory() {
 
     let deckInLocalStorage;
@@ -24,21 +25,22 @@ function loadDecksOnScreen() {
 
     // add title bar
     $('#my-decks').append(`
-    
-    <div class="deck-field deck-title">my decks</div>
-    
+        <div class="deck-field deck-title">my decks</div>
     `);
 
     for(let i = 0; i < 10; i++) {
 
         $('#my-decks').append(`
     
-            <div class="deck-field deck-play">play</div>
-            <div class="deck-field deck-descr">description</div>
-            <div class="deck-field deck-edit">edit</div>
+        <div class="deck-row">
+            <div class="deck-field deck-play" title="practice this deck"><i class="far fa-play-circle"></i></div>
+            <div class="deck-field deck-descr">-</div>
+            <div class="deck-field deck-edit" title="edit this deck"><i class="far fa-edit"></i></div>
+        </div>
 
         `);
     }
+
 }
 
 
@@ -55,7 +57,7 @@ function editDeck(deckNumber) {
         // add title bar 
         $('#my-decks').append(`
     
-        <div class="cards-field deck-storage-number">${deckNumber}</div>
+        <div class="deck-storage-number">${deckNumber}</div>
         <div class="cards-field deck-title">-</div>
         <div class="cards-field cards-title-front">-</div>
         <div class="cards-field cards-title-back">-</div>
@@ -113,7 +115,7 @@ function loadDeck(deckNumber) {
             // add title bar 
             $('#my-decks').append(`
     
-            <div class="cards-field deck-storage-number">${deckNumber}</div>
+            <div class="deck-storage-number">${deckNumber}</div>
             <div class="cards-field deck-title">-</div>
             <div class="cards-field cards-title-front">-</div>
             <div class="cards-field cards-title-back">-</div>
@@ -215,7 +217,7 @@ function loadDeck(deckNumber) {
 
 
 
-
+// deck summary
 // edit deck button 
 $(document).on('click', '.deck-edit', function() {
 
@@ -226,7 +228,7 @@ $(document).on('click', '.deck-edit', function() {
 
 });
 
-
+// cards summary
 // delete card
 $(document).on('click', '.cards-delete', function() {
 
@@ -251,7 +253,7 @@ $(document).on('click', '.cards-delete', function() {
 
 });
 
-
+// cards summary
 // add card button
 $(document).on('click', '#add-card-btn', function(){
 
@@ -265,6 +267,7 @@ $(document).on('click', '#add-card-btn', function(){
 
 });
 
+// cards summary
 // save deck button
 $(document).on('click', '#save-deck-btn', function(){
 
@@ -295,6 +298,7 @@ $(document).on('click', '#save-deck-btn', function(){
 });
 
 
+// cards summary
 // close deck button
 $(document).on('click', '#close-deck-btn', function() {
 
@@ -311,9 +315,10 @@ $(document).on('click', '#close-deck-btn', function() {
 
 });
 
-
+// cards summary
 // edit cards value
 $(document).on('click', '.cards-field', function() {
+
 
     let x = prompt('change field value', '');
 
