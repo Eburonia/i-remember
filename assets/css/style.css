@@ -30,7 +30,6 @@ nav > div {
 
 /* exists */
 #navbar-left {
-    background-color: #D5D8CF;
     display: table-cell;
     float: left;
     width: 400px;
@@ -38,7 +37,6 @@ nav > div {
 
 /* exists */
 #navbar-right {
-    background-color: #D5D8CF;
     float: right;
     width: 100%;
 }
@@ -52,7 +50,7 @@ nav > div {
 #navbar-right > ul > li {
     font-size: 18px;
     display: inline;
-    padding: 0 15px;
+    padding: 0 12px;
 }
 
 /* exists */
@@ -104,10 +102,10 @@ nav > div {
 #toggle-menu > ul > li {
     font-size: 20px;
     display: block;
-    padding: 4px 15px;
+    padding: 5px 15px;
     width: 100%;
     text-align: center;
-    margin: 4px;
+    margin: 4px 0;
     background-color: #959890;
 }
 
@@ -116,10 +114,6 @@ nav > div {
     color: whitesmoke;
     text-decoration: none;
 }
-
-
-
-
 
 
 /* logo */
@@ -132,15 +126,32 @@ nav > div {
 }
 
 
+
+
+
+
+
 /* main content - deck summary */
 /* exists */
+
+
+#my-decks {
+    padding: 20px;
+    width: 40%;
+    min-width: 300px;
+    margin: 50px auto;
+    box-sizing: border-box;
+}
+
+
 .deck-field {
     display: inline-block;
-    background-color: lightgray;
-    margin: 5px;
+    background-color: whitesmoke;
+    margin: 5px 0;
     padding: 10px 5px;
     box-sizing: border-box;
     border-radius: 8px;
+
 }
 
 /* exists */ 
@@ -148,13 +159,20 @@ nav > div {
     text-align: center;
     width: 60px;
     cursor: pointer;
-    background-color: #f04a64;
+    background-color: #707070;
     color: whitesmoke;
+}
+
+.deck-row {
+    margin: 0;
+    padding: 0;
 }
 
 /* exists */
 .deck-descr {
-    width: 340px;
+    width: calc(100% - 140px);
+    margin-left: 5px;
+    margin-right: 5px;
     padding-left: 10px;
     cursor: pointer;
 }
@@ -189,8 +207,21 @@ nav > div {
     border-radius: 8px;
 }
 
-.deck-title, .cards-title-front, .cards-title-back, .deck-storage-number {
-    margin: 5px;
+.deck-title {
+    margin-bottom: 5px;
+    padding: 10px 5px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: 600;
+    color: whitesmoke;
+    background-color: #707070;
+    cursor: pointer;
+}
+
+
+.cards-title-front, .cards-title-back, .deck-storage-number {
+    margin: 0;
     padding: 10px 5px;
     padding-left: 10px;
     box-sizing: border-box;
@@ -218,16 +249,9 @@ nav > div {
     width: 100%;
     float: left;
     box-sizing: border-box;
-    background-color: lightgray;
 }
 
-#my-decks {
-    width: 500px;
-    margin: 50px auto;
-    margin-bottom: 0;
-    background-color: whitesmoke;
-    box-sizing: border-box;
-}
+
 
 #buttons-div {
     width: 500px;
@@ -265,12 +289,18 @@ footer {
     transition: 1s;
 }
 
+.footer-br {
+    display: none;
+}
+
+
 /* exists */
 #copyright {
     font-size: 12px;
     letter-spacing: 1px;
     display: block;
-    margin: 20px 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 
@@ -281,15 +311,15 @@ footer {
 @media only screen and (max-width: 992px) {
 
     #navbar-right > ul > li {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     #navbar-left {
-        width: 225px;
+        width: 220px;
         background-color: #D5D8CF;
     }
 
-    #iremember-logo > img {
+    #iremember-logo > a > img {
         width: 175px;
     }    
 
@@ -310,11 +340,19 @@ footer {
         visibility: visible;
         position: absolute;
         right: 20px;
-        top: 20px;
+        top: 30px;
     }
 
     #toggle-menu {
         visibility: visible;
+    }
+
+    #my-decks {
+        width: 100%;
+    }
+
+    .footer-br {
+        display: block;
     }
 
 }
