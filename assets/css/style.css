@@ -139,7 +139,16 @@ nav > div {
     padding: 20px;
     width: 40%;
     min-width: 300px;
-    margin: 50px auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-sizing: border-box;
+    background-color: none;
+}
+
+#buttons-div {
+    padding: 0 20px;
+    width: 40%;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
@@ -159,8 +168,13 @@ nav > div {
     text-align: center;
     width: 60px;
     cursor: pointer;
-    background-color: #707070;
+    background-color: #959890;
     color: whitesmoke;
+}
+
+.deck-play:hover, .deck-edit:hover {
+    background-color: #f04a64;
+    transition: 1s;
 }
 
 .deck-row {
@@ -174,29 +188,68 @@ nav > div {
     margin-left: 5px;
     margin-right: 5px;
     padding-left: 10px;
-    cursor: pointer;
 }
 
 
 /* main content - cards summary */
 .cards-field {
     display: inline-block;
-    background-color: lightgray;
-    margin: 5px;
+    background-color: whitesmoke;
     padding: 10px 5px;
     box-sizing: border-box;
     border-radius: 8px;
+    cursor: pointer;
 }
 
+.fa-play-circle, .fa-edit {
+    font-size: 18px;
+    color: white;
+    font-weight: 100;
+}
+
+
+.deck-storage-number {
+    box-sizing: border-box;
+    padding: 10px 5px;
+    padding-left: 10px;
+    width: 100%;
+    font-weight: 600;
+    color: whitesmoke;
+    background-color: #707070;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+ 
+.deck-title {
+    margin-bottom: 5px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: 600;
+    color: whitesmoke;
+    background-color: #707070;
+}
+
+.cards-title-front, .cards-title-back {
+    padding: 10px 5px;
+    box-sizing: border-box;
+    width: calc((100% / 2) - 3px);
+    font-weight: 600;
+    color: whitesmoke;
+    background-color: #959890;
+}
+
+
 .cards-front, .cards-back {
-    width: 40%;
+    margin-top: 5px;
+    width: calc(((100% - 50px) / 2));
     padding-left: 10px;
     box-sizing: border-box;
     cursor: pointer;
 }
 
 .cards-delete {
-    width: 5%;
+    width: 30px;
     text-align: center;
     box-sizing: border-box;
     cursor: pointer;
@@ -207,34 +260,15 @@ nav > div {
     border-radius: 8px;
 }
 
-.deck-title {
-    margin-bottom: 5px;
-    padding: 10px 5px;
-    padding-left: 10px;
-    box-sizing: border-box;
-    width: 100%;
-    font-weight: 600;
-    color: whitesmoke;
-    background-color: #707070;
-    cursor: pointer;
-}
 
 
-.cards-title-front, .cards-title-back, .deck-storage-number {
-    margin: 0;
-    padding: 10px 5px;
-    padding-left: 10px;
-    box-sizing: border-box;
-    width: 488px;
-    font-weight: 600;
-    color: whitesmoke;
-    background-color: gray;
-    cursor: pointer;
-}
 
-.cards-title-front, .cards-title-back {
-    width: 47%;
-}
+
+
+
+
+
+
 
 #add-card-btn, #save-deck-btn, #close-deck-btn {
     padding: 5px 10px;
@@ -253,12 +287,7 @@ nav > div {
 
 
 
-#buttons-div {
-    width: 500px;
-    margin: 0 auto;
-    background-color: whitesmoke;
-    box-sizing: border-box;
-}
+
 
 
 /* footer */
