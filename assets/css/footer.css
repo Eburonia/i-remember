@@ -1,0 +1,58 @@
+/* assets/css/footer.css */
+/* Author: Maurice Vossen */
+/* August 2021 */
+
+/* footer */
+/* exists */
+footer {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+/* exists */
+#socials-follow {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* exists */
+.socials {
+    font-size: 24px;
+    margin: 0 20px;
+}
+
+.socials > a > i:hover {
+    color: #f04a64;
+    transition: 1s;
+}
+
+.footer-br {
+    display: none;
+}
+
+
+/* exists */
+#copyright {
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+/* media queries for footer only */
+
+/* for tablets and phones */
+@media only screen and (max-width: 768px) {
+
+    .footer-br {
+        display: block;
+    }
+
+}
