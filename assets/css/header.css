@@ -1,0 +1,162 @@
+/* assets/css/header.css */
+/* Author: Maurice Vossen */
+/* August 2021 */
+
+
+/* navbar */
+/* exists */
+nav {
+    display: flex;
+ }
+ 
+ /* exists */
+ nav > div {
+     box-sizing: border-box;
+     padding: 30px;
+     display: table-cell;
+ }
+ 
+ /* exists */
+ #navbar-left {
+     display: table-cell;
+     float: left;
+     width: 400px;
+ }
+ 
+ /* exists */
+ #navbar-right {
+     float: right;
+     width: 100%;
+ }
+ 
+ /* exists */
+ #navbar-right > ul {
+     float: right;
+ }
+ 
+ /* exists */
+ #navbar-right > ul > li {
+     font-size: 18px;
+     display: inline;
+     padding: 0 12px;
+ }
+ 
+ /* exists */
+ #navbar-right > ul > li > a {
+     text-decoration: none;
+ }
+ 
+ /* exists */
+ #navbar-right > ul > li > a:hover {
+     text-decoration: underline;
+ }
+ 
+ /* toggle hamburger button */
+ /* exists */
+ #navbar-toggle-button {
+     float: right;
+     visibility: hidden;
+     padding: 5px;
+     width: 40px;
+     overflow: auto;
+ }
+ 
+ .hamburger-div {
+     border: 1px solid #707070;
+     width: 60%;
+     padding: 0;
+     margin: 3px auto;
+     overflow: auto;
+ }
+ 
+ 
+ 
+ /* toggle menu */
+ /* exists */
+ #toggle-menu {
+     width: 100%;
+     float: left;
+     clear: right;
+     visibility: hidden;
+ }
+ 
+ /* exists */
+ #toggle-menu > ul {
+     width: auto;
+     box-sizing: border-box;
+ }
+ 
+ /* exists */
+ #toggle-menu > ul > li {
+     font-size: 20px;
+     display: block;
+     padding: 5px 15px;
+     width: 100%;
+     text-align: center;
+     margin: 4px 0;
+     background-color: #959890;
+ }
+ 
+ /* exists */
+ #toggle-menu > ul > li > a {
+     color: whitesmoke;
+     text-decoration: none;
+ }
+ 
+ 
+ /* logo */
+ /* exists */
+ #iremember-logo {
+     border: 0px solid #707070;
+     width: 300px;
+     height: 100px;
+     object-fit: cover;
+ }
+ 
+ 
+ 
+ /* media queries for header only */
+
+/* for small laptops */
+@media only screen and (max-width: 992px) {
+
+    #navbar-right > ul > li {
+        font-size: 15px;
+    }
+
+    #navbar-left {
+        width: 220px;
+        background-color: #D5D8CF;
+    }
+
+    #iremember-logo > a > img {
+        width: 175px;
+    }    
+
+}
+
+/* for tablets and phones */
+@media only screen and (max-width: 768px) {
+
+    #navbar-right {
+        background-color: #D5D8CF;
+    }
+
+    #navbar-right > ul {
+        visibility: hidden;
+    }
+
+    #navbar-toggle-button {
+        visibility: visible;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+    }
+
+    #toggle-menu {
+        visibility: visible;
+    }
+
+}
+
+ 
