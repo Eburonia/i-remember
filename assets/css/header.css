@@ -2,161 +2,116 @@
 /* Author: Maurice Vossen */
 /* August 2021 */
 
-
-/* navbar */
-/* exists */
-nav {
-    display: flex;
- }
- 
- /* exists */
- nav > div {
-     box-sizing: border-box;
-     padding: 30px;
-     display: table-cell;
- }
- 
- /* exists */
- #navbar-left {
-     display: table-cell;
-     float: left;
-     width: 400px;
- }
- 
- /* exists */
- #navbar-right {
-     float: right;
-     width: 100%;
- }
- 
- /* exists */
- #navbar-right > ul {
-     float: right;
- }
- 
- /* exists */
- #navbar-right > ul > li {
-     font-size: 18px;
-     display: inline;
-     padding: 0 12px;
- }
- 
- /* exists */
- #navbar-right > ul > li > a {
-     text-decoration: none;
- }
- 
- /* exists */
- #navbar-right > ul > li > a:hover {
-     text-decoration: underline;
- }
- 
- /* toggle hamburger button */
- /* exists */
- #navbar-toggle-button {
-     float: right;
-     visibility: hidden;
-     padding: 5px;
-     width: 40px;
-     overflow: auto;
- }
- 
- .hamburger-div {
-     border: 1px solid #707070;
-     width: 60%;
-     padding: 0;
-     margin: 3px auto;
-     overflow: auto;
- }
- 
- 
- 
- /* toggle menu */
- /* exists */
- #toggle-menu {
-     width: 100%;
-     float: left;
-     clear: right;
-     visibility: hidden;
- }
- 
- /* exists */
- #toggle-menu > ul {
-     width: auto;
-     box-sizing: border-box;
- }
- 
- /* exists */
- #toggle-menu > ul > li {
-     font-size: 20px;
-     display: block;
-     padding: 5px 15px;
-     width: 100%;
-     text-align: center;
-     margin: 4px 0;
-     background-color: #959890;
- }
- 
- /* exists */
- #toggle-menu > ul > li > a {
-     color: whitesmoke;
-     text-decoration: none;
- }
- 
- 
- /* logo */
- /* exists */
- #iremember-logo {
-     border: 0px solid #707070;
-     width: 300px;
-     height: 100px;
-     object-fit: cover;
- }
- 
- 
- 
- /* media queries for header only */
-
-/* for small laptops */
-@media only screen and (max-width: 992px) {
-
-    #navbar-right > ul > li {
-        font-size: 15px;
-    }
-
-    #navbar-left {
-        width: 220px;
-        background-color: #D5D8CF;
-    }
-
-    #iremember-logo > a > img {
-        width: 175px;
-    }    
-
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* for tablets and phones */
-@media only screen and (max-width: 768px) {
 
-    #navbar-right {
-        background-color: #D5D8CF;
-    }
+header {
+    padding: 20px;
+    background-color: #D5D8CF;
+    overflow: hidden;
+}
+
+
+#navbar-left {
+    float: left;
+    width: 320px;
+    overflow: hidden;
+}
+
+#navbar-right {
+    overflow: hidden;
+}
+
+
+#navbar-right > ul {
+    float: right;
+}
+
+
+#navbar-right > ul > li {
+   display: inline-block;
+   font-size: 18px;
+   margin: 0 10px;
+}
+
+
+#navbar-right > ul > li > a {
+    text-decoration: none;
+    color: #707070;
+ }
+
+ #navbar-right > ul > li > a:hover {
+    text-decoration: underline;
+ }
+
+ #navbar-toggle-button {
+    float: right;
+    display: none;
+    font-size: 20px;
+    padding: 6px 10px;
+    text-align: center;
+}
+
+
+#toggle-menu {
+    width: 100%;
+    float: left;
+    clear: right;
+  
+}
+
+/* exists */
+#toggle-menu > ul {
+    width: auto;
+    box-sizing: border-box;
+}
+
+/* exists */
+#toggle-menu > ul > li {
+    font-size: 20px;
+    display: block;
+    padding: 5px 15px;
+    width: 100%;
+    text-align: center;
+    margin: 4px 0;
+    background-color: #959890;
+}
+
+/* exists */
+#toggle-menu > ul > li > a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+#content-index {
+    background-color: blue;
+    text-align: center;
+    float: left;
+    clear: left;
+    width: 100%;
+}
+
+
+/* media queries for deck.html only */
+
+/* for tablets and phones */
+@media only screen and (max-width: 900px) { 
 
     #navbar-right > ul {
-        visibility: hidden;
+        display: none;
+    }
+
+    #toggle-menu, #toggle-menu > ul {
+        display: block;
     }
 
     #navbar-toggle-button {
-        visibility: visible;
-        position: absolute;
-        right: 20px;
-        top: 30px;
-    }
-
-    #toggle-menu {
-        visibility: visible;
+        display: block;
     }
 
 }
-
- 

@@ -8,6 +8,8 @@ footer {
     float: left;
     text-align: center;
     width: 100%;
+    background-color: #D5D8CF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* exists */
@@ -20,9 +22,11 @@ footer {
 }
 
 /* exists */
-.socials {
+.socials > a > i{
+    text-decoration: none;
     font-size: 24px;
     margin: 0 20px;
+    color: #707070;
 }
 
 .socials > a > i:hover {
