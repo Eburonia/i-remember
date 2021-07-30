@@ -10,7 +10,12 @@
     padding: 50px 0;
 }
 
+
+#active {
+    border-top: 2px solid #f04a64;
+} 
+
+
 #active > a {
     color: #f04a64 !important;
-    
 } 

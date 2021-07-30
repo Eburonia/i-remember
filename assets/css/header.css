@@ -50,7 +50,8 @@ header {
 
 
  #navbar-right > ul > li > a:hover {
-    text-decoration: underline;
+    color: #f04a64;
+    transition: 1s;
  }
 
 
