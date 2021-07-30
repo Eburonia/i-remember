@@ -2,15 +2,17 @@
 /* Author: Maurice Vossen */
 /* August 2021 */
 
-#content-index {
-    text-align: center;
-    clear: left;
+#content-decks {
+    margin: 50px 0;
     width: 100%;
-    padding: 50px 0;
-    background-color: red;
-    margin: 0 auto;
+    float: left;
+    
 }
 
+#my-decks {
+    width: 40%;
+    margin: 0 auto;
+}
 
 #active {
     border-top: 2px solid #f04a64;
@@ -20,3 +22,42 @@
 #active > a {
     color: #f04a64 !important;
 } 
+
+
+#my-decks-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: whitesmoke;
+    background-color: #707070;
+    padding: 4px 0 4px 10px;
+    text-align: left;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.my-decks-field {
+    font-size: 18px;
+    float: left;
+    padding: 4px 0;
+    background-color: #D5D8CF;
+    box-sizing: border-box;
+    margin: 6px 0;
+    border-radius: 6px;
+}
+
+.my-decks-field-play, .my-decks-field-edit {
+    width: 100px;
+    text-align: center;
+    background-color: #f04a64;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.my-decks-field-description {
+    margin-left: 6px;
+    margin-right: 6px;
+    width: calc(100% - 212px);
+    text-align: left;
+    padding-left: 10px;
+}
+
