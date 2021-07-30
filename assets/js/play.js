@@ -6,7 +6,9 @@
 /* this javascript excecutes the practice of one deck */
 
 /* create deck */
-let memory = [];
+var memory = [];
+var pullCard;
+var amountOfCardsInDeck;
 
 loadDeckIntoMemory();
 
@@ -39,6 +41,8 @@ function loadDeckIntoMemory() {
     memory[4][1] = 'tafel';
     memory[4][2] = 'true';
 
+    amountOfCardsInDeck = memory.length - 1;
+
 }
 
 
@@ -54,17 +58,17 @@ function openPlayScreen() {
             
                 <div id="question-field">
                 
-                    <span id="card-question-title">question</span>
+                    <span id="question-title">question</span>
                 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    <p id="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
                 
                 </div>
 
                 <div id="answer-field">
 
-                    <span id="card-answer-title">answer</span>
+                    <span id="answer-title">answer</span>
                 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    <p id="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
                 
                 </div>
             
@@ -84,3 +88,36 @@ function openPlayScreen() {
 
 
 }
+
+
+
+function fireQuestion() {
+
+    
+    do {
+
+        pullCard = Math.floor(amountOfCardsInDeck * Math.random(0, 1)) + 1;
+
+    }while(memory[pullCard][2] == 'false');
+
+    memory[pullCard][2] = 'false';
+    $('#question').text(memory[pullCard][0]);
+
+}
+
+
+/* answer button event */
+$('#answer-button').on('click', function() {
+
+    $('#answer').text(memory[pullCard][1]);
+
+});
+
+
+/* next button event */
+$('#next-button').on('click', function() {
+
+    fireQuestion();
+    $('#answer').text('');
+
+});

@@ -101,7 +101,7 @@
 }
 
 
-#card-question-title, #card-answer-title {
+#question-title, #answer-title {
     text-align: center;
     font-size: 20px;
     font-weight: 600;
@@ -110,7 +110,7 @@
 }
 
 
-#question-field > p, #answer-field > p {
+#question, #answer {
     font-weight: 200;
     font-size: 20px;
 }
