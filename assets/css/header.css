@@ -64,6 +64,11 @@ header {
 }
 
 
+#toggle-menu, #toggle-menu > ul {
+    display: none;
+}
+
+
 #toggle-menu > ul > li {
     font-size: 18px;
     display: block;
@@ -71,7 +76,7 @@ header {
     width: 100%;
     text-align: center;
     margin: 4px 0;
-    background-color: #959890;
+    border: 2px solid #959890;
 }
 
 #toggle-menu > ul > li > a:hover {
