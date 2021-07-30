@@ -1,5 +1,6 @@
 /* hides toggle menu at loading website */
 $('#toggle-menu').toggle();
+$('#toggle-menu').toggle();
 
 
 /* toggle menu */
