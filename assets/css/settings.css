@@ -1,0 +1,11 @@
+/* assets/css/settings.css */
+/* Author: Maurice Vossen */
+/* August 2021 */
+
+#content-index {
+    text-align: center;
+    float: left;
+    clear: left;
+    width: 100%;
+    padding: 50px 0;
+}
