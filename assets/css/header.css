@@ -20,10 +20,14 @@ header {
     float: left;
     width: 320px;
     overflow: hidden;
+    height: 110px;
 }
+
 
 #navbar-right {
     overflow: hidden;
+    height: 100%;
+    height: 110px;
 }
 
 
@@ -44,56 +48,41 @@ header {
     color: #707070;
  }
 
+
  #navbar-right > ul > li > a:hover {
     text-decoration: underline;
  }
 
- #navbar-toggle-button {
+
+#navbar-toggle-button {
     float: right;
     display: none;
     font-size: 20px;
-    padding: 6px 10px;
+    padding: 3px 8px;
     text-align: center;
+    color: rgb(100, 100, 100);
 }
 
 
-#toggle-menu {
-    width: 100%;
-    float: left;
-    clear: right;
-  
-}
-
-/* exists */
-#toggle-menu > ul {
-    width: auto;
-    box-sizing: border-box;
-}
-
-/* exists */
 #toggle-menu > ul > li {
-    font-size: 20px;
+    font-size: 18px;
     display: block;
-    padding: 5px 15px;
+    padding: 6px 0;
     width: 100%;
     text-align: center;
     margin: 4px 0;
     background-color: #959890;
 }
 
-/* exists */
-#toggle-menu > ul > li > a {
-    color: whitesmoke;
-    text-decoration: none;
+#toggle-menu > ul > li > a:hover {
+    color: lightgray;
+    transition: 1s;
 }
 
 
-#content-index {
-    background-color: blue;
-    text-align: center;
-    float: left;
-    clear: left;
-    width: 100%;
+#toggle-menu > ul > li > a {
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 
@@ -101,6 +90,14 @@ header {
 
 /* for tablets and phones */
 @media only screen and (max-width: 900px) { 
+
+    #navbar-left {
+        width: 230px;
+    }
+
+    #iremember-logo > a > img {
+        width: 220px;
+    }
 
     #navbar-right > ul {
         display: none;
