@@ -85,7 +85,7 @@ $('#content-decks-page').empty();
         
             <div id="shown-cards-stats">Card <b><span id="currentShownCard">0</span></b> of <b>${amountOfCardsInDeck}</b></div>
 
-            <div id="correct-wrong-stats">Correct answers: <span id="correct-stats">0</span>Wrong answers: <span id="wrong-stats">0</span></div>
+            <div id="correct-wrong-stats">Correct answers: <span id="correct-stats">0</span> Wrong answers: <span id="wrong-stats">0</span></div>
 
             <div id="card-div">
             
@@ -136,6 +136,7 @@ $('#content-decks-page').empty();
 
 function fireQuestion() {
 
+    $("#input-textbox").prop('disabled', false);
 
     $('#input-textbox').focus();
     $('#answer-title').hide();
@@ -165,6 +166,10 @@ function fireQuestion() {
     }
 
     else {
+
+        $("#input-textbox").prop('disabled', true);
+        $("#input-textbox").blur();
+
         $('#replay-button').show();
         $('#question').text('end of deck, push \'replay button\' below to repeat');
         $('#answer').text('');
@@ -180,30 +185,61 @@ function fireQuestion() {
 
 
 // Credit: https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
-$('#input-textbox').on('keypress',function(e) {
+$('#input-textbox').on('keypress', function(e) {
     
     if(e.which == 13) {
         
-
+        $('#input-textbox').blur();
         $('#answer-title').show();
-        
 
+        let correctStats = $('#correct-stats').text();
+        let wrongStats = $('#wrong-stats').text();
+        let currentShownCard = $('#currentShownCard').text();
+        let cw = parseInt(correctStats) + parseInt(wrongStats);
+        
+        // if answer is correct
         if($('#input-textbox').val() === memory[pullCard][1]) {
+
+            $("#input-textbox").prop('disabled', true);
 
             $('#answer').css('color', 'green');
             $('#answer').text(memory[pullCard][1]);
 
-            // Timeout 2 seconds before next question shows
-            
             $('#input-textbox').val('');
+
+            // Timeout 2 seconds before next question shows
             setTimeout(fireQuestion, 2000);
-           
+
+
+            if(cw < currentShownCard) {
+
+                correctStats++;
+                $('#correct-stats').text(correctStats);
+
+            }
+
         }
 
+        // if answer is wrong
         else {
+
+            $("#input-textbox").focus();
 
             $('#answer').css('color', 'red');
             $('#answer').text('Wrong answer!');
+
+
+            
+
+            
+
+
+            if(cw < currentShownCard) {
+
+                wrongStats++;
+                $('#wrong-stats').text(wrongStats);
+
+            }
 
         }
 
@@ -216,6 +252,9 @@ $('#input-textbox').on('keypress',function(e) {
 /* answer button event */
 $('#answer-button').on('click', function() {
 
+    $("#input-textbox").focus();
+
+    $('#answer-title').show();
     $('#answer').css('color', 'blue');
     $('#answer').text(memory[pullCard][1]);
 
@@ -238,6 +277,11 @@ $('#replay-button').on('click', function() {
     
     $('#question-title').show();
     $('#answer-title').show();
+
+    $("#input-textbox").prop('disabled', false);
+
+    $('#correct-stats').text(0);
+    $('#wrong-stats').text(0);
 
     fireQuestion();
 
