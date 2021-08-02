@@ -85,6 +85,7 @@ $('#content-decks-page').empty();
         
             <div id="shown-cards-stats">Card <b><span id="currentShownCard">0</span></b> of <b>${amountOfCardsInDeck}</b></div>
 
+            <div id="correct-wrong-stats">Correct answers: <span id="correct-stats">0</span>Wrong answers: <span id="wrong-stats">0</span></div>
 
             <div id="card-div">
             
@@ -119,7 +120,6 @@ $('#content-decks-page').empty();
             <div id="buttons-div">
             
                 <button id="answer-button">answer</button>
-                <button id="next-button">next</button>
                 <button id="replay-button">replay</button>
             
             </div>
@@ -136,9 +136,10 @@ $('#content-decks-page').empty();
 
 function fireQuestion() {
 
-    $('#answer-button').show();
-    $('#next-button').hide();
 
+    $('#input-textbox').focus();
+    $('#answer-title').hide();
+    $('#answer-button').show();
 
     let currentShownCard = $('#currentShownCard').text();
 
@@ -172,28 +173,55 @@ function fireQuestion() {
         $('#answer-title').hide();
 
         $('#answer-button').hide();
-        $('#next-button').hide();
 
     }
 
 }
 
 
+// Credit: https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
+$('#input-textbox').on('keypress',function(e) {
+    
+    if(e.which == 13) {
+        
+
+        $('#answer-title').show();
+        
+
+        if($('#input-textbox').val() === memory[pullCard][1]) {
+
+            $('#answer').css('color', 'green');
+            $('#answer').text(memory[pullCard][1]);
+
+            // Timeout 2 seconds before next question shows
+            
+            $('#input-textbox').val('');
+            setTimeout(fireQuestion, 2000);
+           
+        }
+
+        else {
+
+            $('#answer').css('color', 'red');
+            $('#answer').text('Wrong answer!');
+
+        }
+
+
+    }
+});
+
+
+
 /* answer button event */
 $('#answer-button').on('click', function() {
 
+    $('#answer').css('color', 'blue');
     $('#answer').text(memory[pullCard][1]);
-    $('#next-button').show();
 
 });
 
 
-/* next button event */
-$('#next-button').on('click', function() {
-
-    fireQuestion();
-
-});
 
 $('#replay-button').on('click', function() {
 
@@ -206,7 +234,8 @@ $('#replay-button').on('click', function() {
     $('#currentShownCard').text('0');
 
     $('answer-button').show();
-    $('next-button').show();
+
+    
     $('#question-title').show();
     $('#answer-title').show();
 

@@ -86,9 +86,18 @@ body {
 }
 
 
-#shown-cards-stats {
+#shown-cards-stats, #correct-wrong-stats {
     font-size: 18px;
     padding-bottom: 5px;
+}
+
+
+#correct-stats {
+    color: green;
+}
+
+#wrong-stats {
+    color: red;
 }
 
 
