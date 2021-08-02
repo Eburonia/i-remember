@@ -14,6 +14,31 @@ loadDeckIntoMemory();
 
 openPlayScreen();
 
+
+
+loadDeckData('deck1');
+
+function loadDeckData(deckName) {
+
+    let test = 'assets/decks/' + deckName + '.txt';
+
+        $.get(test, function( data ) {
+            //alert( "Data Loaded: " + data );
+        });
+}
+
+
+
+
+//$.get("assets/decks/deck1.txt", function( data ) {
+//  alert( "Data Loaded: " + data );
+//});
+
+
+
+
+
+
 function loadDeckIntoMemory() {
 
     /* first card in deck gives information about from and back side description */
@@ -46,21 +71,23 @@ function loadDeckIntoMemory() {
 }
 
 
+/* this function loads the play (practice a deck) screen on the deck.html page */
 function openPlayScreen() {
-
-    /* this function loads the play (practice a deck) screen on the deck.html page */
 
     $('#content-decks-page').append(`
     
         <div id="play-screen">
         
+            <div>Card <b><span id="currentShownCard">1</span></b> of <b>${amountOfCardsInDeck}</b></div>
+
+
             <div id="card-div">
             
                 <div id="question-field">
                 
                     <span id="question-title">question</span>
                 
-                    <p id="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    <p id="question">-</p>
                 
                 </div>
 
@@ -68,7 +95,7 @@ function openPlayScreen() {
 
                     <span id="answer-title">answer</span>
                 
-                    <p id="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    <p id="answer">-</p>
                 
                 </div>
             
@@ -86,22 +113,33 @@ function openPlayScreen() {
     
     `);
 
-
 }
 
 
 
 function fireQuestion() {
 
+    let currentShownCard = $('#currentShownCard').text();
     
-    do {
+    if(currentShownCard < amountOfCardsInDeck)
+    {
 
-        pullCard = Math.floor(amountOfCardsInDeck * Math.random(0, 1)) + 1;
+        do {
 
-    }while(memory[pullCard][2] == 'false');
+            pullCard = Math.floor(amountOfCardsInDeck * Math.random(0, 1)) + 1;
 
-    memory[pullCard][2] = 'false';
-    $('#question').text(memory[pullCard][0]);
+        }while(memory[pullCard][2] == 'false');
+
+        memory[pullCard][2] = 'false';
+        $('#question').text(memory[pullCard][0]);
+
+        currentShownCard++;
+        $('#currentShownCard').text(currentShownCard);
+    }
+
+    else {
+        alert('end of deck');
+    }
 
 }
 
