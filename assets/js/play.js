@@ -14,6 +14,7 @@ loadDeckIntoMemory();
 
 openPlayScreen();
 
+fireQuestion();
 
 
 loadDeckData('deck1');
@@ -43,27 +44,27 @@ function loadDeckIntoMemory() {
 
     /* first card in deck gives information about from and back side description */
     memory[0] = [];
-    memory[0][0] = 'english';
-    memory[0][1] = 'dutch';
+    memory[0][0] = 'What is the capital of';
+    memory[0][1] = 'Answer';
 
     memory[1] = [];
-    memory[1][0] = 'car';
-    memory[1][1] = 'auto';
+    memory[1][0] = 'Belgium';
+    memory[1][1] = 'Brussels';
     memory[1][2] = 'true';
 
     memory[2] = [];
-    memory[2][0] = 'door';
-    memory[2][1] = 'deur';
+    memory[2][0] = 'Germany';
+    memory[2][1] = 'Berlin';
     memory[2][2] = 'true';
 
     memory[3] = [];
-    memory[3][0] = 'window';
-    memory[3][1] = 'raam';
+    memory[3][0] = 'France';
+    memory[3][1] = 'Paris';
     memory[3][2] = 'true';
 
     memory[4] = [];
-    memory[4][0] = 'table';
-    memory[4][1] = 'tafel';
+    memory[4][0] = 'Italy';
+    memory[4][1] = 'Rome';
     memory[4][2] = 'true';
 
     amountOfCardsInDeck = memory.length - 1;
@@ -74,18 +75,22 @@ function loadDeckIntoMemory() {
 /* this function loads the play (practice a deck) screen on the deck.html page */
 function openPlayScreen() {
 
+$('#content-decks-page').empty();
+
+
+
     $('#content-decks-page').append(`
     
         <div id="play-screen">
         
-            <div>Card <b><span id="currentShownCard">1</span></b> of <b>${amountOfCardsInDeck}</b></div>
+            <div id="shown-cards-stats">Card <b><span id="currentShownCard">0</span></b> of <b>${amountOfCardsInDeck}</b></div>
 
 
             <div id="card-div">
             
                 <div id="question-field">
                 
-                    <span id="question-title">question</span>
+                    <span id="question-title">${memory[0][0]}</span>
                 
                     <p id="question">-</p>
                 
@@ -93,7 +98,7 @@ function openPlayScreen() {
 
                 <div id="answer-field">
 
-                    <span id="answer-title">answer</span>
+                    <span id="answer-title">${memory[0][1]}</span>
                 
                     <p id="answer">-</p>
                 
@@ -101,10 +106,21 @@ function openPlayScreen() {
             
             </div>
 
+
+                <div id="input-answer-div">
+            
+            
+                    <span id="input-text-title">type your answer</span><br>
+                    <input type="text" id="input-textbox">
+            
+                </div>
+
+
             <div id="buttons-div">
             
                 <button id="answer-button">answer</button>
-                <button id="next-button">next</button>    
+                <button id="next-button">next</button>
+                <button id="replay-button">replay</button>
             
             </div>
         
@@ -117,28 +133,47 @@ function openPlayScreen() {
 
 
 
+
 function fireQuestion() {
 
+    $('#answer-button').show();
+    $('#next-button').hide();
+
+
     let currentShownCard = $('#currentShownCard').text();
-    
+
+
     if(currentShownCard < amountOfCardsInDeck)
     {
+
+        $('#answer').text('');
 
         do {
 
             pullCard = Math.floor(amountOfCardsInDeck * Math.random(0, 1)) + 1;
 
-        }while(memory[pullCard][2] == 'false');
+        } while(memory[pullCard][2] == 'false');
 
         memory[pullCard][2] = 'false';
         $('#question').text(memory[pullCard][0]);
 
         currentShownCard++;
         $('#currentShownCard').text(currentShownCard);
+
+        $('#replay-button').hide();
     }
 
     else {
-        alert('end of deck');
+        $('#replay-button').show();
+        $('#question').text('end of deck, push \'replay button\' below to repeat');
+        $('#answer').text('');
+
+        $('#question-title').hide();
+        $('#answer-title').hide();
+
+        $('#answer-button').hide();
+        $('#next-button').hide();
+
     }
 
 }
@@ -148,6 +183,7 @@ function fireQuestion() {
 $('#answer-button').on('click', function() {
 
     $('#answer').text(memory[pullCard][1]);
+    $('#next-button').show();
 
 });
 
@@ -156,6 +192,24 @@ $('#answer-button').on('click', function() {
 $('#next-button').on('click', function() {
 
     fireQuestion();
-    $('#answer').text('');
+
+});
+
+$('#replay-button').on('click', function() {
+
+
+    for(let i = 1; i < memory.length; i++) {
+        memory[i][2] = 'true';
+
+    }
+
+    $('#currentShownCard').text('0');
+
+    $('answer-button').show();
+    $('next-button').show();
+    $('#question-title').show();
+    $('#answer-title').show();
+
+    fireQuestion();
 
 });
