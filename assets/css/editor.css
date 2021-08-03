@@ -2,45 +2,51 @@
 /* Author: Maurice Vossen */
 /* August 2021 */
 
-
-
 #content-editor-page {
-    background-color: red;
     box-sizing: border-box;
 }
 
 
-#cards-summary-div {
+#cards-summary-div, #cards-summary-buttons {
     margin: 50px auto;
     width: 50%;
-    background-color: yellow;
     box-sizing: border-box;
     padding: 10px;
     overflow: hidden;
 }
 
+#cards-summary-buttons {
+    margin: 20px auto;
+    background-color: #707070;
+    border-radius: 6px;
+}
+
+
 #cards-summary-title {
-    background-color: purple;
+    background-color: #707070;
+    color: whitesmoke;
     box-sizing: border-box;
     width: 100%;
     float: left;
     padding: 6px;
     padding-left: 10px;
     font-weight: 600;
+    border-radius: 6px;
 }
 
 .cards-summary-frontside {
-    background-color: green;
+    background-color: #D5D8CF;
     box-sizing: border-box;
     width: calc(50% - 1px);
     float: left;
     padding: 6px;
     padding-left: 10px;
     margin: 2px 0;
+    border-radius: 6px;
 }
 
 .cards-summary-backside {
-    background-color: orange;
+    background-color: #D5D8CF;
     box-sizing: border-box;
     width: calc(50% - 1px);
     float: left;
@@ -48,4 +54,12 @@
     padding-left: 10px;
     margin: 2px 0;
     margin-left: 2px;
+    border-radius: 6px;
+}
+
+
+#browse-button, #read-button, input[type="file"], #add-row {
+    margin-top: 5px;
+    padding: 5px 10px;
+
 }
