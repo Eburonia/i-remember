@@ -27,6 +27,20 @@
     <!-- favicon -->
     <link rel="icon" href="assets/images/favicon.ico">
 
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("user_YgFWqfy9D9yJmZW4rlvUU");
+  //emailjs.send('service_dgvknqk', 'template_brfwkut', {from_name: "Maurice", to_name: "Chris"});
+})();
+</script>
+
+
+
+
 </head>
 
 
@@ -87,7 +101,7 @@
 
                 <h2>Contact us</h2>
 
-                <form id="contact-form" action="" method="POST">
+                <form onsubmit="return sendMail(this);" id="contact-form" method="POST">
 
                     <label for="fname" class="contact-label">Firstname<span class="mandatory-astrisk"> *</span></label><br>
                     <input type="text" class="contact-textbox" id="fname" name="firstname" aria-label="please enter your firstname, this a required field" required><br>
@@ -106,6 +120,9 @@
                     <span class="mandatory-astrisk">* Required fields</span>
 
                 </form>
+
+
+                <button onclick="sendMail()">test</button>
 
             </div>
 
@@ -128,6 +145,7 @@
 
         <!-- load javascript -->
         <script src="assets/js/header.js"></script>
+        <script src="assets/js/contact.js"></script>
 
 
     </body>
