@@ -1,0 +1,51 @@
+/* assets/css/editor.css */
+/* Author: Maurice Vossen */
+/* August 2021 */
+
+
+
+#content-editor-page {
+    background-color: red;
+    box-sizing: border-box;
+}
+
+
+#cards-summary-div {
+    margin: 50px auto;
+    width: 50%;
+    background-color: yellow;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#cards-summary-title {
+    background-color: purple;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding: 6px;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.cards-summary-frontside {
+    background-color: green;
+    box-sizing: border-box;
+    width: calc(50% - 1px);
+    float: left;
+    padding: 6px;
+    padding-left: 10px;
+    margin: 2px 0;
+}
+
+.cards-summary-backside {
+    background-color: orange;
+    box-sizing: border-box;
+    width: calc(50% - 1px);
+    float: left;
+    padding: 6px;
+    padding-left: 10px;
+    margin: 2px 0;
+    margin-left: 2px;
+}
