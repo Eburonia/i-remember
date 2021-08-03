@@ -36,9 +36,7 @@
         <!-- header -->
         <header>
 
-
             <nav>
-
 
                 <div id="navbar-left">
     
@@ -46,14 +44,13 @@
 
                 </div>
     
-
                 <div id="navbar-right">
     
                     <ul>
                         <li><a href="index.html">HOME</a></li>
-                        <li><a href="deck.html">MY DECKS</a></li>
+                        <li><a href="practice.html">PRACTICE</a></li>
+                        <li><a href="editor.html">EDITOR</a></li>
                         <li><a href="manual.html">HOW TO USE</a></li>
-                        <li><a href="settings.html">SETTINGS</a></li>
                         <li id="active"><a href="contact.html">CONTACT</a></li>
                     </ul>
 
@@ -66,29 +63,52 @@
 
                 </div>
 
-            
                 <div id="toggle-menu">
 
                     <ul>
                         <li><a href="index.html">HOME</a></li>
-                        <li><a href="deck.html">MY DECKS</a></li>
+                        <li><a href="practice.html">PRACTICE</a></li>
+                        <li><a href="editor.html">EDITOR</a></li>
                         <li><a href="manual.html">HOW TO USE</a></li>
-                        <li><a href="settings.html">SETTINGS</a></li>
                         <li id="active"><a href="contact.html">CONTACT</a></li>
                     </ul>
 
                 </div>
 
-
             </nav>
-
 
         </header>
 
 
         <!-- main content -->
         <div id="content-index">
-            Contact page
+            
+            <div id="contact-form-div">
+
+                <h2>Contact us</h2>
+
+                <form id="contact-form" action="" method="POST">
+
+                    <label for="fname" class="contact-label">Firstname<span class="mandatory-astrisk"> *</span></label><br>
+                    <input type="text" class="contact-textbox" id="fname" name="firstname" aria-label="please enter your firstname, this a required field" required><br>
+
+                    <label for="lname" class="contact-label">Lastname<span class="mandatory-astrisk"> *</span></label><br>
+                    <input type="text" class="contact-textbox" id="lname" name="lastname" aria-label="please enter your lastname, this a required field" required><br>
+
+                    <label for="email" class="contact-label">E-mail<span class="mandatory-astrisk"> *</span></label><br>
+                    <input type="email" class="contact-textbox" id="email" name="email" aria-label="please enter your e-mail address, this a required field" required><br>
+
+                    <label for="message" class="contact-label">Your message <span class="mandatory-astrisk"> *</span></label><br>
+                    <textarea id="message" class="contact-textbox" name="message" rows="6" cols="50" placeholder="Ask us anything" aria-label="Please enter your question in this textarea, this textare is required" required></textarea><br>
+
+                    <input type="submit" value="submit" id="form-button" aria-label="Click this button to submit the form, make sure you have added all required fields above">
+
+                    <span class="mandatory-astrisk">* Required fields</span>
+
+                </form>
+
+            </div>
+
         </div>
 
 

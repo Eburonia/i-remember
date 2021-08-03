@@ -3,11 +3,11 @@
 /* August 2021 */
 
 #content-index {
-    text-align: center;
-    float: left;
-    clear: left;
-    width: 100%;
+    text-align: left;
     padding: 50px 0;
+    margin: 0 auto;
+    width: 40%;
+    box-sizing: border-box;
 }
 
 
@@ -19,7 +19,7 @@ h2 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     color: #707070;
     letter-spacing: 1px;
 }
@@ -32,3 +32,50 @@ p {
 #active > a {
     color: #f04a64 !important;
 } 
+
+
+#contact-form-div {
+    box-sizing: border-box;
+    background-color: #D5D8CF;
+    padding: 20px 30px 0 20px;
+    border-radius: 20px;
+}
+
+
+.contact-label {
+    font-size: 18px;
+    color: #707070;
+    padding-top: 30px;
+}
+
+.contact-textbox {
+    font-size: 18px;
+    padding: 3px 0 3px 5px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.mandatory-astrisk {
+    font-size: 18px;
+    color: #f04a64;
+}
+
+#message {
+    resize: none;
+    width: 100%;
+}
+
+#form-button {
+    color: whitesmoke;
+    padding: 3px 10px;
+    font-size: 18px;
+    border: 2px solid #9C1228;
+    border-radius: 6px;
+    background-color: #f04a64;
+    margin-bottom: 20px;
+}
+
+#form-button:hover {
+    background-color: #b33649;
+    transition: 1s;
+}
