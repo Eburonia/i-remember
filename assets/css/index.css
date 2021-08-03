@@ -3,7 +3,7 @@
 /* August 2021 */
 
 #content-index {
-    text-align: center;
+    text-align: left;
     padding: 50px 0;
     margin: 0 auto;
     width: 50%;
@@ -17,7 +17,7 @@ h2 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     color: #707070;
     letter-spacing: 1px;
 }
@@ -30,3 +30,8 @@ p {
 #active > a {
     color: #f04a64 !important;
 } 
+
+
+#socials-follow {
+    color: #707070;
+}
