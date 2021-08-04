@@ -14,14 +14,7 @@
     margin: 0 auto;
 }
 
-#active {
-    border-top: 2px solid #f04a64;
-} 
 
-
-#active > a {
-    color: #f04a64 !important;
-} 
 
 
 #my-decks-title {

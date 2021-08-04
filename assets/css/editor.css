@@ -24,15 +24,6 @@ body {
 }
 
 
-
-#active {
-    border-top: 2px solid #f04a64;
-}
-
-#active > a {
-    color: #f04a64 !important;
-} 
-
 #cards-summary-div, #cards-summary-buttons {
     margin: 50px auto;
     width: 50%;

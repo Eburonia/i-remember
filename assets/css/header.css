@@ -77,7 +77,7 @@ header {
     width: 100%;
     text-align: center;
     margin: 4px 0;
-    border: 2px solid #959890;
+    background-color: #959890;
 }
 
 #toggle-menu > ul > li > a:hover {
@@ -92,10 +92,13 @@ header {
 }
 
 
+#active {
+    border-top: 2px solid #f04a64;
+}
 
-
-
-
+#active > a {
+    color: #f04a64 !important;
+} 
 
 
 /* media queries for deck.html only */
@@ -123,4 +126,13 @@ header {
         display: block;
     }
 
+    #active {
+        border-top: 0;
+    }
+    
+    #active > a {
+        color: #f04a64 !important;
+    } 
+
 }
+

@@ -30,16 +30,6 @@ p {
     letter-spacing: 1px;
 }
 
-#active {
-    border-top: 2px solid #f04a64;
-} 
-
-
-#active > a {
-    color: #f04a64 !important;
-} 
-
-
 #contact-form-div {
     box-sizing: border-box;
     background-color: #D5D8CF;

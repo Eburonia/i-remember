@@ -5,6 +5,9 @@
 
 /* this javascript excecutes the practice of one deck */
 
+
+
+
 /* create deck */
 var memory = [];
 var pullCard;
@@ -286,3 +289,4 @@ $('#replay-button').on('click', function() {
     fireQuestion();
 
 });
+

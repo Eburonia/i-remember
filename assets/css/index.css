@@ -22,14 +22,7 @@ p {
     letter-spacing: 1px;
 }
 
-#active {
-    border-top: 2px solid #f04a64;
-} 
 
-
-#active > a {
-    color: #f04a64 !important;
-} 
 
 
 #socials-follow {
