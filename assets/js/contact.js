@@ -1,33 +1,32 @@
 
-/*function sendMail(sendForm) {
 
-   emailjs.send('service_dgvknqk', 'template_brfwkut', {
-       
-    from_name: "Maurice",
-    to_name: "Chris"
-
-    });
-
-
-} */
-
-
+/* Credit: code coming from emailJS example codeInstitude */
 function sendMail(contactForm) {
+
     emailjs.send("service_dgvknqk", "template_brfwkut", {
-        from_name: "Maurice",
-    to_name: "Chris"
+
+        receiver: 'Maurice',
+        from_name: contactForm.firstname.value + " " + contactForm.lastname.value,
+        to_name: contactForm.lastname.value,
+        email_address: contactForm.email.value,
+        message: contactForm.message.value
+
     })
+
     .then(
         function(response) {
             console.log("SUCCESS", response);
-            alert('works');
+            alert('your message has been sent');
         },
+
         function(error) {
             console.log("FAILED", error);
-            alert('does not works');
+            alert('your message has not been sent!');
         }
     );
+
     return false;  // To block from loading a new page
+
 }
 
 
