@@ -1,3 +1,6 @@
+/* assets/css/contact.js */
+/* Author: Maurice Vossen */
+/* August 2021 */
 
 
 /* Credit: code coming from emailJS example codeInstitude */
@@ -16,7 +19,16 @@ function sendMail(contactForm) {
     .then(
         function(response) {
             console.log("SUCCESS", response);
-            alert('your message has been sent');
+
+            /* clear screen when form sent */
+            $('#content-index').empty();
+
+            /* put message on screen the sending was successful */
+            $('#content-index').append(`
+            
+                <div id="sent-message">Your message has been sent!</div>
+
+            `);
         },
 
         function(error) {

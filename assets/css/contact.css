@@ -2,12 +2,18 @@
 /* Author: Maurice Vossen */
 /* August 2021 */
 
+
+
+
 #content-index {
     text-align: left;
     padding: 50px 0;
     margin: 0 auto;
     width: 40%;
     box-sizing: border-box;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 
@@ -78,4 +84,27 @@ p {
 #form-button:hover {
     background-color: #b33649;
     transition: 1s;
+}
+
+#sent-message {
+    margin: 20px;
+    font-size: 18px;
+    color: #707070;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/* media queries for deck.html only */
+
+/* for tablets and phones */
+@media only screen and (max-width: 768px) { 
+
+    #content-index {
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
 }
