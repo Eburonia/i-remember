@@ -29,7 +29,7 @@
 }
 
 
-#cards-summary-title {
+#deck-title {
     background-color: #707070;
     color: whitesmoke;
     box-sizing: border-box;
@@ -41,7 +41,33 @@
     border-radius: 6px;
 }
 
-.cards-summary-frontside {
+#cards-title-frontside {
+    background-color: #959890;
+    color: whitesmoke;
+    box-sizing: border-box;
+    width: calc(50% - 1px);
+    float: left;
+    padding: 6px;
+    padding-left: 10px;
+    margin: 2px 0;
+    border-radius: 6px;
+}
+
+#cards-title-backside {
+    background-color: #959890;
+    color:whitesmoke;
+    box-sizing: border-box;
+    width: calc(50% - 1px);
+    float: left;
+    padding: 6px;
+    padding-left: 10px;
+    margin: 2px 0;
+    margin-left: 2px;
+    border-radius: 6px;
+}
+
+
+.card-frontside  {
     background-color: #D5D8CF;
     box-sizing: border-box;
     width: calc(50% - 1px);
@@ -52,7 +78,7 @@
     border-radius: 6px;
 }
 
-.cards-summary-backside {
+.card-backside  {
     background-color: #D5D8CF;
     box-sizing: border-box;
     width: calc(50% - 1px);
@@ -63,6 +89,7 @@
     margin-left: 2px;
     border-radius: 6px;
 }
+
 
 
 #browse-button, #read-button, input[type="file"], #add-row {
