@@ -1,5 +1,34 @@
 
+
+
+function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+  
+    element.style.display = 'none';
+    document.body.appendChild(element);
+  
+    element.click();
+  
+    document.body.removeChild(element);
+  }
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
 $('#content-editor-page').append(`
+
+    <div id="editor-div">Editor</div>
 
     <div id="cards-summary-div">
     
@@ -16,8 +45,6 @@ $('#content-editor-page').append(`
     </div>
 
 `);
-
-
 
 document.querySelector("#read-button").addEventListener('click', function() {
 
@@ -84,16 +111,6 @@ document.querySelector("#read-button").addEventListener('click', function() {
 });
 
 
-
-
-
-/* this function exports the deck to a text */
-function exportDecktoTxt() {
-
-}
-
-
-
 $('#export-deck').on('click', function(){
 
     let exportDeck = `<deckname>${$('#deck-title').text()}</deckname>\n\n`;
@@ -102,13 +119,7 @@ $('#export-deck').on('click', function(){
     exportDeck = exportDeck + `<back-title>${$('#cards-title-backside').text()}</back-title>\n\n`;
 
     
-
-
     let cards = '';
-
-    
-
-    //alert(exportDeck);
 
     let numberOfCardsOnScreen = $('.card-frontside').length;
 
@@ -121,6 +132,13 @@ $('#export-deck').on('click', function(){
     exportDeck = exportDeck + `<deck>\n${cards}\n</deck>`;
 
     alert(exportDeck);
+
+
+    let docname = $('#deck-title').text() + '.txt';
+
+    // Start file download.
+    download(docname, exportDeck);
+
    
 
 });
@@ -184,9 +202,9 @@ function loadCardsOnScreen(importFile) {
 
         $('#cards-description-div').after(`
     
-            <div class="card-frontside" class="change-field">${frontside}</div>
-            <div class="card-backside" class="change-field">${backside}</div>
-    
+            <div class="card-frontside change-field">${frontside}</div>
+            <div class="card-backside change-field">${backside}</div>
+           
         `);
 
     }
@@ -247,5 +265,6 @@ $(document).on('click', '.change-field', function() {
 
 
 });
+
 
 
