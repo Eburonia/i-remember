@@ -9,19 +9,13 @@ $('#content-editor-page').append(`
         
             <input type="file" id="browse-button" />
             <button id="read-button">Read File</button>
+            <button id="new-button">New Deck</button>
             <button id="add-row">Add Row</button>
+            <button id="export-deck">Export</button>
 
     </div>
 
 `);
-
-
-
-
-
-
-
-
 
 
 
@@ -45,15 +39,15 @@ document.querySelector("#read-button").addEventListener('click', function() {
 
 
             /* load deckname on screen */
-            $('#cards-summary-div').append(`<div id="deck-title">${getDeckDescription(deck)}</div>`);
+            $('#cards-summary-div').append(`<div id="deck-title" class="change-field">${getDeckDescription(deck)}</div>`);
     
 
             /* load card front and backside description on screen */
             $('#deck-title').after(`
             
                 <div id="cards-description-div">
-                    <div id="cards-title-frontside">${getDeckFrontSideDescription(deck)}</div>
-                    <div id="cards-title-backside">${getDeckBackSideDescription(deck)}</div>
+                    <div id="cards-title-frontside" class="change-field">${getDeckFrontSideDescription(deck)}</div>
+                    <div id="cards-title-backside" class="change-field">${getDeckBackSideDescription(deck)}</div>
                 </div>
 
             `);
@@ -92,6 +86,44 @@ document.querySelector("#read-button").addEventListener('click', function() {
 
 
 
+
+/* this function exports the deck to a text */
+function exportDecktoTxt() {
+
+}
+
+
+
+$('#export-deck').on('click', function(){
+
+    let exportDeck = `<deckname>${$('#deck-title').text()}</deckname>\n\n`;
+
+    exportDeck = exportDeck + `<front-title>${$('#cards-title-frontside').text()}</front-title>\n`;
+    exportDeck = exportDeck + `<back-title>${$('#cards-title-backside').text()}</back-title>\n\n`;
+
+    
+
+
+    let cards = '';
+
+    
+
+    //alert(exportDeck);
+
+    let numberOfCardsOnScreen = $('.card-frontside').length;
+
+    for(let i = 0; i < numberOfCardsOnScreen; i++) {
+        cards = cards + $('.card-frontside').eq(i).text() + ',' + $('.card-backside').eq(i).text() + ';\n';
+    }
+
+    cards = cards.substring(0, cards.length-2);
+
+    exportDeck = exportDeck + `<deck>\n${cards}\n</deck>`;
+
+    alert(exportDeck);
+   
+
+});
 
 
 /* this function loads the deck description */
@@ -152,8 +184,8 @@ function loadCardsOnScreen(importFile) {
 
         $('#cards-description-div').after(`
     
-            <div class="card-frontside">${frontside}</div>
-            <div class="card-backside">${backside}</div>
+            <div class="card-frontside" class="change-field">${frontside}</div>
+            <div class="card-backside" class="change-field">${backside}</div>
     
         `);
 
@@ -167,7 +199,27 @@ function loadCardsOnScreen(importFile) {
   
 
 
+/* create new deck */
+$('#new-button').on('click', function(){
 
+     /* clear the screen before loading a deck on screen */
+     $('#cards-summary-div').empty();
+
+    /* load deckname on screen */
+    $('#cards-summary-div').append(`<div id="deck-title" class="change-field">Deck name</div>`);
+    
+
+    /* load card front and backside description on screen */
+     $('#deck-title').after(`
+                 
+        <div id="cards-description-div">
+            <div id="cards-title-frontside" class="change-field">Front side</div>
+            <div id="cards-title-backside" class="change-field">Back side</div>
+        </div>
+     
+    `);
+
+});
 
 
 
@@ -177,18 +229,15 @@ $('#add-row').on('click', function(){
 
     $('#cards-description-div').after(`
     
-        <div class="card-frontside">-</div>
-        <div class="card-backside">-</div>
+        <div class="card-frontside change-field">-</div>
+        <div class="card-backside change-field">-</div>
     
     `);
 
 });
 
-
-$(document).on('click', '.card-frontside', function() {
-
-    $('.card-frontside').css('background-color', '#D5D8CF');
-    $(this).css('background-color', '#f04a64');
+/* edit card click */
+$(document).on('click', '.change-field', function() {
 
     let change = prompt("Change description", $(this).text());
 
