@@ -1,0 +1,13 @@
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #D5D8CF;
+    letter-spacing: 1px;
+}
+
+#message-404 {
+    font-size: 20px;
+    text-align: center;
+    padding: 30px;
+}
