@@ -3,15 +3,13 @@
 /* August 2021 */
 
 
-
-
 #content-index {
     text-align: left;
     padding: 50px 0;
     margin: 0 auto;
     width: 40%;
     box-sizing: border-box;
-    min-height: 100vh;
+    min-height: 80vh;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -24,11 +22,13 @@ h2 {
     letter-spacing: 1px;
 }
 
+
 p {
     font-size: 18px;
     color: #707070;
     letter-spacing: 1px;
 }
+
 
 #contact-form-div {
     box-sizing: border-box;
@@ -44,6 +44,7 @@ p {
     padding-top: 30px;
 }
 
+
 .contact-textbox {
     font-size: 18px;
     padding: 3px 0 3px 5px;
@@ -51,15 +52,18 @@ p {
     margin-bottom: 8px;
 }
 
+
 .mandatory-astrisk {
     font-size: 18px;
     color: #f04a64;
 }
 
+
 #message {
     resize: none;
     width: 100%;
 }
+
 
 #form-button {
     color: whitesmoke;
@@ -71,10 +75,12 @@ p {
     margin-bottom: 20px;
 }
 
+
 #form-button:hover {
     background-color: #b33649;
     transition: 1s;
 }
+
 
 #sent-message {
     margin: 20px;
@@ -85,8 +91,7 @@ p {
 }
 
 
-
-/* media queries for deck.html only */
+/* media queries for contact.html only */
 
 /* for tablets and phones */
 @media only screen and (max-width: 768px) { 

@@ -2,12 +2,15 @@
 /* Author: Maurice Vossen */
 /* August 2021 */
 
+
 #content-index {
     text-align: left;
     padding: 50px 0;
     margin: 0 auto;
     width: 50%;
+    min-height: 80vh;
 }
+
 
 h2 {
     color: #707070;
@@ -16,13 +19,12 @@ h2 {
     letter-spacing: 1px;
 }
 
+
 p {
     font-size: 18px;
     color: #707070;
     letter-spacing: 1px;
 }
-
-
 
 
 #socials-follow {

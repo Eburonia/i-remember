@@ -5,7 +5,9 @@
 
 #content-editor-page {
     box-sizing: border-box;
+    min-height: 80vh;
 }
+
 
 #editor-div {
     width: 50%;
@@ -39,13 +41,14 @@
 
 .editor-button, input[type=file]::file-selector-button {
     color: whitesmoke;
-    border: 2px solid #9C1228;
+    border: 1px solid #9C1228;
     border-radius: 6px;
     background-color: #f04a64;
     font-weight: 700;
     padding: 5px 10px;
     letter-spacing: 1px;
     font-size: 12px;
+    cursor: pointer;
 }
 
 
@@ -82,6 +85,8 @@ input[type=file] {
     padding-left: 10px;
     font-weight: 600;
     border-radius: 6px;
+    margin: 4px 0;
+    margin-top: 20px;
     cursor: pointer;
 }
 
@@ -93,7 +98,7 @@ input[type=file] {
     float: left;
     padding: 6px;
     padding-left: 10px;
-    margin: 2px 0;
+    margin: 4px 0;
     border-radius: 6px;
     cursor: pointer;
     white-space: nowrap;
@@ -103,12 +108,12 @@ input[type=file] {
     background-color: #959890;
     color:whitesmoke;
     box-sizing: border-box;
-    width: calc(50% + 18px);
+    width: calc(50% + 16px);
     float: left;
     padding: 6px;
     padding-left: 10px;
-    margin: 2px 0;
-    margin-left: 2px;
+    margin: 4px 0;
+    margin-left: 4px;
     border-radius: 6px;
     cursor: pointer;
     white-space: nowrap;
@@ -123,7 +128,7 @@ input[type=file] {
     float: left;
     padding: 6px;
     padding-left: 10px;
-    margin: 2px 0;
+    margin: 4px 0;
     border-radius: 6px;
     cursor: pointer;
     white-space: nowrap;
@@ -133,12 +138,12 @@ input[type=file] {
     background-color: #D5D8CF;
     color: #707070;
     box-sizing: border-box;
-    width: calc(50% - 20px);
+    width: calc(50% - 26px);
     float: left;
     padding: 6px;
     padding-left: 10px;
-    margin: 2px 0;
-    margin-left: 2px;
+    margin: 4px 0;
+    margin-left: 4px;
     border-radius: 6px;
     cursor: pointer;
     white-space: nowrap;
@@ -153,14 +158,14 @@ input[type=file] {
 
 .delete-card{
     background-color: #f04a64;
-    border: 2px solid #9C1228;
+    border: 1px solid #9C1228;
     color: whitesmoke;
     box-sizing: border-box;
     width: 36px;
     float: left;
-    padding: 4px;
-    margin: 2px 0;
-    margin-left: 2px;
+    padding: 5px;
+    margin: 4px 0;
+    margin-left: 4px;
     border-radius: 6px;
     cursor: pointer;
     text-align: center;

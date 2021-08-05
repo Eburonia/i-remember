@@ -100,12 +100,13 @@ header {
     border-top: 2px solid #f04a64
 }
 
+
 #active > a {
     color: #f04a64 !important;
 } 
 
 
-/* media queries for deck.html only */
+/* media queries for header.html only */
 
 /* for tablets and phones */
 @media only screen and (max-width: 900px) { 
