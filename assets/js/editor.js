@@ -26,15 +26,14 @@ function loadStartScreen() {
 
     <div id="cards-summary-div"></div>
 
-    <div id="cards-summary-buttons">
+        <div id="editor-buttons-div">
         
-            <input type="file" id="browse-button" />
-            <button id="read-button">Read File</button>
-            <button id="new-button">New Deck</button>
-            <button id="add-row">Add Row</button>
-            <button id="export-deck">Export</button>
-
-    </div>
+                <input type="file" id="browse-button" />
+                <button class="editor-button" id="read-button">Read File</button>
+                <button class="editor-button"id="new-button">New Deck</button>
+                <button class="editor-button"id="add-row">Add Row</button>
+                <button class="editor-button"id="export-deck">Export</button>
+        </div>
 
     `);
 
@@ -260,6 +259,9 @@ $(document).on('click', '.delete-card', function(){
     }
 
 });
+
+
+
 
 
 

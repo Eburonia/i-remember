@@ -3,7 +3,6 @@
 /* August 2021 */
 
 
-
 #content-editor-page {
     box-sizing: border-box;
 }
@@ -18,21 +17,60 @@
     color: #707070;
 }
 
-#cards-summary-div, #cards-summary-buttons {
+
+#cards-summary-div, #editor-buttons-div {
     margin: 0px auto;
     width: 50%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 0px;
     overflow: hidden;
 }
 
-#cards-summary-buttons {
-    margin: 0px auto;
+#editor-buttons-div {
     margin-bottom: 40px;
+    margin-top: 10px;
     background-color: #707070;
     border-radius: 6px;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    overflow: hidden;
 }
+
+.editor-button, input[type=file]::file-selector-button {
+    color: whitesmoke;
+    border: 2px solid #9C1228;
+    border-radius: 6px;
+    background-color: #f04a64;
+    font-weight: 700;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+
+.editor-button {
+    margin-bottom: 10px;
+}
+
+
+.editor-button:hover, input[type=file]::file-selector-button:hover {
+    background-color: #bb1932;
+}
+
+
+input[type=file] {
+    background-color: whitesmoke;
+    padding: 2px;
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+}
+
 
 #deck-title {
     background-color: #707070;
@@ -51,20 +89,21 @@
     background-color: #959890;
     color: whitesmoke;
     box-sizing: border-box;
-    width: calc(48% - 1px);
+    width: calc(50% - 20px);
     float: left;
     padding: 6px;
     padding-left: 10px;
     margin: 2px 0;
     border-radius: 6px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 #cards-title-backside {
     background-color: #959890;
     color:whitesmoke;
     box-sizing: border-box;
-    width: calc(52% - 1px);
+    width: calc(50% + 18px);
     float: left;
     padding: 6px;
     padding-left: 10px;
@@ -72,26 +111,29 @@
     margin-left: 2px;
     border-radius: 6px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 
 .card-frontside  {
     background-color: #D5D8CF;
+    color: #707070;
     box-sizing: border-box;
-    width: calc(48% - 1px);
+    width: calc(50% - 20px);
     float: left;
     padding: 6px;
     padding-left: 10px;
     margin: 2px 0;
     border-radius: 6px;
     cursor: pointer;
-    
+    white-space: nowrap;
 }
 
 .card-backside  {
     background-color: #D5D8CF;
+    color: #707070;
     box-sizing: border-box;
-    width: calc(48% - 1px);
+    width: calc(50% - 20px);
     float: left;
     padding: 6px;
     padding-left: 10px;
@@ -99,31 +141,54 @@
     margin-left: 2px;
     border-radius: 6px;
     cursor: pointer;
+    white-space: nowrap;
+}
+
+
+#deck-title:hover, #cards-title-frontside:hover, #cards-title-backside:hover, .card-frontside:hover, .card-backside:hover {
+    color: whitesmoke;
+    background-color: #f04a64;
 }
 
 
 .delete-card{
     background-color: #f04a64;
+    border: 2px solid #9C1228;
     color: whitesmoke;
     box-sizing: border-box;
-    width: calc(4% - 2px);
+    width: 36px;
     float: left;
-    padding: 6px;
+    padding: 4px;
     margin: 2px 0;
     margin-left: 2px;
     border-radius: 6px;
     cursor: pointer;
     text-align: center;
+    white-space: nowrap;
 }
 
 
-#export-deck, #read-button, #add-row, #new-button, #edit-card {
-    margin-top: 5px;
-    padding: 5px 10px;
-}
-
-#browse-button {
+#browse-button::before {
     background-color: whitesmoke;
     padding: 4px;
     border-radius: 8px;
+    content: 'select a deck';
 }
+
+
+/* media queries for editor.html only */
+
+/* for tablets and phones */
+@media only screen and (max-width: 900px) { 
+
+    #content-editor-page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #editor-div, #cards-summary-div, #editor-buttons-div {
+        width: 100%;
+    }
+
+}
+
