@@ -3,29 +3,23 @@
 /* August 2021 */
 
 
-body {
-    min-height: 100vh;
-}
-
 
 #content-editor-page {
     box-sizing: border-box;
 }
 
 #editor-div {
-
     width: 50%;
     margin: 0 auto;
     font-size: 32px;
     font-weight: 500;
-    padding: 10px;
+    padding-left: 20px;
     margin-top: 20px;
     color: #707070;
 }
 
-
 #cards-summary-div, #cards-summary-buttons {
-    margin: 50px auto;
+    margin: 0px auto;
     width: 50%;
     box-sizing: border-box;
     padding: 10px;
@@ -33,9 +27,11 @@ body {
 }
 
 #cards-summary-buttons {
-    margin: 20px auto;
+    margin: 0px auto;
+    margin-bottom: 40px;
     background-color: #707070;
     border-radius: 6px;
+    padding: 10px;
 }
 
 #deck-title {
@@ -55,7 +51,7 @@ body {
     background-color: #959890;
     color: whitesmoke;
     box-sizing: border-box;
-    width: calc(50% - 1px);
+    width: calc(48% - 1px);
     float: left;
     padding: 6px;
     padding-left: 10px;
@@ -68,7 +64,7 @@ body {
     background-color: #959890;
     color:whitesmoke;
     box-sizing: border-box;
-    width: calc(50% - 1px);
+    width: calc(52% - 1px);
     float: left;
     padding: 6px;
     padding-left: 10px;
@@ -82,7 +78,7 @@ body {
 .card-frontside  {
     background-color: #D5D8CF;
     box-sizing: border-box;
-    width: calc(50% - 1px);
+    width: calc(48% - 1px);
     float: left;
     padding: 6px;
     padding-left: 10px;
@@ -95,7 +91,7 @@ body {
 .card-backside  {
     background-color: #D5D8CF;
     box-sizing: border-box;
-    width: calc(50% - 1px);
+    width: calc(48% - 1px);
     float: left;
     padding: 6px;
     padding-left: 10px;
@@ -106,11 +102,24 @@ body {
 }
 
 
+.delete-card{
+    background-color: #f04a64;
+    color: whitesmoke;
+    box-sizing: border-box;
+    width: calc(4% - 2px);
+    float: left;
+    padding: 6px;
+    margin: 2px 0;
+    margin-left: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+}
+
 
 #export-deck, #read-button, #add-row, #new-button, #edit-card {
     margin-top: 5px;
     padding: 5px 10px;
-
 }
 
 #browse-button {

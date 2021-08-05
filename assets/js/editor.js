@@ -1,4 +1,6 @@
-
+/* assets/css/editor.js */
+/* Author: Maurice Vossen */
+/* August 2021 */
 
 /* function start the download procedure */
 /* Credit: https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server */
@@ -22,9 +24,7 @@ function loadStartScreen() {
 
     <div id="editor-div">Editor</div>
 
-    <div id="cards-summary-div">
-    
-    </div>
+    <div id="cards-summary-div"></div>
 
     <div id="cards-summary-buttons">
         
@@ -54,11 +54,11 @@ document.querySelector("#read-button").addEventListener('click', function() {
 		let reader = new FileReader();
 
         /* check if textfile is selected */
-        if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
+        if(file.name.substring(file.name.length-4, file.name.length) === '.irm') {
            /* a txt file is selected */
         }
         else {
-            alert('select a .txt file');
+            alert('select a .irm file');
             return;
         }
 
@@ -90,28 +90,6 @@ document.querySelector("#read-button").addEventListener('click', function() {
             /* loads the cards on screen */
             loadCardsOnScreen(deck);
 
-
-            
-        /* 
-            $('#cards-summary-div').empty();
-            
-            $('#cards-summary-div').append(`<div id="cards-summary-title">Deck Name</div>`);
-
-            
-        for(let i = 0; i < numberOfCardsInDeck; i++) {
-
-                $('#cards-summary-title').after(`
-            
-                <div class="cards-summary-frontside">${deck[i].brand}</div>
-                <div class="cards-summary-backside">${deck[i].color}</div>
-            
-                `);
-
-            }
-                */
-
-
-
 		});
 
 		reader.readAsText(file);
@@ -140,15 +118,13 @@ $('#export-deck').on('click', function(){
 
     exportDeck = exportDeck + `<deck>\n${cards}\n</deck>`;
 
-    alert(exportDeck);
+    alert('this deck will be downloaded as a .rm file');
 
+    let docname = $('#deck-title').text() + '.irm';
 
-    let docname = $('#deck-title').text() + '.txt';
-
-    // Start file download.
+    /* Start file download. */
     download(docname, exportDeck);
 
-   
 
 });
 
@@ -209,15 +185,12 @@ function loadCardsOnScreen(importFile) {
     
             <div class="card-frontside change-field">${frontside}</div>
             <div class="card-backside change-field">${backside}</div>
+            <div class="delete-card" title="delete card"><i class="far fa-trash-alt"></i></div>
            
         `);
 
     }
-  
-   
 
-
-  
 }
   
 
@@ -251,7 +224,8 @@ $('#add-row').on('click', function(){
     
         <div class="card-frontside change-field">-</div>
         <div class="card-backside change-field">-</div>
-    
+        <div class="delete-card" title="delete card"><i class="far fa-trash-alt"></i></div>
+
     `);
 
 });
@@ -266,6 +240,25 @@ $(document).on('click', '.change-field', function() {
         $(this).text(change);
     }
 
+
+});
+
+
+/* on click the card will be deleted */
+$(document).on('click', '.delete-card', function(){
+
+    // show confirm screen to be sure you want to delete the card
+    let isExecuted = confirm("Are you sure you want to delete this card?");
+
+    // if pressed OK
+    if(isExecuted) {
+
+        // delete the fields at pressed index
+        $('.card-frontside').eq($('.delete-card').index(this)).remove();
+        $('.card-backside').eq($('.delete-card').index(this)).remove();
+        $('.delete-card').eq($('.delete-card').index(this)).remove();
+
+    }
 
 });
 
