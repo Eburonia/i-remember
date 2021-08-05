@@ -1,6 +1,7 @@
 
 
-
+/* function start the download procedure */
+/* Credit: https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server */
 function download(filename, text) {
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -15,18 +16,9 @@ function download(filename, text) {
   }
   
   
-  
-
-
-
-
-
-
-
-
-
-
-$('#content-editor-page').append(`
+/* function loads the start screen */
+function loadStartScreen() {
+    $('#content-editor-page').append(`
 
     <div id="editor-div">Editor</div>
 
@@ -44,15 +36,31 @@ $('#content-editor-page').append(`
 
     </div>
 
-`);
+    `);
 
+}
+
+
+/* load start screen */
+loadStartScreen();
+
+
+/* function load the deck on screen */
 document.querySelector("#read-button").addEventListener('click', function() {
 
         let deck;
-        let numberOfCardsInDeck;
 
 		let file = document.querySelector("#browse-button").files[0];
 		let reader = new FileReader();
+
+        /* check if textfile is selected */
+        if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
+           /* a txt file is selected */
+        }
+        else {
+            alert('select a .txt file');
+            return;
+        }
 
 		reader.addEventListener('load', function(e) {
 
@@ -111,6 +119,7 @@ document.querySelector("#read-button").addEventListener('click', function() {
 });
 
 
+/* on click deck will be exported to a txt file */
 $('#export-deck').on('click', function(){
 
     let exportDeck = `<deckname>${$('#deck-title').text()}</deckname>\n\n`;
@@ -144,7 +153,7 @@ $('#export-deck').on('click', function(){
 });
 
 
-/* this function loads the deck description */
+/* function loads the deck description */
 function getDeckDescription(importFile) {
 
     let start = importFile.indexOf('<deckname>');
@@ -152,11 +161,10 @@ function getDeckDescription(importFile) {
   
     return importFile.substring(start+10, end);
 
-  }
+}
 
 
-
-/* this function loads the deck's cards front side description */
+/* function loads the deck's cards front side description */
 function getDeckFrontSideDescription(importFile) {
 
     let start = importFile.indexOf('<front-title>');
@@ -164,11 +172,10 @@ function getDeckFrontSideDescription(importFile) {
   
     return importFile.substring(start + 13, end);
   
-  }
+}
 
 
-
-/* this function loads the deck's cards back side description */
+/* function loads the deck's cards back side description */
 function getDeckBackSideDescription(importFile) {
 
   let start = importFile.indexOf('<back-title>');
@@ -179,9 +186,7 @@ function getDeckBackSideDescription(importFile) {
 }
 
 
-
-
-/* this function loads the deck's cards on screen */
+/* function loads the deck's cards on screen */
 function loadCardsOnScreen(importFile) {
 
     let start = importFile.indexOf('<deck>');
@@ -213,11 +218,10 @@ function loadCardsOnScreen(importFile) {
 
 
   
-  }
+}
   
 
-
-/* create new deck */
+/* on click a new deck will be created */
 $('#new-button').on('click', function(){
 
      /* clear the screen before loading a deck on screen */
@@ -240,9 +244,7 @@ $('#new-button').on('click', function(){
 });
 
 
-
-
-/* add row to summary */
+/* on click a new card will be added to the deck */
 $('#add-row').on('click', function(){
 
     $('#cards-description-div').after(`
@@ -254,7 +256,8 @@ $('#add-row').on('click', function(){
 
 });
 
-/* edit card click */
+
+/* on click a card can be adjusted */
 $(document).on('click', '.change-field', function() {
 
     let change = prompt("Change description", $(this).text());
