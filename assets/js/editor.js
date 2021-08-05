@@ -173,24 +173,23 @@ function loadCardsOnScreen(importFile) {
     cards = cards.replace(/(\r\n|\n|\r)/gm, "");
     cards = cards.replace('\t', '');
   
-  
     let card = cards.split(';');
-  
+
     for(let i in card) {
   
         let frontside = card[i].slice(0, card[i].indexOf(','));
         let backside = card[i].slice(card[i].indexOf(',')+1, card[i].length);
 
-        $('#cards-description-div').after(`
+        $('#cards-description-div').append(`
     
             <div class="card-frontside change-field">${frontside}</div>
             <div class="card-backside change-field">${backside}</div>
             <div class="delete-card" title="delete card"><i class="far fa-trash-alt"></i></div>
-           
+                
         `);
 
     }
-
+  
 }
   
 
