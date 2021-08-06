@@ -5,6 +5,7 @@
 /* function start the download procedure */
 /* Credit: https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server */
 function download(filename, text) {
+
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', filename);
@@ -15,14 +16,15 @@ function download(filename, text) {
     element.click();
   
     document.body.removeChild(element);
-  }
+}
   
   
 /* function loads the start screen */
 function loadStartScreen() {
+
     $('#content-editor-page').append(`
 
-    <div id="editor-div">Editor</div>
+    <div id="editor-div"><h2>Editor</h2></div>
 
     <div id="cards-summary-div"></div>
 
@@ -45,6 +47,7 @@ loadStartScreen();
 
 
 /* function load the deck on screen */
+/* Credit: this is not my code, from internet */
 document.querySelector("#read-button").addEventListener('click', function() {
 
         let deck;
@@ -53,11 +56,11 @@ document.querySelector("#read-button").addEventListener('click', function() {
 		let reader = new FileReader();
 
         /* check if textfile is selected */
-        if(file.name.substring(file.name.length-4, file.name.length) === '.irm') {
+        if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
            /* a txt file is selected */
         }
         else {
-            alert('select a .irm file');
+            alert('select a .txt file');
             return;
         }
 
@@ -100,30 +103,29 @@ document.querySelector("#read-button").addEventListener('click', function() {
 $('#export-deck').on('click', function(){
 
     let exportDeck = `<deckname>${$('#deck-title').text()}</deckname>\n\n`;
+    let cards = '';
+    let numberOfCardsOnScreen = $('.card-frontside').length;
+
 
     exportDeck = exportDeck + `<front-title>${$('#cards-title-frontside').text()}</front-title>\n`;
     exportDeck = exportDeck + `<back-title>${$('#cards-title-backside').text()}</back-title>\n\n`;
 
-    
-    let cards = '';
-
-    let numberOfCardsOnScreen = $('.card-frontside').length;
 
     for(let i = 0; i < numberOfCardsOnScreen; i++) {
-        cards = cards + $('.card-frontside').eq(i).text() + ',' + $('.card-backside').eq(i).text() + ';\n';
+        cards = cards + $('.card-frontside').eq(i).text() + '+' + $('.card-backside').eq(i).text() + '|\n';
     }
 
-    cards = cards.substring(0, cards.length-2);
 
+    cards = cards.substring(0, cards.length-2);
     exportDeck = exportDeck + `<deck>\n${cards}\n</deck>`;
 
-    alert('this deck will be downloaded as a .rm file');
 
-    let docname = $('#deck-title').text() + '.irm';
+    alert('this deck will be downloaded as a .txt file');
 
-    /* Start file download. */
-    download(docname, exportDeck);
+    let docName = $('#deck-title').text() + '.txt';
 
+    /* Start deck export to .txt file, to be saved on your device */
+    download(docName, exportDeck);
 
 });
 
@@ -172,12 +174,12 @@ function loadCardsOnScreen(importFile) {
     cards = cards.replace(/(\r\n|\n|\r)/gm, "");
     cards = cards.replace('\t', '');
   
-    let card = cards.split(';');
+    let card = cards.split('|');
 
     for(let i in card) {
   
-        let frontside = card[i].slice(0, card[i].indexOf(','));
-        let backside = card[i].slice(card[i].indexOf(',')+1, card[i].length);
+        let frontside = card[i].slice(0, card[i].indexOf('+'));
+        let backside = card[i].slice(card[i].indexOf('+') + 1, card[i].length);
 
         $('#cards-description-div').append(`
     
@@ -233,11 +235,45 @@ $('#add-row').on('click', function(){
 $(document).on('click', '.change-field', function() {
 
     let change = prompt("Change description", $(this).text());
+    let stopChange = false;
 
-    if(change) {
-        $(this).text(change);
+    /* check wheter certain characters are used, these are blocked because they are used as special characters in the txt file */
+    for(let i in change) {
+
+        switch(change[i]) {
+
+            case '+':
+            alert('\'+\' is a special character which cannot be used');
+            stopChange = true;
+            break;
+
+            case '|':
+            alert('\'|\' is a special character which cannot be used');
+            stopChange = true;
+            break;
+
+            case '<':
+            alert('\'<\' is a special character which cannot be used');
+            stopChange = true;
+            break;
+
+            case '>':
+            alert('\'>\' is a special character which cannot be used');
+            stopChange = true;
+            break;
+
+        }
+
     }
 
+    /* change the textfield when no special character is used */
+    if(!stopChange) {
+
+        if(change) {
+           $(this).text(change);
+        }
+
+    }
 
 });
 

@@ -20,6 +20,13 @@
 }
 
 
+h2 {
+    color: #707070;
+    font-size: 24px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
 #cards-summary-div, #editor-buttons-div {
     margin: 0px auto;
     width: 50%;
@@ -156,7 +163,7 @@ input[type=file] {
 }
 
 
-.delete-card{
+.delete-card {
     background-color: #f04a64;
     border: 1px solid #9C1228;
     color: whitesmoke;
@@ -170,6 +177,11 @@ input[type=file] {
     cursor: pointer;
     text-align: center;
     white-space: nowrap;
+}
+
+
+.delete-card:hover {
+    background-color: #bb1932;
 }
 
 
