@@ -1,0 +1,85 @@
+/* assets/css/practice.css */
+/* Author: Maurice Vossen */
+/* August 2021 */
+
+
+#content-index {
+    text-align: left;
+    padding: 50px 0;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 80vh;
+}
+
+
+#practice-flashcards {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+
+#deck-title {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#shown-cards-stats {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#card-from, #total-cards {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+#flashcard {
+    background-color: #D5D8CF;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 24px;
+}
+
+
+#front-side, #back-side {
+    text-align: center;
+    margin: 10px;
+    min-height: 150px;
+    padding-top: 10px;
+    letter-spacing: 1px;
+}
+
+
+#front-side-title, #back-side-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+#question, #answer {
+    padding-top: 5px;
+    letter-spacing: 1px;
+}
+
+
+#input-field-div {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #707070;
+    border-radius: 24px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
