@@ -4,7 +4,7 @@
 
 
 /* declare the memory for the deck */
-var deckMemory = [];
+let deckMemory = [];
 
 
 /* function loads the start screen of the practice page */
@@ -47,21 +47,21 @@ function openPracticeScreen() {
 
         <div id="deck-title">-</div>
 
-        <div id="shown-cards-stats">CARD <span id="card-from">-</span> OF <span id="total-cards">-</span> SHOWN</div>
+        <div id="shown-cards-stats">CARD <span id="current-card">0</span> OF <span id="total-cards">-</span> SHOWN</div>
     
         <div id="flashcard">
         
             <div id="front-side">
 
                 <span id="front-side-title">-</span>
-                <p id="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolore? Quas eius tempore animi similique consequuntur eum mollitia optio tempora fugit tenetur sit modi reprehenderit quis, accusantium, eligendi, ipsam distinctio.</p>
+                <p id="question"></p>
 
             </div>
 
             <div id="back-side">
 
                 <span id="back-side-title">-</span>
-                <p id="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolore? Quas eius tempore animi similique consequuntur eum mollitia optio tempora fugit tenetur sit modi reprehenderit quis, accusantium, eligendi, ipsam distinctio.</p>
+                <p id="answer"></p>
 
             </div>
 
@@ -69,7 +69,7 @@ function openPracticeScreen() {
 
         <div id="input-field-div">
 
-            <div id="score">CORRECT <span id="correct">4</span> - WRONG <span id="wrong">6</span></div>
+            <div id="score">CORRECT <span id="correct">0</span> - WRONG <span id="wrong">0</span></div>
 
             <div id="input-div"><input type="text" id="input-textbox"></div>
 
@@ -171,6 +171,86 @@ function getNumberOfCardsInDeck(deckMemory) {
 openStartScreen();
 
 
+function fireQuestion() {
+
+
+    let currentCard = $('#current-card').text();
+    
+
+    if(currentCard == deckMemory.length) {
+
+
+        $("#input-textbox").prop('disabled', true);
+
+    }
+
+
+
+    else {
+
+    
+        do {
+
+            pullCard = Math.floor(deckMemory.length * Math.random(0, 1));
+
+        } while(deckMemory[pullCard].show == false);
+
+        deckMemory[pullCard].show = false;
+        $('#question').text(deckMemory[pullCard].frontside);
+        $('#answer').text(deckMemory[pullCard].backside);
+
+        currentCard++;
+        $('#current-card').text(currentCard);
+    
+
+    }
+
+
+
+
+
+
+  /*  $('#back-side-title').hide();
+    $('#answer').hide();
+    $('#input-textbox').focus();
+
+    let pullCard;
+
+    $('#current-card').text(currentShownCard);
+
+    if(currentShownCard < deckMemory.length)
+    {
+     
+        $('#answer').text('');
+        
+        do {
+
+            pullCard = Math.floor(deckMemory.length * Math.random(0, 1));
+
+        } while(deckMemory[pullCard].show == false);
+
+        deckMemory[pullCard].show = false;
+        $('#question').text(deckMemory[pullCard].frontside);
+        $('#answer').text(deckMemory[pullCard].backside);
+
+        
+        
+
+    }
+
+    else {
+
+        $("#input-textbox").prop('disabled', true);
+   
+    } */
+
+}
+
+
+
+
+
+
 
 /* click events */
 
@@ -218,6 +298,11 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
         /* load the deck's back side of cards description into the practice screen */
         $('#back-side-title').text(getDeckBackSideDescription(deck));
 
+        /* fire first question on practice screen */
+        fireQuestion();
+
+        
+
     });
 
     reader.readAsText(file);
@@ -226,16 +311,20 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 
 
 /* on click show the question answer */
-$('#answer-button').on('click', function(){
+$(document).on('click', '#answer-button', function(){
 
-    alert('test');
+    $('#back-side-title').show();
+    $('#answer').show();
 
 });
 
 
 /* on click show the next question */
-$('#next-card-button').on('click', function(){
+$(document).on('click', '#next-card-button', function(){
 
-    alert('test');
+   
+  
+
+    fireQuestion();
 
 });

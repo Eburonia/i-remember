@@ -102,7 +102,7 @@
     color: #707070;
 }
 
-#card-from, #total-cards {
+#current-card, #total-cards {
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 1px;
