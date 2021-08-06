@@ -69,6 +69,11 @@ header {
 }
 
 
+#navbar-toggle-button:hover {
+    background-color: #bb1932;
+}
+
+
 #toggle-menu, #toggle-menu > ul {
     display: none;
 }
