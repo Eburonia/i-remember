@@ -39,17 +39,42 @@ function openPlayScreen() {
 
 
         <div id="input-field-div">
+
+            <div id="score">CORRECT <span id="correct">4</span> - WRONG <span id="wrong">6</span></div>
+
+            <div id="input-div"><input type="text" id="input-textbox"></div>
+
+            <div id="buttons-div">
+
+                <button id="answer-button">show answer</button>
+                <button id="next-card-button">next card</button>
             
-            <input type="text" id="input-textbox">
+            </div>
 
         </div>
 
-
-
     `);
 
-
+    /* focus on textbox when screen loads */
+    $('#input-textbox').focus();
 
 }
 
 openPlayScreen();
+
+/* on click show the question answer */
+$('#answer-button').on('click', function(){
+
+    alert('test');
+
+});
+
+
+/* on click show the next question */
+$('#next-card-button').on('click', function(){
+
+    alert('test');
+
+});
+
+
