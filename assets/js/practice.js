@@ -3,8 +3,9 @@
 /* August 2021 */
 
 
-/* declare the memory for the dack */
+/* declare the memory for the deck */
 var deckMemory = [];
+
 
 /* function loads the start screen of the practice page */
 function openStartScreen() {
@@ -20,11 +21,14 @@ function openStartScreen() {
                 <div id="open-deck-div">Open Deck
                 <p>Click the 'browse button' bellow and select a deck (.txt file)</p>
                 <input type="file" id="browse-button" />
-                <button id="load-deck-button">load deck</button></div>
+                <button id="load-deck-button">load deck</button>
+                </div>
             
             </div>
         
         `);
+
+        $("#start-practice-button").prop('disabled', true);
 
 }
 
@@ -41,22 +45,22 @@ function openPracticeScreen() {
     
         <div id="practice-flashcards">PRACTICE FLASHCARDS</div>
 
-        <div id="deck-title">ENGLISH - DUTCH</div>
+        <div id="deck-title">-</div>
 
-        <div id="shown-cards-stats">CARD <span id="card-from">4</span> OF <span id="total-cards">10</span> SHOWN</div>
+        <div id="shown-cards-stats">CARD <span id="card-from">-</span> OF <span id="total-cards">-</span> SHOWN</div>
     
         <div id="flashcard">
         
             <div id="front-side">
 
-                <span id="front-side-title">QUESTION</span>
+                <span id="front-side-title">-</span>
                 <p id="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolore? Quas eius tempore animi similique consequuntur eum mollitia optio tempora fugit tenetur sit modi reprehenderit quis, accusantium, eligendi, ipsam distinctio.</p>
 
             </div>
 
             <div id="back-side">
 
-                <span id="back-side-title">ANSWER</span>
+                <span id="back-side-title">-</span>
                 <p id="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolore? Quas eius tempore animi similique consequuntur eum mollitia optio tempora fugit tenetur sit modi reprehenderit quis, accusantium, eligendi, ipsam distinctio.</p>
 
             </div>
@@ -122,6 +126,46 @@ function loadDeckIntoMemory(importFile) {
 }
 
 
+/* function returns the deck description */
+function getDeckDescription(importFile) {
+
+    let start = importFile.indexOf('<deckname>');
+    let end = importFile.indexOf('</deckname>');
+  
+    return importFile.substring(start+10, end);
+
+}
+
+
+/* function returns the deck's cards front side description */
+function getDeckFrontSideDescription(importFile) {
+
+    let start = importFile.indexOf('<front-title>');
+    let end = importFile.indexOf('</front-title>');
+  
+    return importFile.substring(start + 13, end);
+  
+}
+
+
+/* function returns the deck's cards back side description */
+function getDeckBackSideDescription(importFile) {
+
+  let start = importFile.indexOf('<back-title>');
+  let end = importFile.indexOf('</back-title>');
+
+  return importFile.substring(start + 12, end);
+
+}
+
+
+/* function returns the number of cards in the loaded deck */ 
+function getNumberOfCardsInDeck(deckMemory) {
+
+    return deckMemory.length;
+
+}
+
 
 /* loads the start screen */
 openStartScreen();
@@ -134,8 +178,6 @@ openStartScreen();
 /* Credit: this is not my code, from internet */
 document.querySelector("#load-deck-button").addEventListener('click', function() {
 
-    //alert('test');
-
     let deck;
 
     let file = document.querySelector("#browse-button").files[0];
@@ -143,8 +185,14 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 
     /* check if textfile is selected */
     if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
-       /* a txt file is selected */
+       
+        /* clear the screen before loading a deck into the practice screen */
+        $('#content-index').empty();
+
+        /* open the practice screen */
+        openPracticeScreen();
     }
+
     else {
         alert('select a .txt file');
         return;
@@ -154,41 +202,26 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
     reader.addEventListener('load', function(e) {
 
         deck = e.target.result;
-
-
+      
         /* load the deck into the storage */
         loadDeckIntoMemory(deck);
 
-       
-        /* clear the screen before loading a deck into the practice screen */
-        $('#content-index').empty();
+        /* load the deck description into the practice screen */
+        $('#deck-title').text(getDeckDescription(deck));
 
+        /* load the amount of card in the loaded deck into the practice screen */
+        $('#total-cards').text(getNumberOfCardsInDeck(deckMemory));
 
-        /* open the practice screen */
-        openPracticeScreen()
+        /* load the deck's front side of cards description into the practice screen */
+        $('#front-side-title').text(getDeckFrontSideDescription(deck));
 
-
-        /* load deckname on screen */
-        // $('#cards-summary-div').append(`<div id="deck-title" class="change-field">${getDeckDescription(deck)}</div>`);
-
-
-        /* load card front and backside description on screen */
-        // $('#deck-title').after(`
-        
-          //  <div id="cards-description-div">
-             //   <div id="cards-title-frontside" class="change-field">${getDeckFrontSideDescription(deck)}</div>
-              //  <div id="cards-title-backside" class="change-field">${getDeckBackSideDescription(deck)}</div>
-           // </div>
-
-       // `);
-
-        /* loads the cards on screen */
-       // loadCardsOnScreen(deck);
+        /* load the deck's back side of cards description into the practice screen */
+        $('#back-side-title').text(getDeckBackSideDescription(deck));
 
     });
 
     reader.readAsText(file);
-    
+ 
 });
 
 

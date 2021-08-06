@@ -2,6 +2,7 @@
 /* Author: Maurice Vossen */
 /* August 2021 */
 
+
 /* function start the download procedure */
 /* Credit: https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server */
 function download(filename, text) {
