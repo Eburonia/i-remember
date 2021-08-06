@@ -67,12 +67,14 @@ p {
 
 #form-button {
     color: whitesmoke;
-    padding: 3px 10px;
-    font-size: 18px;
-    border: 2px solid #9C1228;
+    border: 1px solid #9C1228;
     border-radius: 6px;
     background-color: #f04a64;
-    margin-bottom: 20px;
+    font-weight: 700;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 

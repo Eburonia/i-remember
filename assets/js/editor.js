@@ -33,9 +33,9 @@ function loadStartScreen() {
         
                 <input type="file" id="browse-button" />
                 <button class="editor-button" id="read-button">Read File</button>
-                <button class="editor-button"id="new-button">New Deck</button>
-                <button class="editor-button"id="add-row">Add Row</button>
-                <button class="editor-button"id="export-deck">Export</button>
+                <button class="editor-button" id="new-button">New Deck</button>
+                <button class="editor-button" id="add-card">Add Card</button>
+                <button class="editor-button" id="export-deck">Export</button>
         </div>
 
     `);

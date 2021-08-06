@@ -21,7 +21,7 @@ function openStartScreen() {
                 <div id="open-deck-div">Open Deck
                 <p>Click the 'browse button' bellow and select a deck (.txt file)</p>
                 <input type="file" id="browse-button" />
-                <button id="load-deck-button">load deck</button>
+                <button id="load-deck-button">Load Deck</button>
                 </div>
             
             </div>
