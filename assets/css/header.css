@@ -70,7 +70,7 @@ header {
 
 
 #navbar-toggle-button:hover {
-    background-color: #bb1932;
+    background-color: #b33649;
 }
 
 
@@ -86,11 +86,11 @@ header {
     width: 100%;
     text-align: center;
     margin: 4px 0;
-    background-color: #959890;
+    background-color: #707070;
 }
 
 #toggle-menu > ul > li > a:hover {
-    color: lightgray;
+    color: #b33649;
     transition: 1s;
 }
 

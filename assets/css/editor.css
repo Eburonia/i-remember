@@ -65,7 +65,7 @@ h2 {
 
 
 .editor-button:hover, input[type=file]::file-selector-button:hover {
-    background-color: #bb1932;
+    background-color: #b33649;
 }
 
 
@@ -98,7 +98,7 @@ input[type=file] {
 }
 
 #cards-title-frontside {
-    background-color: #959890;
+    background-color: #707070;
     color: whitesmoke;
     box-sizing: border-box;
     width: calc(50% - 20px);
@@ -112,7 +112,7 @@ input[type=file] {
 }
 
 #cards-title-backside {
-    background-color: #959890;
+    background-color: #707070;
     color:whitesmoke;
     box-sizing: border-box;
     width: calc(50% + 16px);
@@ -181,7 +181,7 @@ input[type=file] {
 
 
 .delete-card:hover {
-    background-color: #bb1932;
+    background-color: #b33649;
 }
 
 
