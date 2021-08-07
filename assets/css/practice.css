@@ -185,7 +185,7 @@
 }
 
 
-#answer-button, #next-card-button {
+#answer-button, #next-card-button, #replay-button, #other-deck-button {
     color: whitesmoke;
     border: 1px solid #9C1228;
     border-radius: 6px;

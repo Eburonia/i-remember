@@ -75,8 +75,10 @@ function openPracticeScreen() {
 
             <div id="buttons-div">
 
-                <button id="answer-button">show answer</button>
-                <button id="next-card-button">next card</button>
+                <button id="answer-button">Show Answer</button>
+                <button id="next-card-button">Next Card</button>
+                <button id="replay-button">Replay</button>
+                <button id="other-deck-button">Other Deck</button>
             
             </div>
 
@@ -86,6 +88,12 @@ function openPracticeScreen() {
 
     /* focus on textbox when screen loads */
     $('#input-textbox').focus();
+
+    /* hide the replay button */
+    $('#replay-button').hide();
+
+
+    $('#other-deck-button').hide();
 
 }
 
@@ -175,16 +183,11 @@ function fireQuestion() {
 
 
     let currentCard = $('#current-card').text();
+
+    /* hide answer */
     $('#back-side-title').hide();
     $('#answer').hide();
-
-
-    /* hide next card button when all cards are shown */
-    if(currentCard == (deckMemory.length -1)) {
     
-        $("#next-card-button").hide();
-
-    }
 
 
     /* pull a card and show it on screen */
@@ -207,54 +210,27 @@ function fireQuestion() {
         $('#current-card').text(currentCard);
     
     }
-    else
-    {
-        /* tell end-user they have finished all cards */
-        alert('all cards shown, press \' replay button \' to repead');
-    }
 
-
-
-
-
-  /*  $('#back-side-title').hide();
-    $('#answer').hide();
-    $('#input-textbox').focus();
-
-    let pullCard;
-
-    $('#current-card').text(currentShownCard);
-
-    if(currentShownCard < deckMemory.length)
-    {
-     
-        $('#answer').text('');
-        
-        do {
-
-            pullCard = Math.floor(deckMemory.length * Math.random(0, 1));
-
-        } while(deckMemory[pullCard].show == false);
-
-        deckMemory[pullCard].show = false;
-        $('#question').text(deckMemory[pullCard].frontside);
-        $('#answer').text(deckMemory[pullCard].backside);
-
-        
-        
-
-    }
-
+    /* when al cards are shown of screen */
     else {
+        $("#answer-button").hide();
+        $("#next-card-button").hide();
 
-        $("#input-textbox").prop('disabled', true);
-   
-    } */
+        /* tell end-user they have finished all cards */
+        $('#front-side-title').text('');
+        $('#question').text('all cards shown, press \'replay button\' below to repeat this deck');
 
+        $('#back-side-title').text('');
+        $('#answer').text('');
+
+        $('#other-deck-button').show();
+
+
+        /* show the replay button in order to repeat this deck */
+        $('#replay-button').show();
+    }
+    
 }
-
-
-
 
 
 
@@ -267,6 +243,7 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 
     let deck;
 
+
     let file = document.querySelector("#browse-button").files[0];
     let reader = new FileReader();
 
@@ -278,6 +255,8 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 
         /* open the practice screen */
         openPracticeScreen();
+
+        
     }
 
     else {
@@ -289,6 +268,8 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
     reader.addEventListener('load', function(e) {
 
         deck = e.target.result;
+
+        
       
         /* load the deck into the storage */
         loadDeckIntoMemory(deck);
@@ -329,9 +310,44 @@ $(document).on('click', '#answer-button', function(){
 /* on click show the next question */
 $(document).on('click', '#next-card-button', function(){
 
+    fireQuestion();
+
+});
+
+
+/* on click repeat the deck */
+$(document).on('click', '#replay-button', function() {
+
+    for(let i = 0; i < deckMemory.length; i++) {
+
+        deckMemory[i].show = true;
+ 
+    }
+
+    
+
+    $("#answer-button").show();
+
+    $('#current-card').text(0);
+
+    $('#next-card-button').show();
+
+    $('#replay-button').hide();
    
-  
+    $('#other-deck-button').hide();
+
+
+
 
     fireQuestion();
+
+});
+
+
+/* on click load other deck on screen to practice */
+$(document).on('click', '#other-deck-button', function(){
+
+    /* reloads the start screen and empties the memory */
+    location.reload(); 
 
 });
