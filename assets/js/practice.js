@@ -175,36 +175,43 @@ function fireQuestion() {
 
 
     let currentCard = $('#current-card').text();
+    $('#back-side-title').hide();
+    $('#answer').hide();
+
+
+    /* hide next card button when all cards are shown */
+    if(currentCard == (deckMemory.length -1)) {
     
-
-    if(currentCard == deckMemory.length) {
-
-
-        $("#input-textbox").prop('disabled', true);
+        $("#next-card-button").hide();
 
     }
 
 
-
-    else {
-
-    
+    /* pull a card and show it on screen */
+    if(currentCard < deckMemory.length) {
         do {
 
             pullCard = Math.floor(deckMemory.length * Math.random(0, 1));
 
         } while(deckMemory[pullCard].show == false);
 
+        /* cards which are already shown on screen set to false */
         deckMemory[pullCard].show = false;
+
+        /* show the question on screen */
         $('#question').text(deckMemory[pullCard].frontside);
         $('#answer').text(deckMemory[pullCard].backside);
 
+        /* iterate number of shown cards */
         currentCard++;
         $('#current-card').text(currentCard);
     
-
     }
-
+    else
+    {
+        /* tell end-user they have finished all cards */
+        alert('all cards shown, press \' replay button \' to repead');
+    }
 
 
 
