@@ -5,7 +5,7 @@
 
 /* declare the memory for the deck */
 let deckMemory = [];
-
+let pullCard;
 
 /* function loads the start screen of the practice page */
 function openStartScreen() {
@@ -86,8 +86,6 @@ function openPracticeScreen() {
 
     `);
 
-    /* focus on textbox when screen loads */
-    $('#input-textbox').focus();
 
     /* hide the replay button */
     $('#replay-button').hide();
@@ -140,7 +138,7 @@ function getDeckDescription(importFile) {
     let start = importFile.indexOf('<deckname>');
     let end = importFile.indexOf('</deckname>');
   
-    return importFile.substring(start+10, end);
+    return importFile.substring(start + 10, end);
 
 }
 
@@ -185,6 +183,9 @@ function fireQuestion() {
     $('#back-side-title').hide();
     $('#answer').hide();
     $('#input-textbox').val('');
+
+    /* focus on textbox when screen loads */
+    $('#input-textbox').focus();
     
 
 
@@ -231,6 +232,27 @@ function fireQuestion() {
 }
 
 
+/* function will increment the correct answer score */
+function incrementCorrectAnswer() {
+
+    let currentCorrectAnswerValue = $('#correct').text();
+    currentCorrectAnswerValue++;
+
+    $('#correct').text(currentCorrectAnswerValue); 
+}
+
+
+/* function will increment the wrong answer score */
+function incrementWrongAnswer() {
+
+    let currentWrongAnswerValue = $('#wrong').text();
+    currentWrongAnswerValue++;
+
+    $('#wrong').text(currentWrongAnswerValue); 
+}
+
+
+
 /* loads the start screen */
 openStartScreen();
 
@@ -270,13 +292,13 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 
         deck = e.target.result;
 
-        
+    
       
         /* load the deck into the storage */
         loadDeckIntoMemory(deck);
 
         /* load the deck description into the practice screen */
-        $('#deck-title').text(getDeckDescription(deck));
+        $('#deck-title').text(getDeckDescription(deck).toUpperCase());
 
         /* load the amount of card in the loaded deck into the practice screen */
         $('#total-cards').text(getNumberOfCardsInDeck(deckMemory));
@@ -303,7 +325,7 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 $(document).on('click', '#answer-button', function(){
 
     $('#back-side-title').show();
-    $('#answer').show();
+    $('#answer').css('color', 'lightbluesky').show();
 
 });
 
@@ -357,6 +379,10 @@ $(document).on('click', '#other-deck-button', function(){
 // Credit: https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
 $(document).on('keypress', '#input-textbox',  function(e) {
     
+    /* clear the answer field */
+    $('#answer').hide();
+
+    /* when enter key is pressed */
     if(e.which == 13) {
         
 
@@ -366,13 +392,10 @@ $(document).on('keypress', '#input-textbox',  function(e) {
 
 
         /* convert input answer and correct answer to lowercase for comparison reasons */
-        inputAnswer = inputAnswer.toLowerCase();
-        correctAnswer = correctAnswer.toLowerCase();
-
-        
-        if(inputAnswer === correctAnswer) {
+        if(inputAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
             $('#back-side-title').show();
-            $('#answer').text('Correct Answer!').css('color', 'limegreen').show();
+            $('#answer').text(correctAnswer);
+            $('#answer').show().css('color', 'limegreen').show();
 
             /* Timeout 2 seconds before next question will be fired */
             setTimeout(fireQuestion, 2000);
@@ -381,8 +404,11 @@ $(document).on('keypress', '#input-textbox',  function(e) {
 
         else
         {
+
+            /* show on screen the answer is wrong */
             $('#answer').text('Wrong Answer!').css('color', 'red');
             $('#answer').show();
+
         }
 
     }
