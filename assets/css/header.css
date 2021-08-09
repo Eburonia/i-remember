@@ -68,11 +68,6 @@ header {
 }
 
 
-#navbar-toggle-button:hover {
-    color: #9C1228;
-}
-
-
 #toggle-menu, #toggle-menu > ul {
     display: none;
 }
@@ -86,10 +81,11 @@ header {
     text-align: center;
     margin: 4px 0;
     background-color: #707070;
+    border-radius: 5px;
 }
 
 #toggle-menu > ul > li > a:hover {
-    color: #b33649;
+    color: #f04a64;
     transition: 1s;
 }
 
@@ -137,10 +133,12 @@ header {
 
     #active {
         border-top: 0;
+        background-color: #f04a64 !important;
+        
     }
     
     #active > a {
-        color: #f04a64 !important;
+        color: whitesmoke !important;
     } 
 
 }
