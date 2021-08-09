@@ -25,14 +25,14 @@ function loadStartScreen() {
 
     $('#content-editor-page').append(`
 
-    <div id="editor-div"><h2>Editor</h2></div>
+    <div id="editor-div"><h2>Deck Editor</h2></div>
 
     <div id="cards-summary-div"></div>
 
         <div id="editor-buttons-div">
         
-                <input type="file" id="browse-button" />
-                <button class="editor-button" id="read-button">Read File</button>
+                <input type="file" id="browse-button" /><br>
+                <button class="editor-button" id="read-button">Open Deck</button>
                 <button class="editor-button" id="new-button">New Deck</button>
                 <button class="editor-button" id="add-card">Add Card</button>
                 <button class="editor-button" id="export-deck">Export</button>
@@ -219,7 +219,7 @@ $('#new-button').on('click', function(){
 
 
 /* on click a new card will be added to the deck */
-$('#add-row').on('click', function(){
+$('#add-card').on('click', function(){
 
     $('#cards-description-div').after(`
     

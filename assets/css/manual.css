@@ -18,6 +18,7 @@ body {
     width: calc(50% + 100px);
     min-height: 80vh;
     background-color: whitesmoke;
+    border: 2px solid #f04a64;
 }
 
 
@@ -39,14 +40,13 @@ p {
 /* media queries for manual.html only */
 
 /* for tablets and phones */
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 900px) { 
 
     #content-index {
         width: calc(100% - 20px);
         box-sizing: border-box;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 50px 5px;
+        margin: 0 20px;
+        padding: 20px;
     }
 
 }

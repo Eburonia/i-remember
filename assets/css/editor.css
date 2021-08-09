@@ -3,19 +3,26 @@
 /* August 2021 */
 
 
+body {
+    background-color: #D5D8CF;
+}
+
+
 #content-editor-page {
     box-sizing: border-box;
-    min-height: 80vh;
+    background-color: whitesmoke;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 18px;
+    border: 2px solid #f04a64;
 }
 
 
 #editor-div {
-    width: 50%;
     margin: 0 auto;
     font-size: 32px;
     font-weight: 500;
-    padding-left: 20px;
-    margin-top: 20px;
     color: #707070;
 }
 
@@ -23,17 +30,16 @@
 h2 {
     color: #707070;
     font-size: 24px;
-    padding-bottom: 10px;
     letter-spacing: 1px;
 }
 
 #cards-summary-div, #editor-buttons-div {
     margin: 0px auto;
-    width: 50%;
     box-sizing: border-box;
     padding: 0px;
     overflow: hidden;
 }
+
 
 #editor-buttons-div {
     margin-bottom: 40px;
@@ -45,6 +51,7 @@ h2 {
     padding-top: 8px;
     overflow: hidden;
 }
+
 
 .editor-button, input[type=file]::file-selector-button {
     color: whitesmoke;
@@ -58,6 +65,10 @@ h2 {
     cursor: pointer;
 }
 
+
+input[type=file] {
+    width: 40%;
+}
 
 .editor-button {
     margin-bottom: 10px;
@@ -95,6 +106,8 @@ input[type=file] {
     margin: 4px 0;
     margin-top: 20px;
     cursor: pointer;
+    font-size: 20px;
+    text-align: center;
 }
 
 #cards-title-frontside {

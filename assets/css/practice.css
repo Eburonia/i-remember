@@ -3,13 +3,17 @@
 /* August 2021 */
 
 
+body {
+    background-color: #D5D8CF;
+}
+
+
 #content-index {
     text-align: left;
     padding: 20px 0;
     margin: 0 auto;
     width: 100%;
     min-height: 80vh;
-    background-color: #D5D8CF;
 }
 
 h2 {
@@ -35,6 +39,8 @@ p {
     margin: 0 auto;
     padding: 20px;
     border-radius: 18px;
+    padding: 50px;
+    border: 2px solid #f04a64;
 }
 
 
@@ -65,16 +71,10 @@ p {
 }
 
 
-
-
-
-
-
-
-
-
-
-
+#load-deck-button:hover, input[type=file]::file-selector-button:hover, #example-deck-button:hover {
+    background-color: #b33649;
+    transition: 1s;
+}
 
 
 
@@ -122,6 +122,7 @@ p {
     box-sizing: border-box;
     border-radius: 18px;
     color: #707070;
+    border: 2px solid #f04a64;
 }
 
 
@@ -158,6 +159,7 @@ p {
     padding: 20px;
     text-align: center;
     color: #707070;
+    border: 2px solid #f04a64;
 }
 
 
@@ -203,6 +205,8 @@ p {
 }
 
 
+
+
 #input-div {
     padding: 10px;
 }
@@ -210,4 +214,25 @@ p {
 
 #buttons-div {
     padding: 10px;
+}
+
+
+/* media queries for practice.html only */
+
+/* for tablets and phones */
+@media only screen and (max-width: 900px) { 
+
+    #content-index {
+        width: calc(100% - 20px);
+        box-sizing: border-box;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #start-screen {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
 }
