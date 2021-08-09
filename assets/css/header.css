@@ -82,9 +82,11 @@ header {
     margin: 4px 0;
     background-color: #707070;
     border-radius: 5px;
+    cursor: pointer;
+    color: whitesmoke;
 }
 
-#toggle-menu > ul > li > a:hover {
+#toggle-menu > ul > li:hover {
     color: #f04a64;
     transition: 1s;
 }
