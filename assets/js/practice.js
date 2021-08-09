@@ -181,12 +181,14 @@ function fireQuestion() {
 
     /* hide answer */
     $('#back-side-title').hide();
+    $('#front-side-title').show();
     $('#answer').hide();
-    $('#input-textbox').val('');
 
-    /* focus on textbox when screen loads */
+
+    /* reset the input textbox when question is fired */
+    $('#input-textbox').val('');
+    $('#input-textbox').prop('disabled', false);
     $('#input-textbox').focus();
-    
 
 
     /* pull a card and show it on screen */
@@ -216,10 +218,14 @@ function fireQuestion() {
         $("#next-card-button").hide();
 
         /* tell end-user they have finished all cards */
-        $('#front-side-title').text('');
-        $('#question').text('all cards shown, press \'replay button\' below to repeat this deck');
+        $('#front-side-title').hide();
+        $('#question').text('All cards shown, press the \'Replay\' button below to repeat this deck or press \'Other Deck\' to select an other deck.');
 
-        $('#back-side-title').text('');
+        /* disable input textbox */
+        $('#input-textbox').prop('disabled', true);
+        $("#input-textbox").blur(); // deselect textbox
+
+        $('#back-side-title').hide();
         $('#answer').text('');
 
         $('#other-deck-button').show();
@@ -236,9 +242,17 @@ function fireQuestion() {
 function incrementCorrectAnswer() {
 
     let currentCorrectAnswerValue = $('#correct').text();
-    currentCorrectAnswerValue++;
+    let currentCard = $('#current-card').text();
+    let correctScore = $('#correct').text();
+    let wrongScore = $('#wrong').text();
 
-    $('#correct').text(currentCorrectAnswerValue); 
+    if((parseInt(correctScore) + parseInt(wrongScore)) < parseInt(currentCard)) {
+
+        currentCorrectAnswerValue++;
+        $('#correct').text(currentCorrectAnswerValue);
+
+    }
+
 }
 
 
@@ -246,9 +260,16 @@ function incrementCorrectAnswer() {
 function incrementWrongAnswer() {
 
     let currentWrongAnswerValue = $('#wrong').text();
-    currentWrongAnswerValue++;
+    let currentCard = $('#current-card').text();
+    let correctScore = $('#correct').text();
+    let wrongScore = $('#wrong').text();
 
-    $('#wrong').text(currentWrongAnswerValue); 
+    if((parseInt(correctScore) + parseInt(wrongScore)) < parseInt(currentCard)) {
+
+        currentWrongAnswerValue++;
+        $('#wrong').text(currentWrongAnswerValue);
+
+    }
 }
 
 
@@ -266,7 +287,6 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 
     let deck;
 
-
     let file = document.querySelector("#browse-button").files[0];
     let reader = new FileReader();
 
@@ -279,7 +299,6 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
         /* open the practice screen */
         openPracticeScreen();
 
-        
     }
 
     else {
@@ -292,8 +311,6 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 
         deck = e.target.result;
 
-    
-      
         /* load the deck into the storage */
         loadDeckIntoMemory(deck);
 
@@ -312,8 +329,6 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
         /* fire first question on practice screen */
         fireQuestion();
 
-        
-
     });
 
     reader.readAsText(file);
@@ -324,8 +339,10 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 /* on click show the question answer */
 $(document).on('click', '#answer-button', function(){
 
+    incrementWrongAnswer();
+
     $('#back-side-title').show();
-    $('#answer').css('color', 'lightbluesky').show();
+    $('#answer').css('color', 'deepskyblue').show();
 
 });
 
@@ -359,7 +376,9 @@ $(document).on('click', '#replay-button', function() {
    
     $('#other-deck-button').hide();
 
+    $('#correct').text(0);
 
+    $('#wrong').text(0);
 
 
     fireQuestion();
@@ -385,17 +404,26 @@ $(document).on('keypress', '#input-textbox',  function(e) {
     /* when enter key is pressed */
     if(e.which == 13) {
         
+        /* disable input textbox */
+        $('#input-textbox').prop('disabled', true);
+
 
         /* get input answer and correct answer */
         let inputAnswer = $('#input-textbox').val();
         let correctAnswer = deckMemory[pullCard].backside;
 
-
         /* convert input answer and correct answer to lowercase for comparison reasons */
         if(inputAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+
+            /* deselect the textbox */
+            $("#input-textbox").blur();
+
             $('#back-side-title').show();
             $('#answer').text(correctAnswer);
             $('#answer').show().css('color', 'limegreen').show();
+
+            /* Increment correct score */
+            incrementCorrectAnswer();
 
             /* Timeout 2 seconds before next question will be fired */
             setTimeout(fireQuestion, 2000);
@@ -404,10 +432,18 @@ $(document).on('keypress', '#input-textbox',  function(e) {
 
         else
         {
+            /* disable input textbox */
+            $('#input-textbox').prop('disabled', false);
+
 
             /* show on screen the answer is wrong */
             $('#answer').text('Wrong Answer!').css('color', 'red');
             $('#answer').show();
+
+
+            /* Increment correct score */
+            incrementWrongAnswer();
+
 
         }
 
