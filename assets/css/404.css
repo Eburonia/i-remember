@@ -27,3 +27,7 @@ body{
     color: #f04a64;
     transition: 1s;
 }
+
+#message-404 > img {
+    width: 220px;
+}
