@@ -26,3 +26,19 @@ p {
     letter-spacing: 1px;
 }
 
+
+/* media queries for manual.html only */
+
+/* for tablets and phones */
+@media only screen and (max-width: 768px) { 
+
+    #content-index {
+        width: calc(100% - 20px);
+        box-sizing: border-box;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 50px 5px;
+    }
+
+}
+
