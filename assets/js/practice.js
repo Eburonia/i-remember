@@ -18,10 +18,18 @@ function openStartScreen() {
         
             <div id="start-screen">
             
-                <div id="open-deck-div">Open Deck
-                <p>Click the 'browse button' bellow and select a deck (.txt file)</p>
-                <input type="file" id="browse-button" />
-                <button id="load-deck-button">Load Deck</button>
+                <div id="open-deck-div">
+                    <h2>Open Deck</h2>
+                    <p>Click the 'browse' button below and select a deck (.txt file)</p>
+                    <input type="file" id="browse-button" />
+                    <button id="load-deck-button">Load Deck</button>
+                </div>
+
+                <div id="example-deck-div">
+                    <h2>Example Deck</h2>
+                    <p>To show an example deck, please click the 'example deck' button below.</p>
+                    <p>With this deck you can practice your knowledge about European capital cities and consists out of 30 cards.</p>
+                    <button id="example-deck-button">Example Deck</button>
                 </div>
             
             </div>
@@ -448,5 +456,107 @@ $(document).on('keypress', '#input-textbox',  function(e) {
         }
 
     }
+
+});
+
+
+$(document).on('click', '#example-deck-button', function(){
+
+    cardObj =  {
+  
+        frontside: '',
+        backside: '',
+        show: true
+
+    }
+
+
+
+    /* open the practice screen */
+    openPracticeScreen();
+
+
+    /* load the deck description into the practice screen */
+    $('#deck-title').text(('European Capital Cities').toUpperCase());
+
+    /* load the amount of card in the loaded deck into the practice screen */
+    $('#total-cards').text(6);
+    
+    /* load the deck's front side of cards description into the practice screen */
+    $('#front-side-title').text('What is the capital of');
+    
+    /* load the deck's back side of cards description into the practice screen */
+    $('#back-side-title').text('Answer');
+
+
+    
+
+
+    /* card 1 */
+    cardObj.frontside = 'Italy';
+    cardObj.backside = 'Rome';
+    cardObj.show = true;
+
+    deckMemory.push(cardObj);
+
+    /* card 2 */
+    cardObj.frontside = 'Croatia';
+    cardObj.backside = 'Zagreb';
+    cardObj.show = true;
+
+    deckMemory.push(cardObj);
+
+    /* card 3 */
+    cardObj.frontside = 'Spain';
+    cardObj.backside = 'Madrid';
+    cardObj.show = true;
+
+    deckMemory.push(cardObj);
+
+    /* card 4 */
+    cardObj.frontside = 'Switzerland';
+    cardObj.backside = 'Zurich';
+    cardObj.show = true;
+
+    deckMemory.push(cardObj);
+
+    /* card 5 */
+    cardObj.frontside = 'Austria';
+    cardObj.backside = 'Vienna';
+    cardObj.show = true;
+
+    deckMemory.push(cardObj);
+
+    /* card 6 */
+    cardObj.frontside = 'Czech Republic';
+    cardObj.backside = 'Prague';
+    cardObj.show = true;
+
+    deckMemory.push(cardObj);
+
+
+    fireQuestion();
+
+/*
+
+ 
+ 
+  
+    let card = cards.split('|');
+    let frontside = '';
+    let backside = '';
+    let cardObj;
+
+    for(let i in card) {
+  
+        frontside = card[i].slice(0, card[i].indexOf('+'));
+        backside = card[i].slice(card[i].indexOf('+') + 1, card[i].length);
+  
+        
+  
+    deckMemory.push(cardObj);
+  
+    }
+*/
 
 });

@@ -12,6 +12,19 @@
     background-color: #D5D8CF;
 }
 
+h2 {
+    color: #707070;
+    font-size: 24px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+
+p {
+    font-size: 18px;
+    color: #707070;
+    letter-spacing: 1px;
+}
 
 
 /* start screen CSS code */
@@ -27,17 +40,9 @@
 
 #open-deck-div {
     padding-bottom: 10px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    color: #707070;
 }
 
 
-#open-deck-div > p {
-    font-weight: 100;
-    margin-bottom: 10px;
-}
 
 
 #browse-button {
@@ -46,7 +51,7 @@
 }
 
 
-#load-deck-button, input[type=file]::file-selector-button {
+#load-deck-button, input[type=file]::file-selector-button, #example-deck-button {
     color: whitesmoke;
     border: 1px solid #9C1228;
     border-radius: 6px;
@@ -56,6 +61,7 @@
     letter-spacing: 1px;
     font-size: 12px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 
