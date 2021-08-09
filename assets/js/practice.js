@@ -1,4 +1,4 @@
-/* assets/js/practice.js */
+// assets/js/practice.js
 /* Author: Maurice Vossen */
 /* August 2021 */
 
@@ -175,9 +175,6 @@ function getNumberOfCardsInDeck(deckMemory) {
 }
 
 
-/* loads the start screen */
-openStartScreen();
-
 
 function fireQuestion() {
 
@@ -187,6 +184,7 @@ function fireQuestion() {
     /* hide answer */
     $('#back-side-title').hide();
     $('#answer').hide();
+    $('#input-textbox').val('');
     
 
 
@@ -232,6 +230,9 @@ function fireQuestion() {
     
 }
 
+
+/* loads the start screen */
+openStartScreen();
 
 
 
@@ -349,5 +350,41 @@ $(document).on('click', '#other-deck-button', function(){
 
     /* reloads the start screen and empties the memory */
     location.reload(); 
+
+});
+
+/* on click check the user-input answer with the correct answer */
+// Credit: https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
+$(document).on('keypress', '#input-textbox',  function(e) {
+    
+    if(e.which == 13) {
+        
+
+        /* get input answer and correct answer */
+        let inputAnswer = $('#input-textbox').val();
+        let correctAnswer = deckMemory[pullCard].backside;
+
+
+        /* convert input answer and correct answer to lowercase for comparison reasons */
+        inputAnswer = inputAnswer.toLowerCase();
+        correctAnswer = correctAnswer.toLowerCase();
+
+        
+        if(inputAnswer === correctAnswer) {
+            $('#back-side-title').show();
+            $('#answer').text('Correct Answer!').css('color', 'limegreen').show();
+
+            /* Timeout 2 seconds before next question will be fired */
+            setTimeout(fireQuestion, 2000);
+
+        }
+
+        else
+        {
+            $('#answer').text('Wrong Answer!').css('color', 'red');
+            $('#answer').show();
+        }
+
+    }
 
 });
