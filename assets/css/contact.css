@@ -3,18 +3,11 @@
 /* August 2021 */
 
 
-body {
-    background-color: #D5D8CF;
-}
-
-
 #content-index {
     text-align: left;
-    padding: 50px 0;
+    padding: 50px 50px;
     margin: 0 auto;
-    width: 40%;
-    box-sizing: border-box;
-    min-height: 80vh;
+    width: 50%;
     box-sizing: border-box;
     overflow: hidden;
 }

@@ -10,11 +10,10 @@ body {
 
 #content-index {
     text-align: left;
-    padding: 20px 0;
     margin: 0 auto;
     width: 100%;
-    min-height: 80vh;
 }
+
 
 h2 {
     color: #707070;

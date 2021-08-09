@@ -3,21 +3,15 @@
 /* August 2021 */
 
 
-body {
-    background-color: #D5D8CF;
-}
-
 #content-index {
     text-align: left;
-    padding: 50px 0;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px 50px;
     border-radius: 18px;
     margin: 0 auto;
-    width: calc(50% + 100px);
-    min-height: 80vh;
+    width: 50%;
     background-color: whitesmoke;
     border: 2px solid #f04a64;
+    box-sizing: border-box;
 }
 
 
@@ -33,11 +27,6 @@ p {
     font-size: 18px;
     color: #707070;
     letter-spacing: 1px;
-}
-
-
-#socials-follow {
-    color: #707070;
 }
 
 

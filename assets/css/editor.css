@@ -3,17 +3,12 @@
 /* August 2021 */
 
 
-body {
-    background-color: #D5D8CF;
-}
-
-
 #content-editor-page {
     box-sizing: border-box;
     background-color: whitesmoke;
     width: 50%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 50px;
     border-radius: 18px;
     border: 2px solid #f04a64;
 }
@@ -21,7 +16,6 @@ body {
 
 #editor-div {
     margin: 0 auto;
-    font-size: 32px;
     font-weight: 500;
     color: #707070;
 }
@@ -67,7 +61,7 @@ h2 {
 
 
 input[type=file] {
-    width: 40%;
+    width: calc(100% - 10px);
 }
 
 .editor-button {
@@ -214,13 +208,12 @@ input[type=file] {
 @media only screen and (max-width: 900px) { 
 
     #content-editor-page {
-        padding-left: 10px;
-        padding-right: 10px;
+        width: calc(100% - 20px);
     }
 
     #editor-div, #cards-summary-div, #editor-buttons-div {
         width: 100%;
     }
-
+    
 }
 
