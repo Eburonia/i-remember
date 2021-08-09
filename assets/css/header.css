@@ -61,16 +61,15 @@ header {
     font-size: 20px;
     padding: 3px 8px;
     text-align: center;
-    color: whitesmoke;
+    color: #f04a64;
     cursor: pointer;
-    border: 1px solid #9C1228;
-    border-radius: 3px;
-    background-color: #f04a64;
+    border: 0;
+    background-color: transparent;
 }
 
 
 #navbar-toggle-button:hover {
-    background-color: #b33649;
+    color: #9C1228;
 }
 
 
