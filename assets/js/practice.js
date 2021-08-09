@@ -71,9 +71,21 @@ function openPracticeScreen() {
                 <span id="back-side-title">-</span>
                 <p id="answer"></p>
 
+                
+
             </div>
 
         </div>
+
+
+        <div id="input-small-devices">
+        
+            <div id="answer-small-device">Show Answer</div>
+            <div id="wrong-small-device">Wrong</div>
+            <div id="correct-small-device">Correct</div>
+        
+        </div>
+
 
         <div id="input-field-div">
 
@@ -223,7 +235,6 @@ function fireQuestion() {
 
     /* when al cards are shown of screen */
     else {
-        $("#answer-button").hide();
         $("#next-card-button").hide();
 
         /* tell end-user they have finished all cards */
@@ -235,7 +246,7 @@ function fireQuestion() {
         $("#input-textbox").blur(); // deselect textbox
 
         $('#back-side-title').hide();
-        $('#answer').text('');
+        $('#answer').text('Your score is: ');
 
         $('#other-deck-button').show();
 
@@ -693,5 +704,34 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
     fireQuestion();
+
+});
+
+
+
+
+$(document).on('click', '#answer-small-device', function() {
+
+    $('#answer').show();
+
+});
+
+
+$(document).on('click', '#wrong-small-device', function() {
+
+    incrementWrongAnswer();
+
+    /* Timeout 2 seconds before next question will be fired */
+    setTimeout(fireQuestion, 2000);
+
+});
+
+
+$(document).on('click', '#correct-small-device', function() {
+
+    incrementCorrectAnswer();
+
+    /* Timeout 2 seconds before next question will be fired */
+    setTimeout(fireQuestion, 2000);
 
 });
