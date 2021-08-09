@@ -188,7 +188,7 @@ p {
     letter-spacing: 1px;
     font-size: 16px;
     text-align: center;
-    width: 50%;
+    width: calc(100% - 40px);
 }
 
 
@@ -229,9 +229,12 @@ p {
         margin-right: 10px;
     }
 
-    #start-screen {
+    #flashcard {
         width: 100%;
-        box-sizing: border-box;
+    }
+
+    #input-field-div {
+        width: 100%;
     }
 
 

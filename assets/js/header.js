@@ -5,7 +5,6 @@ $('#toggle-menu').hide();
 /* toggle menu */
 $('#navbar-toggle-button').on('click', function() {
     $('#toggle-menu').slideToggle('slow');
-    $('#navbar-toggle-button').text('test');
 });
 
 
