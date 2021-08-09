@@ -104,7 +104,7 @@ p {
 /* media queries for contact.html only */
 
 /* for tablets and phones */
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 900px) { 
 
     #content-index {
         width: 100%;

@@ -44,7 +44,7 @@ p {
 /* media queries for index.html only */
 
 /* for tablets and phones */
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 900px) { 
 
     #content-index {
         width: calc(100% - 20px);

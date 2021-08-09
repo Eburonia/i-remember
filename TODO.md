@@ -1,3 +1,0 @@
-- add additional smaller company logo for smaller devices
-- add meta tags per page
-- add active page to header
