@@ -278,6 +278,11 @@ p {
         margin-right: 10px;
     }
 
+
+    #start-screen {
+        width: 100%;
+    }
+
     #flashcard {
         width: 100%;
     }
@@ -291,5 +296,7 @@ p {
         width: 100%;
         display: block;
     }
+
+
 
 }
