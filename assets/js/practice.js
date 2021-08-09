@@ -186,6 +186,7 @@ function fireQuestion() {
 
 
     let currentCard = $('#current-card').text();
+    $("#next-card-button").hide();
 
     /* hide answer */
     $('#back-side-title').hide();
@@ -352,6 +353,8 @@ $(document).on('click', '#answer-button', function(){
     $('#back-side-title').show();
     $('#answer').css('color', 'deepskyblue').show();
 
+    $('#input-textbox').focus();
+
 });
 
 
@@ -462,14 +465,14 @@ $(document).on('keypress', '#input-textbox',  function(e) {
 
 $(document).on('click', '#example-deck-button', function(){
 
-    cardObj =  {
+    /* declare card object */
+    let cardObj =  {
   
         frontside: '',
         backside: '',
         show: true
 
     }
-
 
 
     /* open the practice screen */
@@ -480,7 +483,7 @@ $(document).on('click', '#example-deck-button', function(){
     $('#deck-title').text(('European Capital Cities').toUpperCase());
 
     /* load the amount of card in the loaded deck into the practice screen */
-    $('#total-cards').text(6);
+    $('#total-cards').text(20);
     
     /* load the deck's front side of cards description into the practice screen */
     $('#front-side-title').text('What is the capital of');
@@ -489,74 +492,206 @@ $(document).on('click', '#example-deck-button', function(){
     $('#back-side-title').text('Answer');
 
 
-    
-
 
     /* card 1 */
-    cardObj.frontside = 'Italy';
-    cardObj.backside = 'Rome';
-    cardObj.show = true;
+    cardObj =  {
+        frontside: 'the Netherlands',
+        backside: 'the Hague',
+        show: true
+    }
 
     deckMemory.push(cardObj);
+
 
     /* card 2 */
-    cardObj.frontside = 'Croatia';
-    cardObj.backside = 'Zagreb';
-    cardObj.show = true;
+    cardObj =  {
+        frontside: 'Belgium',
+        backside: 'Brussels',
+        show: true
+    }
 
     deckMemory.push(cardObj);
+
 
     /* card 3 */
-    cardObj.frontside = 'Spain';
-    cardObj.backside = 'Madrid';
-    cardObj.show = true;
-
+    cardObj =  {
+        frontside: 'France',
+        backside: 'Paris',
+        show: true
+    }
+    
     deckMemory.push(cardObj);
+
 
     /* card 4 */
-    cardObj.frontside = 'Switzerland';
-    cardObj.backside = 'Zurich';
-    cardObj.show = true;
-
+    cardObj =  {
+        frontside: 'Spain',
+        backside: 'Madrid',
+        show: true
+    }
+        
     deckMemory.push(cardObj);
 
+    
     /* card 5 */
-    cardObj.frontside = 'Austria';
-    cardObj.backside = 'Vienna';
-    cardObj.show = true;
-
+    cardObj =  {
+        frontside: 'Portugal',
+        backside: 'Lisbon',
+        show: true
+    }
+        
     deckMemory.push(cardObj);
 
+    
     /* card 6 */
-    cardObj.frontside = 'Czech Republic';
-    cardObj.backside = 'Prague';
-    cardObj.show = true;
+    cardObj =  {
+        frontside: 'Italy',
+        backside: 'Rome',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+         
+
+    /* card 7 */
+    cardObj =  {
+        frontside: 'Croatia',
+        backside: 'Zagreb',
+        show: true
+    }
 
     deckMemory.push(cardObj);
 
+
+    /* card 8 */
+    cardObj =  {
+        frontside: 'Serbia',
+        backside: 'Belgrade',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 9 */
+    cardObj =  {
+        frontside: 'Austria',
+        backside: 'Vienna',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 10 */
+    cardObj =  {
+        frontside: 'Czech Republic',
+        backside: 'Prague',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 11 */
+    cardObj =  {
+        frontside: 'Germany',
+        backside: 'Berlin',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 12 */
+    cardObj =  {
+        frontside: 'Norway',
+        backside: 'Oslo',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 13 */
+    cardObj =  {
+        frontside: 'Danmark',
+        backside: 'Copenhagen',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 14 */
+    cardObj =  {
+        frontside: 'Sweden',
+        backside: 'Stockholm',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 15 */
+    cardObj =  {
+        frontside: 'Finland',
+        backside: 'Helsinki',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 16 */
+    cardObj =  {
+        frontside: 'Hungary',
+        backside: 'Budapest',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 17 */
+    cardObj =  {
+        frontside: 'Romenia',
+        backside: 'Bucharest',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 18 */
+    cardObj =  {
+        frontside: 'Greece',
+        backside: 'Athens',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 19 */
+    cardObj =  {
+        frontside: 'Bulgaria',
+        backside: 'Sofia',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
+
+
+    /* card 20 */
+    cardObj =  {
+        frontside: 'Poland',
+        backside: 'Warsaw',
+        show: true
+    }
+
+    deckMemory.push(cardObj);
 
     fireQuestion();
-
-/*
-
- 
- 
-  
-    let card = cards.split('|');
-    let frontside = '';
-    let backside = '';
-    let cardObj;
-
-    for(let i in card) {
-  
-        frontside = card[i].slice(0, card[i].indexOf('+'));
-        backside = card[i].slice(card[i].indexOf('+') + 1, card[i].length);
-  
-        
-  
-    deckMemory.push(cardObj);
-  
-    }
-*/
 
 });
