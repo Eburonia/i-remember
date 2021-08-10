@@ -367,7 +367,7 @@ No errors found.
 ### Publishing
 'GitHub Pages' was used for publishing the website. The procedure was as follows:
 1. Login to the [GitHub](https://www.github.com/) website.
-2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://eburonia.github.io/i-remember/)
+2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
 3. You can find a ribbon on the top of your screen. In the ribbon, click on 'Settings'.
 4. In the selection menu on the left side of your screen, click on 'Pages'.
 5. Beneath 'Source' you will find a small pull-down menu. Click on it and select 'main', then press the 'Save' button.
@@ -381,7 +381,7 @@ No errors found.
 ### Forking
 If you want to make a copy of the repository you can Fork it without changing the original repository by following the next procedure:
 1. Login to the [GitHub](https://www.github.com/) website.
-2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://eburonia.github.io/i-remember/)
+2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
 3. On the right side of your screen, next to 'Unwatch' pull-down menu, and the 'Star' button, you can find the 'Fork' button.
 4. By clicking this button, it will create a copy of the website in your repository.
 
@@ -391,7 +391,7 @@ If you want to make a copy of the repository you can Fork it without changing th
 ### Cloning
 You can clone the repository by following the next procedure:
 1. Login to the [GitHub](https://www.github.com/) website.
-2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://eburonia.github.io/i-remember/)
+2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
 3. Click on the 'Code' button next to the Green 'GitPod' button.
 4. Click on 'HTTPS' and copy the hyperlink below it.
 5. Go to the repository where you want to make a clone of the website. Or create a new repository.
@@ -404,7 +404,7 @@ You can clone the repository by following the next procedure:
 ### Downloading
 You can download the repository by following the next procedure:
 1. Login to the [GitHub](https://www.github.com/) website.
-2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://eburonia.github.io/i-remember/)
+2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
 3. Click on the 'Code' button next to the Green 'GitPod' button and then click on 'Download ZIP'.
 4. A .zip file of the repository content will be downloaded. 
 
