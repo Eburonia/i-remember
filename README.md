@@ -110,11 +110,11 @@ Not much attention is given to selecting a proper font type. 'Segoe UI' is the o
 
 #### Wireframes
 Wireframes belonging to the website's project have been made in [Adobe XD](https://www.adobe.com/products/xd.html). PDF files of them can be found here:
-- Wireframes of the Index Page - [link]()
-- Wireframes of the Practice Page - [link]()
-- Wireframes of the Editor Page - [link]()
-- Wireframes of the Manual Page - [link]()
-- Wireframes of the Contact Page - [link]()
+- Wireframes of the Index Page - [link](assets/wireframes/wireframes-index.pdf)
+- Wireframes of the Practice Page - [link](assets/wireframes/wireframes-practice.pdf)
+- Wireframes of the Editor Page - [link](assets/wireframes/wireframes-editor.pdf)
+- Wireframes of the Manual Page - [link](assets/wireframes/wireframes-manual.pdf)
+- Wireframes of the Contact Page - [link](assets/wireframes/wireframes-contact.pdf)
 
 All wireframes were designed for three different devices:
 - Desktop - Web: maximum viewport width 1920px
@@ -123,7 +123,8 @@ All wireframes were designed for three different devices:
 
 
 #### Mockups
-The intention was to also create mockups for the website project. Due to the limited available time of the web developer, it has been skipped.
+Due to the limited available time of the web developer, mockups have not been created.
+Instead, an image of the responsive design has been added on top of this README file.
 
 
 <!-- Features -->
@@ -131,11 +132,15 @@ The intention was to also create mockups for the website project. Due to the lim
 ## Features
 
 ### Header
-...
+A header has been added on top of every page and exists out of the website logo and a navigation bar/menu. The navigation bar/menu will change to a 'hamburger style navigation bar/menu on smaller devices (e.g. iPad or smartphone). By hovering the navigation bar's items, the colour will change from a dark gray colour to an orange/pink colour as described in the colour scheme section of this README file, making it clear to the end-user this is a clickable link. The company logo on the top left side of the header has a clickable link assigned to it which will always redirect the website to the index page. The Company logo will be resized for smaller devices. The background colour used for the header is a light green colour as described in the colour scheme section in this README file.
 
 
 ### Footer
-...
+A footer has been added on the bottom of every page and exists out of social media links, and a copyright notice. The same background colour has been chosen as the header (light green) while the social media links are styled in a dark gray colour. By hovering the social media icons, the colour will change from a dark gray colour to an orange/pink colour as described in the colour scheme section of this README file. This makes it clear to the end-user these are clickable links. The icons used for the social media links are directly loaded from the font-awesome website. All social media links will be opened on a new blank page. A clear copyright notice is visible at the bottom of the footer.
+
+
+### h2 Heading
+
 
 ### Paragraphs
 ...
@@ -148,7 +153,7 @@ The intention was to also create mockups for the website project. Due to the lim
 
 
 ### Responsiveness
-All pages are responsive on all devices. Minimum viewport width: 320px.
+All pages are responsive on all devices. Designed for minimum viewport width of: 320px.
 
 
 ### Accessibility
