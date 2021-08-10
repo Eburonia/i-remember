@@ -140,21 +140,24 @@ A header has been added on top of every page and exists out of the website logo 
 A footer has been added on the bottom of every page and exists out of social media links, and a copyright notice. The same background colour has been chosen as the header (light green) while the social media links are styled in a dark gray colour. By hovering the social media icons, the colour will change from a dark gray colour to an orange/pink colour as described in the colour scheme section of this README file. This makes it clear to the end-user these are clickable links. The icons used for the social media links are directly loaded from the [fontawesome](https://www.fontawesome.com) website. All social media links will be opened on a new blank page. A clear copyright notice is visible at the bottom of the footer.
 
 
-
 ### Index Page
+The index page is a simple page that tells the end-user what the purpose of the website is. For that reason, an 'about' section has been added to the index page.
 
 
 ### Practice Page
+The practice page exists out of two sections. In the first section, you have to import a flashcard set .txt file into the system by first clicking the 'Browse' button and select an .txt file and then by clicking the 'Load Deck' button the practice screen which is the second section will be opened on screen. You can also import an example flashcard set by pressing the 'Example Deck' button. This shows first-time users quickly how the interface of the practice screen looks like.
 
 
 ### Editor Page
+On the 'Editor' page you can create your own flashcard sets or import existing flashcard sets and adjust them. By clicking the 'Browse' button you can select a flashcard set .txt file and then import it on the 'Editor' page by clicking the 'Open Deck' button. When a flashcard set has been imported, you can add cards by clicking the 'Add Card' button or delete cards by clicking the 'Recycle Bin' button next to the card which you want to delete. By clicking on a card's front-side or back-side field you can adjust the card's question or answer. By clicking the top field you can adjust the flashcard set's name, and below there are two fields where you can adjust the front-side and back-side's flashcard title. To save the flashcard set, an 'Export' button has been added. By pressing this button, a pop-up screen will appear and a .txt file of the flashcard set will be saved on your local drive when giving permission.
 
 
 ### How to Use Page
+The 'how to use page' tells the end-user how the 'practice' and 'editor' pages function utilizing a small manual including images.
 
 
 ### Contact Page
-
+On the 'contact' page you can find a submission form including 3 text fields (first name, last name, e-mail address) and a text area (your message). All fields are mandatory fields and need to be filled in before you can press the 'Submit' button. When done correctly, a message will be shown on the screen telling the end-user the form input has been sent or not.
 
 
 ### h2 Heading
@@ -166,11 +169,11 @@ For consistency, sizing and colour (dark gray) of the <p> paragraphs are chosen 
 
 
 ### Links
-<p style="color: red;">TO BE ADDED</p>
+The only links on the website you can find are in the navigation bar/menu.
 
 
 ### Buttons
-For consistency, all buttons are sized and styled the same way, a dark red colour for the border, an orange/pink background color, and a smokewhite color for the fonts are used. 
+For consistency, all buttons are sized and styled the same way. A dark red colour for the border, an orange/pink background colour, and a smokewhite colour for the fonts are used. 
 
 <img src="assets/images-readme/button.png" alt="typical call for action button"><br>
 <sub>Typical call for action button</sub>
@@ -188,7 +191,6 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 ### Future Features
 * The project is very basically executed at this moment, a future feature could be working with a database so the end-user can save his flashcard sets over there. This is to avoid the not so user-friendly way of storing your flashcard sets right now (every time downloading when you have created a new flashcard set or when you have adjusted your flashcard set).
 * Also, the statistics at the moment are not spectacular and can be expanded and stored in a database. You could think of how many times a card has been shown to the end-user or decrease the amounts of cards that will be shown to the end-user in case the end-user always guests the answer correctly. 
-
 
 
 <!-- Technologies Used -->
