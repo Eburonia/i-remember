@@ -483,7 +483,7 @@ $(document).on('click', '#example-deck-button', function(){
         backside: '',
         show: true
 
-    }
+    };
 
 
     /* open the practice screen */
@@ -509,7 +509,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'the Netherlands',
         backside: 'the Hague',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -519,7 +519,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Belgium',
         backside: 'Brussels',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -529,7 +529,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'France',
         backside: 'Paris',
         show: true
-    }
+    };
     
     deckMemory.push(cardObj);
 
@@ -539,7 +539,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Spain',
         backside: 'Madrid',
         show: true
-    }
+    };
         
     deckMemory.push(cardObj);
 
@@ -549,7 +549,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Portugal',
         backside: 'Lisbon',
         show: true
-    }
+    };
         
     deckMemory.push(cardObj);
 
@@ -559,7 +559,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Italy',
         backside: 'Rome',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
          
@@ -569,7 +569,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Croatia',
         backside: 'Zagreb',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -579,7 +579,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Serbia',
         backside: 'Belgrade',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -589,7 +589,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Austria',
         backside: 'Vienna',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -599,7 +599,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Czech Republic',
         backside: 'Prague',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -609,7 +609,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Germany',
         backside: 'Berlin',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -619,7 +619,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Norway',
         backside: 'Oslo',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -629,7 +629,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Danmark',
         backside: 'Copenhagen',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -639,7 +639,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Sweden',
         backside: 'Stockholm',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -649,7 +649,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Finland',
         backside: 'Helsinki',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -659,7 +659,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Hungary',
         backside: 'Budapest',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -669,7 +669,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Romenia',
         backside: 'Bucharest',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -679,7 +679,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Greece',
         backside: 'Athens',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -689,7 +689,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Bulgaria',
         backside: 'Sofia',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
@@ -699,7 +699,7 @@ $(document).on('click', '#example-deck-button', function(){
         frontside: 'Poland',
         backside: 'Warsaw',
         show: true
-    }
+    };
 
     deckMemory.push(cardObj);
 
