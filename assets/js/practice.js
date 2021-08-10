@@ -302,7 +302,7 @@ openStartScreen();
 /* click events */
 
 /* function loads the deck on screen */
-/* Credit: this is not my code, from internet */
+/* Credit: https://usefulangle.com/post/193/javascript-read-local-file */
 document.querySelector("#load-deck-button").addEventListener('click', function() {
 
     let deck;

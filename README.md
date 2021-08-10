@@ -205,14 +205,14 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 
 ### Frameworks, Libraries and Programs Used
-- [jquery v3.5.1](https://jquery.com/download/) - ...
-- [Font Awesome](https://www.fontawesome.com/) - Font Awesome icons are used on the website for linking to the social media pages ...
+- [jQuery v3.5.1](https://jquery.com/download/) - jQuery which is a JavaScript Library mainly used for manipulating the HTML DOM tree, is used throughout the website especially on the 'Practice' and 'Editor' page.
+- [Font Awesome](https://www.fontawesome.com/) - Font Awesome icons are used on the website for linking to the social media pages and in h2 headings.
 - [Git](https://git-scm.com/) - Git was used for version control and code change tracking of the website project. The terminal in Gitpod was used to commit and to push the project to the Github repository.
 - [Github](https://github.com/) - The project code has been stored on the Github website.
 - [GitPod](https://www.gitpod.io/) - GitPod was used for creating the code, testing of the website, commiting, and pushing the code to the github repository. 
-- [Photoshop v8.0](https://www.photoshop.com/en) - An older version of Photoshop (Photoshop CS version 8.0) was used to ...
 - [Adobe XD](https://www.adobe.com/products/xd.html) - Adobe XD was used to create the website's Wireframes. To see the Wireframes, go to the Design section above to see the results.
-- [Photopea.com](https://www.photopea.com/) - ...
+- [Photopea.com](https://www.photopea.com/) - The Photopea website is used for creating the website logo and README files images.
+- [EmailJS](https://www.emailjs.com/) - EmailJS is used to send emails from the contact page form to the website owner's e-mail address directly from the client-side JavaScript code.
 
 
 <!-- Testing -->
@@ -224,7 +224,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 #### Common
 - Check aria labels. **(checked)**
 - Check alternative 'alt' text. **(checked)**
-- Check the spelling of the page content (English and Dutch). **(checked)**
+- Check the spelling of the page content. **(checked)**
 
 
 #### Header/Navigation Bar
@@ -277,6 +277,8 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 ### Usability Testing
 - Family and friends were asked to test the website and to navigate through all four website pages. Buttons, links, and forms were tested by them.
 
+
+**CHECK**
 <img src="assets/readme-images/..." alt="iPhone 5 screenshot"><br>
 <sub>iPhone 5 screenshot</sub>
 
@@ -286,8 +288,7 @@ The following browsers were used for compatibility testing:
 - Firefox
 - Google Chrome
 - Microsoft Edge  
-See 'Known Bugs' 
-section for more information about the outcome.
+See 'Known Bugs' section for more information about the outcome.
 
 
 ### Further Testing
@@ -313,6 +314,7 @@ W3C Markup Validator, results of English language pages:
 * [contact.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fcontact.html)
 * [404.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Feburonia.github.io%2Fi-remember%2F404.html)
 
+**CHECK**
 No errors found.
 
 
@@ -328,7 +330,15 @@ W3C CSS Validator, results of the style sheets:
 * [contact.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2Fcontact.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 * [404.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2F404.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
+
+**CHECK**
 No errors found.
+
+
+**ADD JAVASCRIPT CHECKER**
+
+
+
 
 
 ### Testing Grammar and Spelling 
@@ -407,6 +417,8 @@ No errors found.
 ### 
 - ...
 
+
+**CHECK**
 <img src="assets/readme-images/..." alt="Screen capture of hero image bug">
 
 
@@ -468,8 +480,10 @@ You can download the repository by following the next procedure:
 ## Credits
 
 ### Code
-- All html, CSS, jQuery and JavaScript code was written by the website creator: Maurice Vossen
-- Colours were selected by using Photoshop v8.0
+- Most of all HTML, CSS, jQuery and JavaScript code was written by the website creator: Maurice Vossen
+- The generate a file and download it on the 'Editor' page has been copied from [here](https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server). The code has been adjusted by the website creator. 
+- The submission form JavaScript code on the 'Contact' page is coming from the Code Institude's webinar about EmailJS.
+- The JavaScript code for importing a .txt file content on the 'Practice' and 'Editor' page has been copied from [here](https://usefulangle.com/post/193/javascript-read-local-file). The code has been adjusted by the website creator.
 
 
 ### Content
