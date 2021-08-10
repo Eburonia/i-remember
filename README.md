@@ -330,11 +330,22 @@ No errors found.
 
 #### Returning Visitor Goals
 1. As a returning visitor of the website, I want to maintain my flashcard sets, So I can add or delete flashcards that are needed or not needed anymore.
+   * On the 'editor' page, you can 'adjust' your flashcards, 'delete' your flashcards, or 'add' new flashcards.
+
 2. As a returning visitor of the website, I want to re-use my created flashcard sets, So I can keep practicing them.
+   * You need to download your created flashcard sets (a .txt file will be generated) in order to re-use them for practicing purposes. In case you want to use the generated .txt files on your smaller devices, you have to import them on your smartphone or iPad and load them into the website.
+
 3. As a returning visitor of the website, I want to use my created flashcard sets on different devices, so I can decide which device I might use when I want to practice.
+   * You need to download your created flashcard set (a .txt file will be generated) in order to re-use them for practicing purposes.
+
 4. As a returning visitor of the website, I want to know my progress in remembering my flashcards, so I can decide whether I need to invest more time to increase my remembering score.
+   * On the 'practice' page, a scoreboard has been implemented. It shows the end-user how many cards have been guessed 'correct' and how many 'wrong'.
+
 5. As a returning visitor of the website, I want to practice my flashcards as long as I want, So I can determine how much time I want to invest in a practice session.
+   * When the end-user got through the selected flashcard set. Two buttons will show up 'Replay Deck' or 'Other Deck'. Here you can replay your active flashcard set or select another flashcard set.
+
 6. As a returning visitor of the website, I want to receive the latest information about the website, So I know when for example newly implemented features are added to the website.
+   * The latest news about the website and new features will be shared on the website's 'twitter' and 'facebook' pages. Links to the website's social media pages can be found in the footer of every page.
 
 
 <!-- Known Bugs -->
