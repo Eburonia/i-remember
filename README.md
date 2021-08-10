@@ -106,6 +106,7 @@ Not much attention is given to selecting a proper font type. 'Segoe UI' is the o
 
 
 #### Imagery
+Because this website is made for learning purposes, except for the website logo and the manual no more images have been added to the website. The website logo is responsive for smaller devices.
 
 
 #### Wireframes
