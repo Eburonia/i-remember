@@ -33,6 +33,8 @@ For smaller devices (iPad and smartphone) typing your answer is not that conveni
 
 [Technologies Used](#technologies)
 
+[Testing](#testing)
+
 [Known Bugs](#bugs)
 
 [Deployment](#deployment)
@@ -285,15 +287,46 @@ No errors found.
 
 #### First-time Visitor Goals
 1. As a first-time visitor of the website, I want to understand what the website's purpose is, so I can have an idea of whether I have ended up in the right place or not.
+   * In the upper left corner in the navigator bar, a website logo stating 'iRemember Spaced Repetition' already gives a suggestion of what the website might be about.
+   * The index page starts with an about section, clearly stating what the purpose of the website is.
+   * In the navigator bar, there is a link to the 'how to use' page which also gives you information about the purpose of the website.
+   * In case the end-user still has questions, he can use the contact form on the contact page to send a question or message to the website owner.
+
 2. As a first-time visitor of the website, I want to easily navigate throughout the website,  So I don't get frustrated by having any idea where to click.
+   * A navigation bar has been added to every page in the upper right corner of the website including all available pages on the website.
+   * On smaller devices (iPad and smartphones) the navigation bar is executed as a so-called 'hamburger-style' navigation menu.
+
 3. As a first-time visitor of the website, I want to quickly find out how to use the website, so I might not get frustrated by just intuitively trying things out on the website.
+   * On the index page, a link to the 'how to use' page has been implemented in the 'about' section. Also in the navigation bar/menu the same link has been implemented.
+
 4. As a first-time visitor of the website, I want to practice an example flashcard set without having to create one first, so I can quickly see how the 'practice' page looks and functions.
+   * An example flashcard set has been implemented on the 'practice' page. By pressing the 'Example Deck' button, the example flashcard set existing out of 20 cards will be loaded on the practice screen. In this card set, you have to guess the capital city of 20 European countries. 
+
 5. As a first-time visitor of the website, I want to create my own flashcard sets, so I can start practicing my flashcards.
+   * A special 'editor' page has been implemented on the website. Here you can 'create' a new flashcard set, 'import' and 'adjust' an existing flashcard set and download your created flashcard set. You can give a description to your flashcard set, and give a description to the front-side and back-side of your flashcards.
+   * On the 'practice' page you can 'import' your created flashcard set by clicking the 'Browse' and 'Load Deck' buttons.
+
 6. As a first-time visitor of the website, I want to have a user-friendly user interface, So I might not get annoyed or frustrated using the website.
+   * The 'practice' page of the website functions differently on a desktop and on smaller devices. On the desktop, you have 'direct input' for the answer by means of a 'textbox'. This can be done because direct input from the keyboard works conveniently here. But on smaller devices, direct input does not function conveniently. For this reason, the 'textbox' has been replaced by 3 buttons: 'show answer', 'correct answer' and 'wrong answer'. While on the desktop version the system checks your answer, on smaller devices you have to tell the system whether your answer was correct or not by pressing the 'correct' or 'wrong' button.
+   * The 'editor' page works the same on desktop and smaller devices. It is advised to use the 'Landscape Mode' of the phone when using the 'editor' page for the sake of convenience.
+
 7. As a first-time visitor of the website, I want to know what other end-users think of the website, So I can decide whether I might use the website or not.
+   * Social media links are added to the 'footer' section of every page. On the indicated website's social media platforms, the end-users can comment or discuss the website.
+
 8. As a first-time visitor of the website, I want to contact the website creator, so I can ask him a question or give him some feedback.
+   * A special 'contact' page has been added to the website which can be accessed in the website's navigation bar/menu.
+   * On the 'contact' page a 'contact form' has been implemented. Here the end-user can add information about himself (first name, last name, e-mail address) and of course the message you want to send to the website owner. The sent e-mail will end up in the mailbox of the website owner.
+
 9. As a first-time visitor of the website, I want to know what a flashcard set is about, So I might not get confused when practicing a specific flashcard set.
+   * On the 'editor' page, a summary of a flashcard set will be shown to the end-user. Next to the flashcards themselves, 3 additional fields are implemented: 'deck description', 'front-side description', and 'back-side description'. This gives the end-user additional information about the flashcard set. Not only on the 'editor' page, but this information will also be shown on the 'practice' page. These fields can be for example: 
+	   - Deck description: Vocabulary English-Spanish
+	   - Front-side description: English
+	   - Back-side description: Spanish
+
 10. As a first-time visitor of the website, I want to know how long it takes to get through a flashcard set, So I might not get frustrated because I have no idea how much time it will take.
+    * On the 'practice' page, it clearly states how many cards there are in the imported flashcard set. It also states how many cards have been shown so far.
+    * This looks like for example: CARD 8 OF 26 SHOWN.
+
 
 #### Returning Visitor Goals
 1. As a returning visitor of the website, I want to maintain my flashcard sets, So I can add or delete flashcards that are needed or not needed anymore.
