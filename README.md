@@ -94,7 +94,7 @@ The following colours were used throughout the webpage:
       - Colour used in scoreboard (show answer), and 'show answer' button small devices.
 
 
-<img src="assets/readme-images/..." alt="colour scheme"><br>
+<img src="assets/images-readme/colour-scheme.png" alt="colour scheme"><br>
 <sub>Colour scheme</sub>
 
 
@@ -180,6 +180,7 @@ All pages are responsive on all devices. Minimum viewport width: 320px.
 - [GitPod](https://www.gitpod.io/) - GitPod was used for creating the code, testing of the website, commiting, and pushing the code to the github repository. 
 - [Photoshop v8.0](https://www.photoshop.com/en) - An older version of Photoshop (Photoshop CS version 8.0) was used to ...
 - [Adobe XD](https://www.adobe.com/products/xd.html) - Adobe XD was used to create the website's Wireframes. To see the Wireframes, go to the Design section above to see the results.
+- [Photopea.com](https://www.photopea.com/) - ...
 
 
 <!-- Testing -->
@@ -394,7 +395,7 @@ No errors found.
 7. Refresh the page after a minute and when this text box turns green, the website has been published.
 8. Click the link in the green text box to go to your published website.
 
-<img src="assets/readme-images/..." alt="Github pages publishing">
+<img src="assets/images-readme/publishing.png" alt="github pages publishing">
 
 
 ### Forking
@@ -404,7 +405,7 @@ If you want to make a copy of the repository you can Fork it without changing th
 3. On the right side of your screen, next to 'Unwatch' pull-down menu, and the 'Star' button, you can find the 'Fork' button.
 4. By clicking this button, it will create a copy of the website in your repository.
 
-<img src="assets/readme-images/forking.png" alt="Forking webpage">
+<img src="assets/images-readme/forking.png" alt="forking webpage">
 
 
 ### Cloning
@@ -417,7 +418,7 @@ You can clone the repository by following the next procedure:
 6. When in this repository, select the folder or create a folder where you want to clone the directory.
 7. Go to the terminal and type: 'Git Clone (copied link)' and press enter. The directory has been cloned now.
 
-<img src="assets/readme-images/cloning.png" alt="Cloning webpage">
+<img src="assets/images-readme/cloning.png" alt="cloning webpage">
 
 
 ### Downloading
@@ -427,7 +428,7 @@ You can download the repository by following the next procedure:
 3. Click on the 'Code' button next to the Green 'GitPod' button and then click on 'Download ZIP'.
 4. A .zip file of the repository content will be downloaded. 
 
-<img src="assets/readme-images/downloading.png" alt="Downloading webpage">
+<img src="assets/images-readme/downloading.png" alt="downloading webpage">
 
 
 <!-- Credits -->
