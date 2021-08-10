@@ -11,13 +11,13 @@ View the GitHub Repository [link](https://github.com/Eburonia/i-remember/)
 
 <!-- About -->
 ## About
-The purpose of this website is to create a basic so-called spaced repetition[link] system. In this system, flashcards are shown to the end-user. Every flashcard has a 'question' on the front-side and an 'answer' on the back-side. The purpose of the flashcard system is to show the front-side (question) of the flashcard, and then the end-user has to guess what has been written on the back-side (answer).
+The purpose of this website is to create a basic so-called [spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition) system. In this system, flashcards are shown to the end-user. Every flashcard has a 'question' on the front-side and an 'answer' on the back-side. The purpose of the flashcard system is to show the front-side (question) of the flashcard, and then the end-user has to guess what has been written on the back-side (answer).
 
 To give potential end-user an idea of what the website might be about, the name 'iRemember' was given to the project. The purpose is to 'remember' as much as possible answers to the questions utilizing spaced repetition.
 
 A set of cards is also called a 'deck' in English and can exist out of many cards. There are two important sections on this website. One is where you can 'practice' your flashcards and one is where you can 'create' your flashcards.
 
-There already exist spaced repetition systems on the internet. One of the most well-known is called 'Anki.' The desktop version of this application is popular among language learners and is also of high quality. There is also a smartphone version of the application which you have to pay for but is not that impressive.
+There already exist spaced repetition systems on the internet. One of the most well-known is called '[Anki](https://apps.ankiweb.net/)'. The desktop version of this application is popular among language learners and is also of high quality. There is also a smartphone version of the application which you have to pay for but is not that impressive.
 
 The idea of the website creator was to create a free version of a spaced repetition system that can be used on a desktop, iPad, or smartphone everywhere where there is an internet connection. The basic version will show you randomly the front side (question) of a flashcard. On the desktop, you have to answer the question by adding your answer to a textbox. By pressing the enter button, the system will check whether your answer is correct or not.
 
