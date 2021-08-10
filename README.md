@@ -136,20 +136,43 @@ A header has been added on top of every page and exists out of the website logo 
 
 
 ### Footer
-A footer has been added on the bottom of every page and exists out of social media links, and a copyright notice. The same background colour has been chosen as the header (light green) while the social media links are styled in a dark gray colour. By hovering the social media icons, the colour will change from a dark gray colour to an orange/pink colour as described in the colour scheme section of this README file. This makes it clear to the end-user these are clickable links. The icons used for the social media links are directly loaded from the font-awesome website. All social media links will be opened on a new blank page. A clear copyright notice is visible at the bottom of the footer.
+A footer has been added on the bottom of every page and exists out of social media links, and a copyright notice. The same background colour has been chosen as the header (light green) while the social media links are styled in a dark gray colour. By hovering the social media icons, the colour will change from a dark gray colour to an orange/pink colour as described in the colour scheme section of this README file. This makes it clear to the end-user these are clickable links. The icons used for the social media links are directly loaded from the [fontawesome](https://www.fontawesome.com) website. All social media links will be opened on a new blank page. A clear copyright notice is visible at the bottom of the footer.
+
+
+
+### Index Page
+
+
+### Practice Page
+
+
+### Editor Page
+
+
+### How to Use Page
+
+
+### Contact Page
+
 
 
 ### h2 Heading
+Every page as a h2 heading added describing the main purpose of the page. For consistency, sizing and colour (dark gray) of the h2 heading are chosen all the same on every page.
 
 
 ### Paragraphs
-...
+For consistency, sizing and colour (dark gray) of the <p> paragraphs are chosen all the same on every page.
+
 
 ### Links
-...
+<p style="color: red;">TO BE ADDED</p>
+
 
 ### Buttons
-...
+For consistency, all buttons are sized and styled the same way, a dark red colour for the border, an orange/pink background color, and a smokewhite color for the fonts are used. 
+
+<img src="assets/images-readme/button.png" alt="typical call for action button"><br>
+<sub>Typical call for action button</sub>
 
 
 ### Responsiveness
@@ -162,7 +185,8 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 
 ### Future Features
-...
+* The project is very basically executed at this moment, a future feature could be working with a database so the end-user can save his flashcard sets over there. This is to avoid the not so user-friendly way of storing your flashcard sets right now (every time downloading when you have created a new flashcard set or when you have adjusted your flashcard set).
+* Also, the statistics at the moment are not spectacular and can be expanded and stored in a database. You could think of how many times a card has been shown to the end-user or decrease the amounts of cards that will be shown to the end-user in case the end-user always guests the answer correctly. 
 
 
 
