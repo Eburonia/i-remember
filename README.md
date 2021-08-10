@@ -73,9 +73,28 @@ For smaller devices (iPad and smartphone) typing your answer is not that conveni
 ### Design
 
 #### Colour Scheme
-- 
+The following colours were used throughout the webpage:
+   - Hex: #D5D8CF: light green colour
+      - Main colour on website, used for header, footer, and main content.
+   - Hex: #707070: dark gray colour
+      - Colour used for heading, website logo, paragraphs, navigation bar, footer, and deck editor.
+   - Hex: #f04a64: orange/pink colour
+      - Colour used for buttons, website logo, hover colour, and division border.
+   - Hex: #F5F5F5: whitesmoke colour
+      - Colour used in division sections, and text of buttons.
+   - Hex: #9C1229: dark red colour
+      - Colour used for button borders.
+   - Hex: #b33649: dark red colour
+      - Colour used for button hover.
+   - Hex: #32cd32: limegreen colour
+      - Colour used in scoreboard (correct answers), and 'correct' button small devices.
+   - Hex: #ff0000: red colour
+      - Colour used in scoreboard (wrong answers), and 'wrong' button small devices.
+   - Hex: #00bfff: deepskyblue colour
+      - Colour used in scoreboard (show answer), and 'show answer' button small devices.
 
-<img src="assets/readme-images/..." alt="Colour scheme"><br>
+
+<img src="assets/readme-images/..." alt="colour scheme"><br>
 <sub>Colour scheme</sub>
 
 
