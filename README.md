@@ -484,32 +484,28 @@ You can download the repository by following the next procedure:
 - The generate a file and download it on the 'Editor' page has been copied from [here](https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server). The code has been adjusted by the website creator. 
 - The submission form JavaScript code on the 'Contact' page is coming from the Code Institude's webinar about EmailJS.
 - The JavaScript code for importing a .txt file content on the 'Practice' and 'Editor' page has been copied from [here](https://usefulangle.com/post/193/javascript-read-local-file). The code has been adjusted by the website creator.
+- Many jQuery code examples were found on the internet which gave the website creator information on how to implement certain code on this website, especially the [stackoverflow](https://www.stackoverflow.com) website gave a lot of information.
 
 
 ### Content
 
 #### README file
-- The following README files were used as inspiration for creating the README file of the project:
-   * Same format used as in the previous project, see [README.md](...) file of the Japanese Restaurant Shibuya
-   * Code Institute Website [link](https://github.com/Code-Institute-Solutions/SampleREADME)
-   * Code Institute Love Running [link](https://github.com/Code-Institute-Solutions/readme-template)
+For the sake of consistency, the README file of the website creator's previous project ([Japanese Restaurant Shibuya](https://github.com/Eburonia/japanese-restaurant-shibuya)) was used as a basis for the README file of this project.
 
 
 #### Index Page
-- ...
-   * ...
-   * ...
+All content on the 'Index' page was written by the website creator.
+
 
 #### Manual Page
-- ...
-   * ...
-   * ...
+All content on the 'Manual' page was written by the website creator.
 
 
 ### Media
 
 #### Images
-- All pictures shown are for illustration purposes only and are not owned by the web developer, all copyrights and credit go to the respective owner.
+- The website logo was created by the website creator.
+- All images on the 'How to Use' page were created by the website creator.
 
 <img src="assets/images/..." alt="..."><br>
 <sub>....</sub>
