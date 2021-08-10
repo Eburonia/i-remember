@@ -99,10 +99,10 @@ The following colours were used throughout the webpage:
 
 
 #### Typography
-- []() is the only font used throughout the website. ... is set as a fallback font type. ... is a well-readable font. 
+Not much attention is given to selecting a proper font type. 'Segoe UI' is the only font type used throughout the website which is a well-readable font type and 'Tahoma', 'Geneva', 'Verdana', and 'sans-serif' are set as a fallback font type.
 
-<img src="assets/readme-images/..." alt="... Font"><br>
-<sub>... font</sub>
+<img src="assets/images-readme/font-type.png" alt="segoe UI font-type"><br>
+<sub>Segoe UI font-type</sub>
 
 
 #### Imagery
