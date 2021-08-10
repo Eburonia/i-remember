@@ -284,20 +284,24 @@ No errors found.
 ### Testing User Stories from User Experience (UX) Section
 
 #### First-time Visitor Goals
-1. As a first-time of the website, 
-2. As a first-time of the website, 
-3. As a first-time of the website, 
-4. As a first-time of the website, 
-5. As a first-time of the website, 
-6. As a first-time of the website, 
-7. As a first-time of the website, 
-8. As a first-time of the website, 
-9. As a first-time of the website, 
-10. As a first-time of the website,
+1. As a first-time visitor of the website, I want to understand what the website's purpose is, so I can have an idea of whether I have ended up in the right place or not.
+2. As a first-time visitor of the website, I want to easily navigate throughout the website,  So I don't get frustrated by having any idea where to click.
+3. As a first-time visitor of the website, I want to quickly find out how to use the website, so I might not get frustrated by just intuitively trying things out on the website.
+4. As a first-time visitor of the website, I want to practice an example flashcard set without having to create one first, so I can quickly see how the 'practice' page looks and functions.
+5. As a first-time visitor of the website, I want to create my own flashcard sets, so I can start practicing my flashcards.
+6. As a first-time visitor of the website, I want to have a user-friendly user interface, So I might not get annoyed or frustrated using the website.
+7. As a first-time visitor of the website, I want to know what other end-users think of the website, So I can decide whether I might use the website or not.
+8. As a first-time visitor of the website, I want to contact the website creator, so I can ask him a question or give him some feedback.
+9. As a first-time visitor of the website, I want to know what a flashcard set is about, So I might not get confused when practicing a specific flashcard set.
+10. As a first-time visitor of the website, I want to know how long it takes to get through a flashcard set, So I might not get frustrated because I have no idea how much time it will take.
 
 #### Returning Visitor Goals
-1. As a first-time of the website, 
-2. As a first-time of the website,
+1. As a returning visitor of the website, I want to maintain my flashcard sets, So I can add or delete flashcards that are needed or not needed anymore.
+2. As a returning visitor of the website, I want to re-use my created flashcard sets, So I can keep practicing them.
+3. As a returning visitor of the website, I want to use my created flashcard sets on different devices, so I can decide which device I might use when I want to practice.
+4. As a returning visitor of the website, I want to know my progress in remembering my flashcards, so I can decide whether I need to invest more time to increase my remembering score.
+5. As a returning visitor of the website, I want to practice my flashcards as long as I want, So I can determine how much time I want to invest in a practice session.
+6. As a returning visitor of the website, I want to receive the latest information about the website, So I know when for example newly implemented features are added to the website.
 
 
 <!-- Known Bugs -->
