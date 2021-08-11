@@ -74,7 +74,6 @@ p {
 
  #navbar-right > ul > li > a:hover {
     color: #f04a64;
-    transition: 1s;
  }
 
 
@@ -111,7 +110,6 @@ p {
 
 #toggle-menu > ul > li:hover {
     background-color: #f04a64;
-    transition: 1s;
 }
 
 
