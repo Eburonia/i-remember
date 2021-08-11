@@ -21,10 +21,10 @@ function sendMail(contactForm) {
             console.log("SUCCESS", response);
 
             /* clear screen when form sent */
-            $('#content-index').empty();
+            $('#content-contact').empty();
 
             /* put message on screen the sending was successful */
-            $('#content-index').append(`
+            $('#content-contact').append(`
             
                 <div id="sent-message">Your message has been sent!</div>
 

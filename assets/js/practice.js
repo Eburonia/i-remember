@@ -11,10 +11,10 @@ let pullCard;
 function openStartScreen() {
 
         /* clear the screen before loading the practice screen */
-        $('#content-index').empty();
+        $('#content-practice').empty();
 
         /* load the start screen */
-        $('#content-index').append(`
+        $('#content-practice').append(`
         
             <div id="start-screen">
             
@@ -45,11 +45,11 @@ function openStartScreen() {
 function openPracticeScreen() {
 
     /* clear the screen before loading the practice screen */
-    $('#content-index').empty();
+    $('#content-practice').empty();
 
 
     /* load the practice screen */
-    $('#content-index').append(`
+    $('#content-practice').append(`
     
         <div id="practice-flashcards">PRACTICE FLASHCARDS</div>
 
@@ -314,7 +314,7 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
     if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
        
         /* clear the screen before loading a deck into the practice screen */
-        $('#content-index').empty();
+        $('#content-practice').empty();
 
         /* open the practice screen */
         openPracticeScreen();

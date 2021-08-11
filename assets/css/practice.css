@@ -3,7 +3,7 @@
 /* August 2021 */
 
 
-#content-index {
+#content-practice {
     text-align: left;
     margin: 0 auto;
     width: 100%;
@@ -251,7 +251,7 @@
 /* for tablets and phones */
 @media only screen and (max-width: 900px) { 
 
-    #content-index {
+    #content-practice {
         width: calc(100% - 20px);
         box-sizing: border-box;
         margin-left: 10px;

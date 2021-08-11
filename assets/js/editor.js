@@ -23,7 +23,7 @@ function download(filename, text) {
 /* function loads the start screen */
 function loadStartScreen() {
 
-    $('#content-editor-page').append(`
+    $('#content-editor').append(`
 
     <div id="editor-div"><h2>Deck Editor <i class="fas fa-pencil-alt"></i></h2></div>
 
