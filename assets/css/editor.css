@@ -215,6 +215,7 @@ input[type=file] {
 
     #content-editor {
         width: calc(100% - 20px);
+        padding: 20px;
     }
 
     #editor-div, #cards-summary-div, #editor-buttons-div {

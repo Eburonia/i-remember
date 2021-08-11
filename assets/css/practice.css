@@ -292,9 +292,9 @@ input[type=file] {
         margin-right: 10px;
     }
 
-
     #start-screen {
         width: 100%;
+        padding: 20px;
     }
 
     #flashcard {

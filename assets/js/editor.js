@@ -209,7 +209,7 @@ $('#new-button').on('click', function(){
      $('#deck-title').after(`
                  
         <div id="cards-description-div">
-            <div id="cards-title-frontside" class="change-field" aria-label="click this field to adjust the front side card description>Front side</div>
+            <div id="cards-title-frontside" class="change-field" aria-label="click this field to adjust the front side card description">Front side</div>
             <div id="cards-title-backside" class="change-field" aria-label="click this field to adjust the back side card description">Back side</div>
         </div>
      
