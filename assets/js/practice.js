@@ -19,14 +19,21 @@ function openStartScreen() {
             <div id="start-screen">
             
                 <div id="open-deck-div">
-                    <h2>Open Deck <i class="fas fa-upload"></i></h2>
+                    <h2>Practice <i class="fas fa-play-circle"></i></i></h2>
+                    <h3>Open Deck</h3>
                     <p>Click the 'browse' button below and select a deck (.txt file)</p>
-                    <input type="file" id="browse-button" title="Select a deck" aria-label="click this button to select a deck"/>
-                    <button id="load-deck-button" title="Load the selected deck" aria-label="click this button to load the selected deck">Load Deck</button><br>
+
+                    <div id="browse-button-div">
+
+                        <input type="file" id="browse-button" title="Select a deck" aria-label="click this button to select a deck"/><br>
+                        <button id="load-deck-button" title="Load the selected deck" aria-label="click this button to load the selected deck">Load Deck</button><br>
+
+                    </div>
+
                 </div>
 
                 <div id="example-deck-div">
-                    <h2>Example Deck <i class="fas fa-eye"></i></h2>
+                    <h3>Example Deck</h3>
                     <p>To show an example deck, please click the 'example deck' button below.</p>
                     <p>With this deck you can practice your knowledge about European capital cities and consists out of 30 cards.</p>
                     <button id="example-deck-button" title="Load an example deck" aria-label="click this button to load an example deck">Example Deck</button>

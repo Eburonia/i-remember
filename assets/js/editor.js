@@ -29,7 +29,7 @@ function loadStartScreen() {
 
     <div id="cards-summary-div"></div>
 
-        <div id="editor-buttons-div" title="Select a deck">
+        <div id="editor-buttons-div">
         
                 <input type="file" id="browse-button" title="Select a deck"/><br>
                 <button class="editor-button" id="read-button" title="Open the deck on screen" aria-label="click this button to open a deck file">Open Deck</button>

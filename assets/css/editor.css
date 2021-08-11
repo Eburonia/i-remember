@@ -206,12 +206,6 @@ input[type=file] {
 }
 
 
-#browse-button::before {
-    background-color: whitesmoke;
-    padding: 4px;
-    border-radius: 8px;
-    content: 'select a deck';
-}
 
 
 /* media queries for editor.html only */

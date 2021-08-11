@@ -12,6 +12,14 @@
 }
 
 
+h3 {
+    color: #707070;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+
 /* start screen CSS code */
 
 #start-screen {
@@ -31,12 +39,28 @@
 }
 
 
+#browse-button-div {
+    margin: 0px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 10px;
+    background-color: #707070;
+    border-radius: 6px;
+    padding: 8px 10px;
+}
+
 
 
 #browse-button {
-    padding: 10px;
     border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    overflow: hidden;
 }
+
 
 
 #load-deck-button, input[type=file]::file-selector-button, #example-deck-button {
@@ -53,8 +77,18 @@
 }
 
 
+input[type=file]::file-selector-button {
+    padding: 6px 10px;
+}
+
+
 #load-deck-button:hover, input[type=file]::file-selector-button:hover, #example-deck-button:hover {
     background-color: #b33649;
+}
+
+
+input[type=file] {
+    width: calc(100% - 20px);
 }
 
 
