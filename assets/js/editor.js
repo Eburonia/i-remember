@@ -29,13 +29,13 @@ function loadStartScreen() {
 
     <div id="cards-summary-div"></div>
 
-        <div id="editor-buttons-div">
+        <div id="editor-buttons-div" title="Select a deck">
         
-                <input type="file" id="browse-button" /><br>
-                <button class="editor-button" id="read-button">Open Deck</button>
-                <button class="editor-button" id="new-button">New Deck</button>
-                <button class="editor-button" id="add-card">Add Card</button>
-                <button class="editor-button" id="export-deck">Export</button>
+                <input type="file" id="browse-button" title="Select a deck"/><br>
+                <button class="editor-button" id="read-button" title="Open the deck on screen">Open Deck</button>
+                <button class="editor-button" id="new-button" title="Start a new deck">New Deck</button>
+                <button class="editor-button" id="add-card" title="Add a card to the deck">Add Card</button>
+                <button class="editor-button" id="export-deck" title="Export the deck to a downloadable file">Export</button>
         </div>
 
     `);
