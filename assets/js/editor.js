@@ -32,13 +32,17 @@ function loadStartScreen() {
         <div id="editor-buttons-div">
         
                 <input type="file" id="browse-button" title="Select a deck"/><br>
-                <button class="editor-button" id="read-button" title="Open the deck on screen" aria-label="click this button to open a deck file">Open Deck</button>
+                <button class="editor-button" id="read-button" title="Open the deck on screen" aria-label="click this button to open a deck file">Open Deck2</button>
                 <button class="editor-button" id="new-button" title="Start a new deck" aria-label="click this button to create a new deck">New Deck</button>
                 <button class="editor-button" id="add-card" title="Add a card to the deck" aria-label="click this button to add a new card to your deck">Add Card</button>
                 <button class="editor-button" id="export-deck" title="Export the deck to a downloadable file" aria-label="click this button to export your deck to a downloadable file">Export</button>
         </div>
 
     `);
+
+    /* hide load deck button */
+    $('#read-button').hide();
+    alert('test');
 
 }
 
@@ -297,6 +301,21 @@ $(document).on('click', '.delete-card', function(){
 
 });
 
+
+
+/* show load button when .txt file is selected */
+$('#browse-button').change(function() {
+
+    let file = document.querySelector("#browse-button").files[0];
+
+    if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
+        $('#read-button').show();
+    }
+    else {
+        alert('please select a .txt file');
+    }
+
+});
 
 
 

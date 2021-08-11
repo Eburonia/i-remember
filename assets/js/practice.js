@@ -43,7 +43,9 @@ function openStartScreen() {
         
         `);
 
-        $("#start-practice-button").prop('disabled', true);
+        $('#start-practice-button').prop('disabled', true);
+
+        $('#load-deck-button').hide();
 
 }
 
@@ -503,7 +505,6 @@ $(document).on('keypress', '#input-textbox',  function(e) {
             /* disable input textbox */
             $('#input-textbox').prop('disabled', false);
 
-
             /* show on screen the answer is wrong */
             $('#answer').text('Wrong Answer!').css('color', 'red');
             $('#answer').show();
@@ -799,3 +800,25 @@ $(document).on('click', '#other-deck-small-device', function() {
     alert('test');
 
 });
+
+
+
+/* show load button when .txt file is selected */
+$('#browse-button').change(function() {
+
+    let file = document.querySelector("#browse-button").files[0];
+
+    if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
+        $('#load-deck-button').show();
+    }
+    else {
+        alert('please select a .txt file');
+    }
+
+});
+
+
+
+
+
+    
