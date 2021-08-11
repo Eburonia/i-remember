@@ -21,15 +21,15 @@ function openStartScreen() {
                 <div id="open-deck-div">
                     <h2>Open Deck <i class="fas fa-upload"></i></h2>
                     <p>Click the 'browse' button below and select a deck (.txt file)</p>
-                    <input type="file" id="browse-button" title="Select a deck" />
-                    <button id="load-deck-button" title="Load the selected deck">Load Deck</button><br>
+                    <input type="file" id="browse-button" title="Select a deck" aria-label="click this button to select a deck"/>
+                    <button id="load-deck-button" title="Load the selected deck" aria-label="click this button to load the selected deck">Load Deck</button><br>
                 </div>
 
                 <div id="example-deck-div">
                     <h2>Example Deck <i class="fas fa-eye"></i></h2>
                     <p>To show an example deck, please click the 'example deck' button below.</p>
                     <p>With this deck you can practice your knowledge about European capital cities and consists out of 30 cards.</p>
-                    <button id="example-deck-button" title="Load an example deck">Example Deck</button>
+                    <button id="example-deck-button" title="Load an example deck" aria-label="click this button to load an example deck">Example Deck</button>
                 </div>
             
             </div>
@@ -95,10 +95,10 @@ function openPracticeScreen() {
 
             <div id="buttons-div">
 
-                <button id="answer-button">Show Answer</button>
-                <button id="next-card-button">Next Card</button>
-                <button id="replay-button">Replay</button>
-                <button id="other-deck-button">Other Deck</button>
+                <button id="answer-button" title="show the cards answer" aria-label="click this button to show the answer">Show Answer</button>
+                <button id="next-card-button" title="go to next card" aria-label="click this button to go to the next card">Next Card</button>
+                <button id="replay-button" title="replay this deck" aria-label="click this button to replay this deck">Replay</button>
+                <button id="other-deck-button" title="select another deck" aria-label="click this button to select another deck">Other Deck</button>
             
             </div>
 
