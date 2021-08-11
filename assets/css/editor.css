@@ -4,7 +4,6 @@
 
 
 #content-editor
-
 {
     box-sizing: border-box;
     background-color: whitesmoke;
@@ -14,6 +13,14 @@
     border-radius: 18px;
     border: 2px solid #f04a64;
     margin-bottom: 50px;
+
+    /* disable selecting text */
+    /* Credit: https://www.arungudelli.com/tutorial/css/disable-text-selection-in-html-using-user-select-css-property/ */ 
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 
