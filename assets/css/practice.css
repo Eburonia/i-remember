@@ -81,6 +81,9 @@ input[type=file]::file-selector-button {
     padding: 6px 10px;
 }
 
+input[type=file]::file-selector-
+
+
 
 #load-deck-button:hover, input[type=file]::file-selector-button:hover, #example-deck-button:hover {
     background-color: #b33649;

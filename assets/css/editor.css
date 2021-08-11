@@ -44,9 +44,7 @@
     margin-top: 10px;
     background-color: #707070;
     border-radius: 6px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 8px;
+    padding: 8px 10px 0 10px;
     overflow: hidden;
 }
 
@@ -68,6 +66,7 @@ input[type=file] {
     width: calc(100% - 10px);
 }
 
+
 .editor-button {
     margin-bottom: 10px;
 }
@@ -80,14 +79,9 @@ input[type=file] {
 
 input[type=file] {
     background-color: whitesmoke;
-    padding: 2px;
+    padding: 6px 2px 6px 10px;
     border-radius: 6px;
-    margin-top: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 10px;
+    margin: 5px 10px 10px 0;
 }
 
 
@@ -110,6 +104,7 @@ input[type=file] {
     text-align: center;
 }
 
+
 #cards-title-frontside {
     background-color: #707070;
     text-overflow: ellipsis;
@@ -125,6 +120,7 @@ input[type=file] {
     white-space: nowrap;
     font-weight: 600;
 }
+
 
 #cards-title-backside {
     background-color: #707070;
@@ -206,21 +202,21 @@ input[type=file] {
 }
 
 
-
-
 /* media queries for editor.html only */
 
 /* for tablets and phones */
 @media only screen and (max-width: 900px) { 
+
 
     #content-editor {
         width: calc(100% - 20px);
         padding: 20px;
     }
 
+
     #editor-div, #cards-summary-div, #editor-buttons-div {
         width: 100%;
     }
     
-}
 
+}

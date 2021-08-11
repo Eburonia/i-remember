@@ -86,13 +86,16 @@
 /* for tablets and phones */
 @media only screen and (max-width: 900px) { 
 
+
     #content-contact {
         width: calc(100% - 20px);
         padding: 0;
     }
 
+
     #contact-form-div {
         padding: 20px;
     }
+    
 
 }
