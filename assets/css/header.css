@@ -105,12 +105,12 @@ header {
 }
 
 
-#active {
+#active, #active-toggle {
     border-top: 2px solid #f04a64
 }
 
 
-#active > a {
+#active > a, #active-toggle > a {
     color: #f04a64 !important;
 } 
 
@@ -140,13 +140,13 @@ header {
         display: block;
     }
 
-    #active {
+    #active, #active-toggle {
         border-top: 0;
         background-color: #f04a64 !important;
         
     }
     
-    #active > a {
+    #active > a, #active > a {
         color: whitesmoke !important;
     } 
 
