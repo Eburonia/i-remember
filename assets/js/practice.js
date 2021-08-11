@@ -85,15 +85,6 @@ function openPracticeScreen() {
         </div>
 
 
-        <div id="input-small-devices">
-        
-            <div id="answer-small-device">Show Answer</div>
-            <div id="wrong-small-device">Wrong</div>
-            <div id="correct-small-device">Correct</div>
-        
-        </div>
-
-
         <div id="input-field-div">
 
             <div id="score">CORRECT <span id="correct">0</span> - WRONG <span id="wrong">0</span></div>
@@ -109,6 +100,18 @@ function openPracticeScreen() {
             
             </div>
 
+
+            <div id="input-small-devices">
+        
+                <div id="replay-button-small-device">Replay</div>
+                <div id="other-deck-small-device">Other Deck</div>
+
+                <div id="answer-small-device">Show Answer</div>
+                <div id="wrong-small-device">Wrong</div>
+                <div id="correct-small-device">Correct</div>
+    
+            </div>
+
         </div>
 
     `);
@@ -116,9 +119,10 @@ function openPracticeScreen() {
 
     /* hide the replay button */
     $('#replay-button').hide();
-    $('#answer-button').show();
-
     $('#other-deck-button').hide();
+
+    $('#replay-button-small-device').hide();
+    $('#other-deck-small-device').hide();
 
 }
 
@@ -206,6 +210,9 @@ function fireQuestion() {
     let currentCard = $('#current-card').text();
     $("#next-card-button").hide();
 
+    $('#correct-small-device').css('background-color', 'limegreen');
+    $('#wrong-small-device').css('background-color', 'red');
+
     /* hide answer */
     $('#back-side-title').hide();
     $('#front-side-title').show();
@@ -252,18 +259,47 @@ function fireQuestion() {
         $("#input-textbox").blur(); // deselect textbox
 
         $('#back-side-title').hide();
-        $('#answer').text('Your score is: ');
-
-        $('#other-deck-button').show();
+        $('#answer').show();
 
 
-        /* show the replay button in order to repeat this deck */
-        $('#replay-button').show();
+        let yourScoreCorrect = parseInt($('correct').val()) / parseInt($('#total-cards').val());
+        alert(parseInt($('correct').val()));
 
-        $('#answer-button').hide();
+        $('#answer').text('Your score is: ' + yourScoreCorrect);
+
+        if ($(window).width() < 900) {
+            $('#replay-button-small-device').show();
+            $('#other-deck-small-device').show();
+        }
+        else {
+            /* show the replay button in order to repeat this deck */
+            $('#replay-button').show();
+            $('#other-deck-button').show();
+        }
+
+         $('#answer-button').hide();
+
     }
     
 }
+
+
+$(window).resize(function(){
+    
+    if ($(window).width() < 900) {
+        $('#replay-button-small-device').show();
+        $('#other-deck-small-device').show();
+    }
+    else {
+        /* show the replay button in order to repeat this deck */
+        $('#replay-button').show();
+        $('#other-deck-button').show();
+    }
+
+  });
+
+
+
 
 
 /* function will increment the correct answer score */
@@ -407,6 +443,10 @@ $(document).on('click', '#replay-button', function() {
     $('#correct').text(0);
 
     $('#wrong').text(0);
+
+    $('#replay-button-small-device').hide();
+
+    $('#other-deck-small-device').hide();
 
 
     fireQuestion();
@@ -727,9 +767,11 @@ $(document).on('click', '#wrong-small-device', function() {
 
     incrementWrongAnswer();
 
+    $('#wrong-small-device').css('background-color', 'crimson');
+
     /* Timeout 2 seconds before next question will be fired */
     setTimeout(fireQuestion, 2000);
-
+    
 });
 
 
@@ -737,7 +779,23 @@ $(document).on('click', '#correct-small-device', function() {
 
     incrementCorrectAnswer();
 
+    $('#correct-small-device').css('background-color', 'green');
+
     /* Timeout 2 seconds before next question will be fired */
     setTimeout(fireQuestion, 2000);
+    
+});
+
+
+$(document).on('click', '#replay-button-small-device', function() {
+
+    alert('test');
+
+});
+
+
+$(document).on('click', '#other-deck-small-device', function() {
+
+    alert('test');
 
 });
