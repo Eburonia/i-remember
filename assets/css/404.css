@@ -28,6 +28,6 @@ body{
     transition: 1s;
 }
 
-#message-404 > img {
+img {
     width: 220px;
 }

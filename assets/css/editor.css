@@ -22,12 +22,6 @@
 }
 
 
-h2 {
-    color: #707070;
-    font-size: 24px;
-    letter-spacing: 1px;
-}
-
 #cards-summary-div, #editor-buttons-div {
     margin: 0px auto;
     box-sizing: border-box;

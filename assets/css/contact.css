@@ -13,21 +13,6 @@
 }
 
 
-h2 {
-    color: #707070;
-    font-size: 24px;
-    padding-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-
-p {
-    font-size: 18px;
-    color: #707070;
-    letter-spacing: 1px;
-}
-
-
 #contact-form-div {
     background-color: whitesmoke;
     box-sizing: border-box;
