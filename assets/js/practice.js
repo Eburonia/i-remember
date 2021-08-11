@@ -116,7 +116,7 @@ function openPracticeScreen() {
 
     /* hide the replay button */
     $('#replay-button').hide();
-
+    $('#answer-button').show();
 
     $('#other-deck-button').hide();
 
@@ -203,7 +203,6 @@ function getNumberOfCardsInDeck(deckMemory) {
 
 function fireQuestion() {
 
-
     let currentCard = $('#current-card').text();
     $("#next-card-button").hide();
 
@@ -260,6 +259,8 @@ function fireQuestion() {
 
         /* show the replay button in order to repeat this deck */
         $('#replay-button').show();
+
+        $('#answer-button').hide();
     }
     
 }
@@ -369,8 +370,8 @@ $(document).on('click', '#answer-button', function(){
     incrementWrongAnswer();
 
     $('#back-side-title').show();
+    $('#answer').text(deckMemory[pullCard].backside);
     $('#answer').css('color', 'deepskyblue').show();
-
     $('#input-textbox').focus();
 
 });
@@ -393,9 +394,7 @@ $(document).on('click', '#replay-button', function() {
  
     }
 
-    
-
-    $("#answer-button").show();
+    $('#answer-button').show();
 
     $('#current-card').text(0);
 

@@ -156,7 +156,7 @@ input[type=file] {
 
 
 #question, #answer {
-    font-size: 16px;
+    font-size: 20px;
     padding-top: 5px;
     letter-spacing: 1px;
 }
@@ -216,6 +216,7 @@ input[type=file] {
     letter-spacing: 1px;
     font-size: 12px;
     cursor: pointer;
+    margin: 0 5px;
 }
 
 
