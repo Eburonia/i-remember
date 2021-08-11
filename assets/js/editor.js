@@ -32,10 +32,10 @@ function loadStartScreen() {
         <div id="editor-buttons-div" title="Select a deck">
         
                 <input type="file" id="browse-button" title="Select a deck"/><br>
-                <button class="editor-button" id="read-button" title="Open the deck on screen">Open Deck</button>
-                <button class="editor-button" id="new-button" title="Start a new deck">New Deck</button>
-                <button class="editor-button" id="add-card" title="Add a card to the deck">Add Card</button>
-                <button class="editor-button" id="export-deck" title="Export the deck to a downloadable file">Export</button>
+                <button class="editor-button" id="read-button" title="Open the deck on screen" aria-label="click this button to open a deck file">Open Deck</button>
+                <button class="editor-button" id="new-button" title="Start a new deck" aria-label="click this button to create a new deck">New Deck</button>
+                <button class="editor-button" id="add-card" title="Add a card to the deck" aria-label="click this button to add a new card to your deck">Add Card</button>
+                <button class="editor-button" id="export-deck" title="Export the deck to a downloadable file" aria-label="click this button to export your deck to a downloadable file">Export</button>
         </div>
 
     `);
@@ -77,15 +77,15 @@ document.querySelector("#read-button").addEventListener('click', function() {
 
 
             /* load deckname on screen */
-            $('#cards-summary-div').append(`<div id="deck-title" class="change-field">${getDeckDescription(deck)}</div>`);
+            $('#cards-summary-div').append(`<div id="deck-title" class="change-field" aria-label="click this text field to adjust the deck description">${getDeckDescription(deck)}</div>`);
     
 
             /* load card front and backside description on screen */
             $('#deck-title').after(`
             
                 <div id="cards-description-div">
-                    <div id="cards-title-frontside" class="change-field">${getDeckFrontSideDescription(deck)}</div>
-                    <div id="cards-title-backside" class="change-field">${getDeckBackSideDescription(deck)}</div>
+                    <div id="cards-title-frontside" class="change-field" aria-label="click this field to adjust the front side card description">${getDeckFrontSideDescription(deck)}</div>
+                    <div id="cards-title-backside" class="change-field" aria-label="click this field to adjust the back side card description">${getDeckBackSideDescription(deck)}</div>
                 </div>
 
             `);
@@ -184,9 +184,9 @@ function loadCardsOnScreen(importFile) {
 
         $('#cards-description-div').append(`
     
-            <div class="card-frontside change-field">${frontside}</div>
-            <div class="card-backside change-field">${backside}</div>
-            <div class="delete-card" title="delete card"><i class="far fa-trash-alt"></i></div>
+            <div class="card-frontside change-field" aria-label="click this text field to adjust the front side card description">${frontside}</div>
+            <div class="card-backside change-field" aria-label="click this text field to adjust the back side card description">${backside}</div>
+            <div class="delete-card" title="delete card" aria-label="click this button to delete this card"><i class="far fa-trash-alt"></i></div>
                 
         `);
 
@@ -202,15 +202,15 @@ $('#new-button').on('click', function(){
      $('#cards-summary-div').empty();
 
     /* load deckname on screen */
-    $('#cards-summary-div').append(`<div id="deck-title" class="change-field">Deck name</div>`);
+    $('#cards-summary-div').append(`<div id="deck-title" class="change-field" aria-label="click this text field to adjust the deck description">Deck name</div>`);
     
 
     /* load card front and backside description on screen */
      $('#deck-title').after(`
                  
         <div id="cards-description-div">
-            <div id="cards-title-frontside" class="change-field">Front side</div>
-            <div id="cards-title-backside" class="change-field">Back side</div>
+            <div id="cards-title-frontside" class="change-field" aria-label="click this field to adjust the front side card description>Front side</div>
+            <div id="cards-title-backside" class="change-field" aria-label="click this field to adjust the back side card description">Back side</div>
         </div>
      
     `);
@@ -223,9 +223,9 @@ $('#add-card').on('click', function(){
 
     $('#cards-description-div').after(`
     
-        <div class="card-frontside change-field">-</div>
-        <div class="card-backside change-field">-</div>
-        <div class="delete-card" title="delete card"><i class="far fa-trash-alt"></i></div>
+        <div class="card-frontside change-field" aria-label="click this text field to adjust the front side card description">-</div>
+        <div class="card-backside change-field" aria-label="click this text field to adjust the back side card description">-</div>
+        <div class="delete-card" title="delete card" aria-label="click this button to delete this card"><i class="far fa-trash-alt"></i></div>
 
     `);
 
