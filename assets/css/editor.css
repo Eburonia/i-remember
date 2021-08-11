@@ -90,6 +90,8 @@ input[type=file] {
 
 #deck-title {
     background-color: #707070;
+    text-overflow: ellipsis;
+    overflow: hidden;
     color: whitesmoke;
     box-sizing: border-box;
     width: 100%;
@@ -107,12 +109,13 @@ input[type=file] {
 
 #cards-title-frontside {
     background-color: #707070;
+    text-overflow: ellipsis;
+    overflow: hidden;
     color: whitesmoke;
     box-sizing: border-box;
     width: calc(50% - 20px);
     float: left;
-    padding: 6px;
-    padding-left: 10px;
+    padding: 6px 10px;
     margin: 4px 0;
     border-radius: 6px;
     cursor: pointer;
@@ -122,12 +125,13 @@ input[type=file] {
 
 #cards-title-backside {
     background-color: #707070;
+    text-overflow: ellipsis;
+    overflow: hidden;
     color:whitesmoke;
     box-sizing: border-box;
     width: calc(50% + 16px);
     float: left;
-    padding: 6px;
-    padding-left: 10px;
+    padding: 6px 10px;
     margin: 4px 0;
     margin-left: 4px;
     border-radius: 6px;
@@ -139,20 +143,24 @@ input[type=file] {
 
 .card-frontside  {
     background-color: #D5D8CF;
+    text-overflow: ellipsis;
+    overflow: hidden;
     color: #707070;
     box-sizing: border-box;
     width: calc(50% - 20px);
     float: left;
-    padding: 6px;
-    padding-left: 10px;
+    padding: 6px 10px;
     margin: 4px 0;
     border-radius: 6px;
     cursor: pointer;
     white-space: nowrap;
 }
 
+
 .card-backside  {
     background-color: #D5D8CF;
+    text-overflow: ellipsis;
+    overflow: hidden;
     color: #707070;
     box-sizing: border-box;
     width: calc(50% - 26px);
