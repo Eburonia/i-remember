@@ -92,6 +92,10 @@ The following colours were used throughout the webpage:
       - Colour used in scoreboard (wrong answers), and 'wrong' button small devices.
    - Hex: #00bfff: deepskyblue colour
       - Colour used in scoreboard (show answer), and 'show answer' button small devices.
+   - Hex: #dc143c: crimson colour
+      - Colour used in scoreboard (wrong answers), and 'wrong' button (pressed) smaller devices.
+   - Hex: #00ff00: green colour
+      - Colour used in scoreboard (correct answers), and 'correct' button (pressed) smaller devices.
 
 
 <img src="assets/images-readme/colour-scheme.png" alt="colour scheme"><br>
@@ -99,7 +103,8 @@ The following colours were used throughout the webpage:
 
 
 #### Typography
-Not much attention is given to selecting a proper font type. 'Segoe UI' is the only font type used throughout the website which is a well-readable font type and 'Tahoma', 'Geneva', 'Verdana', and 'sans-serif' are set as a fallback font type.
+- Not much attention is given to selecting a proper font type. 'Segoe UI' is the only font type used throughout the website which is a well-readable font type and 'Tahoma', 'Geneva', 'Verdana', and 'sans-serif' are set as a fallback font type.
+- The 'Glacial Indifference' font is used for the website logo.
 
 <img src="assets/images-readme/font-type.png" alt="segoe UI font-type"><br>
 <sub>Segoe UI font-type</sub>
@@ -412,7 +417,7 @@ No errors found.
 
 <!-- Known Bugs -->
 <a id="bugs"></a>
-## Known Bugs
+- Aria labels in division buttons are not accepted in the W3C Markup Validator, a warning is shown (Possible misuse of aria-label). These aria-labels are removed from the code.
 
 ### 
 - ...
