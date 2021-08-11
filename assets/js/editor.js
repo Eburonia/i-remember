@@ -25,7 +25,7 @@ function loadStartScreen() {
 
     $('#content-editor-page').append(`
 
-    <div id="editor-div"><h2>Deck Editor</h2></div>
+    <div id="editor-div"><h2>Deck Editor <i class="fas fa-pencil-alt"></i></h2></div>
 
     <div id="cards-summary-div"></div>
 
