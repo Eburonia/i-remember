@@ -104,9 +104,6 @@ function openPracticeScreen() {
 
             <div id="input-small-devices">
         
-                <div class="button-small-device" id="replay-deck-button-small-device">Replay</div>
-                <div class="button-small-device" id="other-deck-button-small-device">Other Deck</div>
-
                 <div class="button-small-device" id="wrong-button-small-device">Wrong</div>
                 <div class="button-small-device" id="answer-button-small-device">Answer</div>
                 <div class="button-small-device" id="correct-button-small-device">Correct</div>
@@ -253,30 +250,32 @@ function fireQuestion() {
         $('#front-side-title').hide();
         $('#question').text('All cards shown, press the \'Replay\' button below to repeat this deck or press \'Other Deck\' to select an other deck.');
 
-        /* disable input textbox */
+        // disable input textbox
         $('#input-textbox').prop('disabled', true);
         $("#input-textbox").blur(); // deselect textbox
 
         $('#back-side-title').hide();
         $('#answer').show();
+        $('#answer').text('');
 
 
-        let yourScoreCorrect = parseInt($('correct').val()) / parseInt($('#total-cards').val());
-        alert(parseInt($('correct').val()));
+        //let yourScoreCorrect = parseInt($('correct').val()) / parseInt($('#total-cards').val());
+       // alert(parseInt($('correct').val()));
 
-        $('#answer').text('Your score is: ' + yourScoreCorrect);
+        //$('#answer').text('Your score is: ' + yourScoreCorrect);
 
-        if ($(window).width() < 900) {
+      
             $('#replay-deck-button-small-device').show();
             $('#other-deck-button-small-device').show();
-        }
-        else {
-            /* show the replay button in order to repeat this deck */
-            $('#replay-button').show();
-            $('#other-deck-button').show();
-        }
 
-         $('#answer-button').hide();
+            
+
+                $('#replay-button').show();
+                $('#other-deck-button').show();
+            
+        
+
+            $('#answer-button').hide();
 
     }
     
@@ -759,6 +758,7 @@ $(document).on('click', '#wrong-button-small-device', function() {
 
     incrementWrongAnswer();
 
+    $('#answer').css('color', 'red');
     $('#wrong-button-small-device').css('background-color', 'crimson');
 
     /* Timeout 2 seconds before next question will be fired */
@@ -770,6 +770,7 @@ $(document).on('click', '#wrong-button-small-device', function() {
 $(document).on('click', '#answer-button-small-device', function() {
 
     $('#back-side-title').show();
+    $('#answer').css('color', 'deepskyblue');
     $('#answer').show();
 
 });
@@ -779,6 +780,7 @@ $(document).on('click', '#correct-button-small-device', function() {
 
     incrementCorrectAnswer();
 
+    $('#answer').css('color', 'limegreen');
     $('#correct-button-small-device').css('background-color', 'green');
 
     /* Timeout 2 seconds before next question will be fired */
