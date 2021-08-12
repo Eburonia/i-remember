@@ -9,6 +9,14 @@
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 50px;
+
+    /* disable selecting text */
+    /* Credit: https://www.arungudelli.com/tutorial/css/disable-text-selection-in-html-using-user-select-css-property/ */ 
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 
@@ -50,7 +58,6 @@ h3 {
 }
 
 
-
 #browse-button {
     border-radius: 6px;
     padding-left: 10px;
@@ -81,8 +88,10 @@ input[type=file]::file-selector-button {
     padding: 6px 10px;
 }
 
-input[type=file]::file-selector-
 
+input[type=file]::file-selector-button:hover {
+    background-color: #b33649;
+}
 
 
 #load-deck-button:hover, input[type=file]::file-selector-button:hover, #example-deck-button:hover {
@@ -187,13 +196,16 @@ input[type=file] {
     padding-bottom: 0;
 }
 
+
 #correct, #wrong {
     font-weight: 700;
 }
 
+
 #correct {
     color: limegreen;
 }
+
 
 #wrong {
     color: red;
@@ -222,6 +234,9 @@ input[type=file] {
     margin: 0 5px;
 }
 
+#answer-button:hover {
+    background-color: #b33649;
+}
 
 #input-div {
     padding: 10px;

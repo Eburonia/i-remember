@@ -32,7 +32,7 @@ function loadStartScreen() {
         <div id="editor-buttons-div">
         
                 <input type="file" id="browse-button" title="Select a deck"/><br>
-                <button class="editor-button" id="read-button" title="Open the deck on screen" aria-label="click this button to open a deck file">Open Deck2</button>
+                <button class="editor-button" id="read-button" title="Open the deck on screen" aria-label="click this button to open a deck file">Open Deck</button>
                 <button class="editor-button" id="new-button" title="Start a new deck" aria-label="click this button to create a new deck">New Deck</button>
                 <button class="editor-button" id="add-card" title="Add a card to the deck" aria-label="click this button to add a new card to your deck">Add Card</button>
                 <button class="editor-button" id="export-deck" title="Export the deck to a downloadable file" aria-label="click this button to export your deck to a downloadable file">Export</button>
@@ -40,8 +40,15 @@ function loadStartScreen() {
 
     `);
 
-    /* hide load deck button */
+    // hide load deck button
     $('#read-button').hide();
+
+    // hide add card button
+    $('#add-card').hide();
+
+    // hide export button
+    $('#export-deck').hide();
+
 
 }
 
@@ -99,6 +106,16 @@ document.querySelector("#read-button").addEventListener('click', function() {
 		});
 
 		reader.readAsText(file);
+
+        // show add card button on screen
+        $('#add-card').show();
+
+        // show export button
+        $('#export-deck').show();
+
+
+        // open deck button
+        $('#read-button').hide();
         
 });
 
@@ -198,7 +215,7 @@ function loadCardsOnScreen(importFile) {
 }
   
 
-/* on click a new deck will be created */
+// on click, a new deck will be created
 $('#new-button').on('click', function(){
 
      /* clear the screen before loading a deck on screen */
@@ -217,6 +234,15 @@ $('#new-button').on('click', function(){
         </div>
      
     `);
+
+    // focus on div to prevent button staying active on phone
+    $('#editor-buttons-div').focus();
+
+    // show add card button on screen
+    $('#add-card').show();
+
+    // show export button
+    $('#export-deck').show();
 
 });
 

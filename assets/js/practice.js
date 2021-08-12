@@ -206,17 +206,25 @@ function getNumberOfCardsInDeck(deckMemory) {
 }
 
 
-
 function fireQuestion() {
 
     let currentCard = $('#current-card').text();
 
-    $('#correct-button-small-device').prop('disabled', false);
-    $('#wrong-button-small-device').prop('disabled', false);
+    $('#answer-button-small-device').prop('disabled', false);
+    $('#answer-button-small-device').css('background-color', 'deepskyblue');
+    $('#answer-button-small-device').css('color', 'whitesmoke');
+
+    $('#correct-button-small-device').css('background-color', '#707070');
+    $('#correct-button-small-device').css('color', '#707070');
 
 
-    $('#correct-button-small-device').css('background-color', 'limegreen');
-    $('#wrong-button-small-device').css('background-color', 'red');
+    $('#wrong-button-small-device').css('background-color', '#707070');
+    $('#wrong-button-small-device').css('color', '#707070');
+
+
+    $('#correct-button-small-device').prop('disabled', true);
+    $('#wrong-button-small-device').prop('disabled', true);
+
 
     /* hide answer */
     $('#back-side-title').hide();
@@ -258,7 +266,7 @@ function fireQuestion() {
         /* tell end-user they have finished all cards */
         $('#front-side-title').hide();
 
-        $('#question').html("All cards shown<br>Press the 'Replay' button below to repeat this deck<br>Or press 'Other Deck to select an other deck.");
+        $('#question').html("All cards shown.<br>Press the 'Replay' button below to repeat this deck.<br>Or press 'Other Deck to select an other deck.");
 
         // disable input textbox
         $('#input-textbox').prop('disabled', true);
@@ -289,21 +297,6 @@ function fireQuestion() {
     }
     
 }
-
-
-/* $(window).resize(function(){
-    
-    if ($(window).width() < 900) {
-        $('#replay-deck-button-small-device').show();
-        $('#other-deck-button-small-device').show();
-    }
-    else {
-        // show the replay button in order to repeat this deck 
-        $('#replay-button').show();
-        $('#other-deck-button').show();
-    }
-
-  }); */
 
 
 /* function will increment the correct answer score */
@@ -449,7 +442,7 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 });
 
 
-/* on click show the question answer */
+// on click, show the question answer
 $(document).on('click', '#answer-button', function(){
 
     incrementWrongAnswer();
@@ -462,7 +455,7 @@ $(document).on('click', '#answer-button', function(){
 });
 
 
-/* on click repeat the deck */
+// on click, replay the deck
 $(document).on('click', '#replay-button', function() {
 
     replayDeck();
@@ -470,63 +463,62 @@ $(document).on('click', '#replay-button', function() {
 });
 
 
-/* on click load other deck on screen to practice */
+// on click, load other deck on screen to practice
 $(document).on('click', '#other-deck-button', function(){
 
-    /* reloads the start screen and empties the memory */
+    // reloads the start screen and empties the memory
     location.reload(); 
 
 });
 
-/* on click check the user-input answer with the correct answer */
+// on click, check the user-input answer with the correct answer
 // Credit: https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
 $(document).on('keypress', '#input-textbox',  function(e) {
     
-    /* clear the answer field */
+    // clear the answer field
     $('#answer').hide();
 
-    /* when enter key is pressed */
+    // when enter key is pressed
     if(e.which == 13) {
         
-        /* disable input textbox */
+        // disable input textbox
         $('#input-textbox').prop('disabled', true);
 
 
-        /* get input answer and correct answer */
+        // get input answer and correct answer
         let inputAnswer = $('#input-textbox').val();
         let correctAnswer = deckMemory[pullCard].backside;
 
-        /* convert input answer and correct answer to lowercase for comparison reasons */
+        // convert input answer and correct answer to lowercase for comparison reasons
         if(inputAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
 
-            /* deselect the textbox */
+            // deselect the textbox
             $("#input-textbox").blur();
 
             $('#back-side-title').show();
             $('#answer').text(correctAnswer);
             $('#answer').show().css('color', 'limegreen').show();
 
-            /* Increment correct score */
+            // increment correct score
             incrementCorrectAnswer();
 
-            /* Timeout 2 seconds before next question will be fired */
+            // timeout 2 seconds before next question will be fired
             setTimeout(fireQuestion, 2000);
 
         }
 
         else
         {
-            /* disable input textbox */
+            // disable input textbox
             $('#input-textbox').prop('disabled', false);
 
-            /* show on screen the answer is wrong */
+            // show on screen the answer is wrong
             $('#answer').text('Wrong Answer!').css('color', 'red');
             $('#answer').show();
 
 
-            /* Increment correct score */
+            // increment correct score
             incrementWrongAnswer();
-
 
         }
 
@@ -535,10 +527,10 @@ $(document).on('keypress', '#input-textbox',  function(e) {
 });
 
 
-
+// on click, load the example deck (European Topography)
 $(document).on('click', '#example-deck-button', function(){
 
-    /* declare card object */
+    // declare card object
     let cardObj =  {
   
         frontside: '',
@@ -548,25 +540,24 @@ $(document).on('click', '#example-deck-button', function(){
     };
 
 
-    /* open the practice screen */
+    // open the practice screen
     openPracticeScreen();
 
 
-    /* load the deck description into the practice screen */
+    // load the deck description into the practice screen
     $('#deck-title').text(('European Capital Cities').toUpperCase());
 
-    /* load the amount of card in the loaded deck into the practice screen */
+    // load the amount of card in the loaded deck into the practice screen
     $('#total-cards').text(20);
     
-    /* load the deck's front side of cards description into the practice screen */
+    // load the deck's front side of cards description into the practice screen
     $('#front-side-title').text('What is the capital of');
     
-    /* load the deck's back side of cards description into the practice screen */
+    // load the deck's back side of cards description into the practice screen
     $('#back-side-title').text('Answer');
 
 
-
-    /* card 1 */
+    // card 1
     cardObj =  {
         frontside: 'the Netherlands',
         backside: 'the Hague',
@@ -576,7 +567,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 2 */
+    // card 2
     cardObj =  {
         frontside: 'Belgium',
         backside: 'Brussels',
@@ -586,7 +577,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 3 */
+    // card 3
     cardObj =  {
         frontside: 'France',
         backside: 'Paris',
@@ -596,7 +587,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 4 */
+    // card 4
     cardObj =  {
         frontside: 'Spain',
         backside: 'Madrid',
@@ -606,7 +597,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
     
-    /* card 5 */
+    // card 5
     cardObj =  {
         frontside: 'Portugal',
         backside: 'Lisbon',
@@ -616,7 +607,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
     
-    /* card 6 */
+    // card 6
     cardObj =  {
         frontside: 'Italy',
         backside: 'Rome',
@@ -626,7 +617,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
          
 
-    /* card 7 */
+    // card 7
     cardObj =  {
         frontside: 'Croatia',
         backside: 'Zagreb',
@@ -636,7 +627,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 8 */
+    // card 8
     cardObj =  {
         frontside: 'Serbia',
         backside: 'Belgrade',
@@ -646,7 +637,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 9 */
+    // card 9
     cardObj =  {
         frontside: 'Austria',
         backside: 'Vienna',
@@ -656,7 +647,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 10 */
+    // card 10
     cardObj =  {
         frontside: 'Czech Republic',
         backside: 'Prague',
@@ -666,7 +657,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 11 */
+    // card 11
     cardObj =  {
         frontside: 'Germany',
         backside: 'Berlin',
@@ -676,7 +667,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 12 */
+    // card 12
     cardObj =  {
         frontside: 'Norway',
         backside: 'Oslo',
@@ -686,7 +677,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 13 */
+    // card 13
     cardObj =  {
         frontside: 'Danmark',
         backside: 'Copenhagen',
@@ -696,7 +687,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 14 */
+    // card 14
     cardObj =  {
         frontside: 'Sweden',
         backside: 'Stockholm',
@@ -706,7 +697,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 15 */
+    // card 15
     cardObj =  {
         frontside: 'Finland',
         backside: 'Helsinki',
@@ -716,7 +707,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 16 */
+    // card 16
     cardObj =  {
         frontside: 'Hungary',
         backside: 'Budapest',
@@ -726,7 +717,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 17 */
+    // card 17
     cardObj =  {
         frontside: 'Romenia',
         backside: 'Bucharest',
@@ -736,7 +727,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 18 */
+    // card 18
     cardObj =  {
         frontside: 'Greece',
         backside: 'Athens',
@@ -746,7 +737,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 19 */
+    // card 19
     cardObj =  {
         frontside: 'Bulgaria',
         backside: 'Sofia',
@@ -756,7 +747,7 @@ $(document).on('click', '#example-deck-button', function(){
     deckMemory.push(cardObj);
 
 
-    /* card 20 */
+    // card 20
     cardObj =  {
         frontside: 'Poland',
         backside: 'Warsaw',
@@ -770,7 +761,7 @@ $(document).on('click', '#example-deck-button', function(){
 });
 
 
-
+// on click, increment wrong answer score, and fire a new card
 $(document).on('click', '#wrong-button-small-device', function() {
 
     $('#wrong-button-small-device').prop('disabled', true);
@@ -786,15 +777,33 @@ $(document).on('click', '#wrong-button-small-device', function() {
 });
 
 
+// on click, show the answer on screen and disable the correct and wrong buttons
 $(document).on('click', '#answer-button-small-device', function() {
+
+    $('#correct-button-small-device').prop('disabled', false);
+    $('#wrong-button-small-device').prop('disabled', false);
+
+
+    $('#correct-button-small-device').css('background-color', 'limegreen');
+    $('#correct-button-small-device').css('color', 'whitesmoke');
+
+
+    $('#wrong-button-small-device').css('background-color', 'red');
+    $('#wrong-button-small-device').css('color', 'whitesmoke');
+
 
     $('#back-side-title').show();
     $('#answer').css('color', 'deepskyblue');
     $('#answer').show();
 
+    $('#answer-button-small-device').prop('disabled', true);
+    $('#answer-button-small-device').css('background-color', '#707070');
+    $('#answer-button-small-device').css('color', '#707070');
+
 });
 
 
+// on click, increment correct answer score, and fire a new card
 $(document).on('click', '#correct-button-small-device', function() {
 
     $('#correct-button-small-device').prop('disabled', true);
@@ -804,12 +813,13 @@ $(document).on('click', '#correct-button-small-device', function() {
     $('#answer').css('color', 'limegreen');
     $('#correct-button-small-device').css('background-color', 'green');
 
-    /* Timeout 2 seconds before next question will be fired */
+    // Timeout 2 seconds before next question will be fired
     setTimeout(fireQuestion, 2000);
     
 });
 
 
+// on click, replay the active deck from the beginning
 $(document).on('click', '#replay-deck-button-small-device', function() {
 
     replayDeck();
@@ -817,15 +827,16 @@ $(document).on('click', '#replay-deck-button-small-device', function() {
 });
 
 
+// on click, go to the begin screen to select another deck
 $(document).on('click', '#other-deck-button-small-device', function() {
 
-    /* reloads the start screen and empties the memory */
+    // reload the begin screen and empty the memory
     location.reload(); 
 
 });
 
 
-/* show load button when .txt file is selected */
+// on change, show load button when a (.txt) file is selected
 $('#browse-button').change(function() {
 
     let file = document.querySelector("#browse-button").files[0];
