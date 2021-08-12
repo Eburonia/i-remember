@@ -209,7 +209,7 @@ input[type=file] {
 }
 
 
-#answer-button, #next-card-button, #replay-button, #other-deck-button {
+#answer-button, #replay-button, #other-deck-button {
     color: whitesmoke;
     border: 1px solid #9C1228;
     border-radius: 6px;
@@ -247,83 +247,50 @@ input[type=file] {
 }
 
 
-#replay-button-small-device {
+.button-small-device {
     float: left;
-    background-color: purple;
-    width: calc(50% - 5px);
+    padding-top: 15px;
+    cursor: pointer;
     display: block;
     height: 50px;
-    font-size: 18px;
+    font-size: 16px;
     box-sizing: border-box;
-    padding-top: 12px;
+    border-radius: 10px;
     margin: 5px;
+}
+
+
+#replay-deck-button-small-device {
+    background-color: purple;
+    width: calc(50% - 5px);
     margin-left: 0;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 
-#other-deck-small-device {
-    float: left;
+#other-deck-button-small-device {
     background-color: purple;
     width: calc(50% - 5px);
-    display: block;
-    height: 50px;
-    font-size: 18px;
-    box-sizing: border-box;
-    padding-top: 12px;
-    margin: 5px;
     margin-right: 0;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 
-#answer-small-device {
-    float: left;
-    background-color: deepskyblue;
-    width: 100%;
-    display: block;
-    height: 100px;
-    font-size: 18px;
-    box-sizing: border-box;
-    padding-top: 40px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-
-#correct-small-device {
-    float: left;
+#correct-button-small-device {
     background-color: limegreen;
-    width: calc(50% - 5px);
-    display: block;
-    height: 100px;
-    font-size: 18px;
-    box-sizing: border-box;
-    padding-top: 40px;
-    margin: 5px;
+    width: calc(33.3% - 5px);
     margin-right: 0;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 
-#wrong-small-device {
-    float: left;
+#answer-button-small-device {
+    background-color: deepskyblue;
+    width: calc(33.3% - 10px);
+}
+
+
+#wrong-button-small-device {
     background-color: #f04a64;
-    width: calc(50% - 5px);
-    display: block;
-    height: 100px;
-    font-size: 18px;
-    box-sizing: border-box;
-    padding-top: 40px;
-    margin: 5px;
+    width: calc(33.3% - 5px);
     margin-left: 0;
-    border-radius: 16px;
-    cursor: pointer;
 }
 
 

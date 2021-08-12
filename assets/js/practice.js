@@ -96,7 +96,6 @@ function openPracticeScreen() {
             <div id="buttons-div">
 
                 <button id="answer-button" title="show the cards answer" aria-label="click this button to show the answer">Show Answer</button>
-                <button id="next-card-button" title="go to next card" aria-label="click this button to go to the next card">Next Card</button>
                 <button id="replay-button" title="replay this deck" aria-label="click this button to replay this deck">Replay</button>
                 <button id="other-deck-button" title="select another deck" aria-label="click this button to select another deck">Other Deck</button>
             
@@ -105,12 +104,12 @@ function openPracticeScreen() {
 
             <div id="input-small-devices">
         
-                <div id="replay-button-small-device">Replay</div>
-                <div id="other-deck-small-device">Other Deck</div>
+                <div class="button-small-device" id="replay-deck-button-small-device">Replay</div>
+                <div class="button-small-device" id="other-deck-button-small-device">Other Deck</div>
 
-                <div id="answer-small-device">Show Answer</div>
-                <div id="wrong-small-device">Wrong</div>
-                <div id="correct-small-device">Correct</div>
+                <div class="button-small-device" id="wrong-button-small-device">Wrong</div>
+                <div class="button-small-device" id="answer-button-small-device">Answer</div>
+                <div class="button-small-device" id="correct-button-small-device">Correct</div>
     
             </div>
 
@@ -123,8 +122,8 @@ function openPracticeScreen() {
     $('#replay-button').hide();
     $('#other-deck-button').hide();
 
-    $('#replay-button-small-device').hide();
-    $('#other-deck-small-device').hide();
+    $('#replay-deck-button-small-device').hide();
+    $('#other-deck-button-small-device').hide();
 
 }
 
@@ -210,10 +209,9 @@ function getNumberOfCardsInDeck(deckMemory) {
 function fireQuestion() {
 
     let currentCard = $('#current-card').text();
-    $("#next-card-button").hide();
 
-    $('#correct-small-device').css('background-color', 'limegreen');
-    $('#wrong-small-device').css('background-color', 'red');
+    $('#correct-button-small-device').css('background-color', 'limegreen');
+    $('#wrong-button-small-device').css('background-color', 'red');
 
     /* hide answer */
     $('#back-side-title').hide();
@@ -250,7 +248,6 @@ function fireQuestion() {
 
     /* when al cards are shown of screen */
     else {
-        $("#next-card-button").hide();
 
         /* tell end-user they have finished all cards */
         $('#front-side-title').hide();
@@ -270,8 +267,8 @@ function fireQuestion() {
         $('#answer').text('Your score is: ' + yourScoreCorrect);
 
         if ($(window).width() < 900) {
-            $('#replay-button-small-device').show();
-            $('#other-deck-small-device').show();
+            $('#replay-deck-button-small-device').show();
+            $('#other-deck-button-small-device').show();
         }
         else {
             /* show the replay button in order to repeat this deck */
@@ -286,22 +283,19 @@ function fireQuestion() {
 }
 
 
-$(window).resize(function(){
+/* $(window).resize(function(){
     
     if ($(window).width() < 900) {
-        $('#replay-button-small-device').show();
-        $('#other-deck-small-device').show();
+        $('#replay-deck-button-small-device').show();
+        $('#other-deck-button-small-device').show();
     }
     else {
-        /* show the replay button in order to repeat this deck */
+        // show the replay button in order to repeat this deck 
         $('#replay-button').show();
         $('#other-deck-button').show();
     }
 
-  });
-
-
-
+  }); */
 
 
 /* function will increment the correct answer score */
@@ -336,6 +330,43 @@ function incrementWrongAnswer() {
         $('#wrong').text(currentWrongAnswerValue);
 
     }
+}
+
+
+/* function replays the deck */
+function replayDeck() {
+
+    for(let i = 0; i < deckMemory.length; i++) {
+
+        deckMemory[i].show = true;
+ 
+    }
+
+    // hide buttons large device
+    $('#replay-button').hide();
+    $('#other-deck-button').hide();
+
+    // hide buttons small device
+    $('#replay-deck-button-small-device').hide();
+    $('#other-deck-button-small-device').hide();
+
+    // reset values
+    $('#current-card').text(0);
+    $('#correct').text(0);
+    $('#wrong').text(0);
+
+    // how answer button large device, hide small device
+    if ($(window).width() > 900) {
+        $('#answer-button').show();
+    }
+
+    else {
+        $('#answer-button').hide();
+    }
+
+    // fire new question on screen
+    fireQuestion();
+
 }
 
 
@@ -415,43 +446,10 @@ $(document).on('click', '#answer-button', function(){
 });
 
 
-/* on click show the next question */
-$(document).on('click', '#next-card-button', function(){
-
-    fireQuestion();
-
-});
-
-
 /* on click repeat the deck */
 $(document).on('click', '#replay-button', function() {
 
-    for(let i = 0; i < deckMemory.length; i++) {
-
-        deckMemory[i].show = true;
- 
-    }
-
-    $('#answer-button').show();
-
-    $('#current-card').text(0);
-
-    $('#next-card-button').show();
-
-    $('#replay-button').hide();
-   
-    $('#other-deck-button').hide();
-
-    $('#correct').text(0);
-
-    $('#wrong').text(0);
-
-    $('#replay-button-small-device').hide();
-
-    $('#other-deck-small-device').hide();
-
-
-    fireQuestion();
+    replayDeck();
 
 });
 
@@ -519,6 +517,7 @@ $(document).on('keypress', '#input-textbox',  function(e) {
     }
 
 });
+
 
 
 $(document).on('click', '#example-deck-button', function(){
@@ -756,31 +755,31 @@ $(document).on('click', '#example-deck-button', function(){
 
 
 
+$(document).on('click', '#wrong-button-small-device', function() {
 
-$(document).on('click', '#answer-small-device', function() {
+    incrementWrongAnswer();
 
+    $('#wrong-button-small-device').css('background-color', 'crimson');
+
+    /* Timeout 2 seconds before next question will be fired */
+    setTimeout(fireQuestion, 2000);
+    
+});
+
+
+$(document).on('click', '#answer-button-small-device', function() {
+
+    $('#back-side-title').show();
     $('#answer').show();
 
 });
 
 
-$(document).on('click', '#wrong-small-device', function() {
-
-    incrementWrongAnswer();
-
-    $('#wrong-small-device').css('background-color', 'crimson');
-
-    /* Timeout 2 seconds before next question will be fired */
-    setTimeout(fireQuestion, 2000);
-    
-});
-
-
-$(document).on('click', '#correct-small-device', function() {
+$(document).on('click', '#correct-button-small-device', function() {
 
     incrementCorrectAnswer();
 
-    $('#correct-small-device').css('background-color', 'green');
+    $('#correct-button-small-device').css('background-color', 'green');
 
     /* Timeout 2 seconds before next question will be fired */
     setTimeout(fireQuestion, 2000);
@@ -788,19 +787,19 @@ $(document).on('click', '#correct-small-device', function() {
 });
 
 
-$(document).on('click', '#replay-button-small-device', function() {
+$(document).on('click', '#replay-deck-button-small-device', function() {
 
-    alert('test');
-
-});
-
-
-$(document).on('click', '#other-deck-small-device', function() {
-
-    alert('test');
+    replayDeck();
 
 });
 
+
+$(document).on('click', '#other-deck-button-small-device', function() {
+
+    /* reloads the start screen and empties the memory */
+    location.reload(); 
+
+});
 
 
 /* show load button when .txt file is selected */
