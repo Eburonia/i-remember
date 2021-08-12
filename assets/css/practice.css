@@ -152,7 +152,7 @@ input[type=file] {
 
 
 #front-side-title, #back-side-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -203,7 +203,7 @@ input[type=file] {
 #input-textbox {
     padding: 4px 8px;
     letter-spacing: 1px;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
     width: calc(100% - 40px);
 }
@@ -339,6 +339,7 @@ input[type=file] {
         font-size: 16px;
         box-sizing: border-box;
         border-radius: 10px;
+        border: 0;
     }
 
     #other-deck-button {
@@ -350,6 +351,7 @@ input[type=file] {
         font-size: 16px;
         box-sizing: border-box;
         border-radius: 10px;
+        border: 0;
     }
 
 }

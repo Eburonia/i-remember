@@ -91,7 +91,11 @@ function openPracticeScreen() {
 
             <div id="score">CORRECT <span id="correct">0</span> - WRONG <span id="wrong">0</span></div>
 
-            <div id="input-div"><input type="text" id="input-textbox"></div>
+            <div id="input-div">
+                
+                <input type="text" id="input-textbox">
+            
+            </div>
 
             <div id="buttons-div">
 
@@ -207,6 +211,10 @@ function fireQuestion() {
 
     let currentCard = $('#current-card').text();
 
+    $('#correct-button-small-device').prop('disabled', false);
+    $('#wrong-button-small-device').prop('disabled', false);
+
+
     $('#correct-button-small-device').css('background-color', 'limegreen');
     $('#wrong-button-small-device').css('background-color', 'red');
 
@@ -214,6 +222,7 @@ function fireQuestion() {
     $('#back-side-title').hide();
     $('#front-side-title').show();
     $('#answer').hide();
+    $('#score').show();
 
 
     /* reset the input textbox when question is fired */
@@ -248,33 +257,33 @@ function fireQuestion() {
 
         /* tell end-user they have finished all cards */
         $('#front-side-title').hide();
-        $('#question').text('All cards shown, press the \'Replay\' button below to repeat this deck or press \'Other Deck\' to select an other deck.');
+
+        $('#question').html("All cards shown<br>Press the 'Replay' button below to repeat this deck<br>Or press 'Other Deck to select an other deck.");
 
         // disable input textbox
         $('#input-textbox').prop('disabled', true);
         $("#input-textbox").blur(); // deselect textbox
 
         $('#back-side-title').hide();
+
+        $('#answer').css('color', '#707070');
         $('#answer').show();
         $('#answer').text('');
+        $('#answer').append(`Your score is:<br>Correct Answers: ${$('#correct').text()}<br>Wrongs Answers: ${$('#wrong').text()}`);
+
+        $('#score').hide();
 
 
-        //let yourScoreCorrect = parseInt($('correct').val()) / parseInt($('#total-cards').val());
-       // alert(parseInt($('correct').val()));
-
-        //$('#answer').text('Your score is: ' + yourScoreCorrect);
-
+            $('#correct-button-small-device').hide();
+            $('#answer-button-small-device').hide();
+            $('#wrong-button-small-device').hide();
       
             $('#replay-deck-button-small-device').show();
             $('#other-deck-button-small-device').show();
 
+            $('#replay-button').show();
+            $('#other-deck-button').show();
             
-
-                $('#replay-button').show();
-                $('#other-deck-button').show();
-            
-        
-
             $('#answer-button').hide();
 
     }
@@ -340,6 +349,14 @@ function replayDeck() {
         deckMemory[i].show = true;
  
     }
+
+
+    // show buttons small device
+    $('#correct-button-small-device').show();
+    $('#answer-button-small-device').show();
+    $('#wrong-button-small-device').show();
+    $('#shown-cards-stats').show();
+
 
     // hide buttons large device
     $('#replay-button').hide();
@@ -756,6 +773,8 @@ $(document).on('click', '#example-deck-button', function(){
 
 $(document).on('click', '#wrong-button-small-device', function() {
 
+    $('#wrong-button-small-device').prop('disabled', true);
+
     incrementWrongAnswer();
 
     $('#answer').css('color', 'red');
@@ -777,6 +796,8 @@ $(document).on('click', '#answer-button-small-device', function() {
 
 
 $(document).on('click', '#correct-button-small-device', function() {
+
+    $('#correct-button-small-device').prop('disabled', true);
 
     incrementCorrectAnswer();
 
