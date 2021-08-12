@@ -42,7 +42,6 @@ function loadStartScreen() {
 
     /* hide load deck button */
     $('#read-button').hide();
-    alert('test');
 
 }
 
