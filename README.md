@@ -116,7 +116,7 @@ Because this website is made for learning purposes, except for the website logo 
 
 #### Wireframes
 Wireframes belonging to the website's project have been made in [Adobe XD](https://www.adobe.com/products/xd.html). PDF files of them can be found here:
-- Wireframes of the 'Index'Page - [link](assets/wireframes/wireframes-index.pdf)
+- Wireframes of the 'Index' Page - [link](assets/wireframes/wireframes-index.pdf)
 - Wireframes of the 'Practice' Page - [link](assets/wireframes/wireframes-practice.pdf)
 - Wireframes of the 'Editor' Page - [link](assets/wireframes/wireframes-editor.pdf)
 - Wireframes of the 'How to use' Page - [link](assets/wireframes/wireframes-how-to-use.pdf)
@@ -416,11 +416,10 @@ No errors found.
 
 
 <!-- Known Bugs -->
+## Known Bugs
 <a id="bugs"></a>
 - Aria labels in division buttons are not accepted in the W3C Markup Validator, a warning is shown (Possible misuse of aria-label). These aria-labels are removed from the code.
-
-### 
-- ...
+- The wireframe PDF files are not loaded correctly on screen in the GitHub repository (the first page won't show up). To see the full content of the PDF file, press the download button.
 
 
 **CHECK**
