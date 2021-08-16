@@ -5,12 +5,15 @@
 
 // declare the memory for the deck
 let deckMemory = [];
+
+// memory for current shown card on screen
 let pullCard;
+
 
 // function loads the start screen of the practice page
 function openStartScreen() {
 
-        // clear the screen before loading the practice screen
+        // clear the screen before loading the start screen of the practice page
         $('#content-practice').empty();
 
         // load the start screen
@@ -19,8 +22,10 @@ function openStartScreen() {
             <div id="start-screen">
             
                 <div id="open-deck-div">
+
                     <h2>Practice <i class="fas fa-play-circle"></i></i></h2>
                     <h3>Open Deck</h3>
+
                     <p>Click the 'browse' button below and select a deck (.txt file)</p>
 
                     <div id="browse-button-div">
@@ -33,18 +38,21 @@ function openStartScreen() {
                 </div>
 
                 <div id="example-deck-div">
+
                     <h3>Example Deck</h3>
+
                     <p>To show an example deck, please click the 'example deck' button below.</p>
                     <p>With this deck you can practice your knowledge about European capital cities and consists out of 30 cards.</p>
+
                     <button id="example-deck-button" title="Load an example deck" aria-label="click this button to load an example deck">Example Deck</button>
+
                 </div>
             
             </div>
         
         `);
 
-        $('#start-practice-button').prop('disabled', true);
-
+        // button will be shown when file has been selected
         $('#load-deck-button').hide();
 
 }
@@ -118,33 +126,40 @@ function openPracticeScreen() {
     `);
 
 
-    // hide buttons desktop
+    // hide buttons on desktop 
     $('#replay-button').hide();
     $('#other-deck-button').hide();
 
-    // hide buttons small devices
+    // hide buttons on small devices
     $('#replay-deck-button-small-device').hide();
     $('#other-deck-button-small-device').hide();
 
 }
 
 
-/* function loads the deck's cards into the memory */
+// function loads the flashcard set into the memory
 function loadDeckIntoMemory(importFile) {
 
     let start = importFile.indexOf('<deck>');
     let end = importFile.indexOf('</deck>');
-  
+
+    // store all cards from file in variable
     let cards = importFile.substring(start + 6, end);
+
+    let frontside = '';
+    let backside = '';
+    
+    let cardObj;
   
+    // remove new lines from file
     cards = cards.replace(/(\r\n|\n|\r)/gm, "");
+
+    // remove tabs from file
     cards = cards.replace('\t', '');
   
     let card = cards.split('|');
-    let frontside = '';
-    let backside = '';
-    let cardObj;
 
+    // store all cards in card object and add them to memory 
     for(let i in card) {
   
         frontside = card[i].slice(0, card[i].indexOf('+'));
@@ -158,14 +173,15 @@ function loadDeckIntoMemory(importFile) {
   
         }
   
-    deckMemory.push(cardObj);
+        // add card object to memory 
+        deckMemory.push(cardObj);
   
     }
 
 }
 
 
-/* function returns the deck description */
+// function returns the deck's description
 function getDeckDescription(importFile) {
 
     let start = importFile.indexOf('<deckname>');
@@ -176,7 +192,7 @@ function getDeckDescription(importFile) {
 }
 
 
-/* function returns the deck's cards front side description */
+// function returns the card's front-side description
 function getDeckFrontSideDescription(importFile) {
 
     let start = importFile.indexOf('<front-title>');
@@ -187,7 +203,7 @@ function getDeckFrontSideDescription(importFile) {
 }
 
 
-/* function returns the deck's cards back side description */
+// function returns the card's back-side description
 function getDeckBackSideDescription(importFile) {
 
   let start = importFile.indexOf('<back-title>');
@@ -198,7 +214,7 @@ function getDeckBackSideDescription(importFile) {
 }
 
 
-/* function returns the number of cards in the loaded deck */ 
+// function returns the number of cards in the imported deck
 function getNumberOfCardsInDeck(deckMemory) {
 
     return deckMemory.length;
@@ -206,56 +222,75 @@ function getNumberOfCardsInDeck(deckMemory) {
 }
 
 
+// function fires a question
 function fireQuestion() {
 
+    // current shown card number
     let currentCard = $('#current-card').text();
 
+
+    // enable answer button + css styling small devices
     $('#answer-button-small-device').prop('disabled', false);
     $('#answer-button-small-device').css('background-color', 'deepskyblue');
     $('#answer-button-small-device').css('color', 'whitesmoke');
 
+
+    // disable correct button, set styling small devices
     $('#correct-button-small-device').prop('disabled', true);
-    $('#wrong-button-small-device').prop('disabled', true);
-
-
     $('#correct-button-small-device').css('background-color', 'lightgray');
+
+
+    // disable wrong button, set styling small devices
+    $('#wrong-button-small-device').prop('disabled', true);
     $('#wrong-button-small-device').css('background-color', 'lightgray');
 
-    /* hide answer */
-    $('#back-side-title').hide();
+
+    // show sections 
     $('#front-side-title').show();
-    $('#answer').hide();
     $('#score').show();
 
 
-    /* reset the input textbox when question is fired */
+    // hide answer sections
+    $('#back-side-title').hide();
+    $('#answer').hide();
+
+
+    // reset the input-textbox when this function is fired and focus
     $('#input-textbox').val('');
     $('#input-textbox').prop('disabled', false);
     $('#input-textbox').focus();
 
 
-    /* pull a card and show it on screen */
+    // pull a random card and show it on screen
     if(currentCard < deckMemory.length) {
+
+        // select a card (pullCard) which has not been shown yet
         do {
 
             pullCard = Math.floor(deckMemory.length * Math.random(0, 1));
 
         } while(deckMemory[pullCard].show == false);
 
-        /* cards which are already shown on screen set to false */
+
+        // set show card to false (won't be shown on screen anymore when pulling a new card)
         deckMemory[pullCard].show = false;
 
-        /* show the question on screen */
+
+        // show the cards question on screen
         $('#question').text(deckMemory[pullCard].frontside);
+
+
+        // add answer on screen (won't be visible)
         $('#answer').text(deckMemory[pullCard].backside);
 
-        /* iterate number of shown cards */
+
+        // iterate number of shown cards on screen
         currentCard++;
         $('#current-card').text(currentCard);
     
     }
 
-    /* when al cards are shown of screen */
+    // when al cards are shown of screen
     else {
 
         /* tell end-user they have finished all cards */
@@ -294,7 +329,7 @@ function fireQuestion() {
 }
 
 
-/* function will increment the correct answer score */
+// function will increment the 'correct answer' score
 function incrementCorrectAnswer() {
 
     let currentCorrectAnswerValue = $('#correct').text();
@@ -302,6 +337,7 @@ function incrementCorrectAnswer() {
     let correctScore = $('#correct').text();
     let wrongScore = $('#wrong').text();
 
+    // increment only 1 time
     if((parseInt(correctScore) + parseInt(wrongScore)) < parseInt(currentCard)) {
 
         currentCorrectAnswerValue++;
@@ -312,7 +348,7 @@ function incrementCorrectAnswer() {
 }
 
 
-/* function will increment the wrong answer score */
+// function will increment the 'wrong answer' score
 function incrementWrongAnswer() {
 
     let currentWrongAnswerValue = $('#wrong').text();
@@ -320,6 +356,7 @@ function incrementWrongAnswer() {
     let correctScore = $('#correct').text();
     let wrongScore = $('#wrong').text();
 
+    // increment only 1 time
     if((parseInt(correctScore) + parseInt(wrongScore)) < parseInt(currentCard)) {
 
         currentWrongAnswerValue++;
@@ -329,9 +366,11 @@ function incrementWrongAnswer() {
 }
 
 
-/* function replays the deck */
+// function replays the deck
 function replayDeck() {
 
+
+    // reset deck memory shown cards to true
     for(let i = 0; i < deckMemory.length; i++) {
 
         deckMemory[i].show = true;
@@ -339,36 +378,40 @@ function replayDeck() {
     }
 
 
-    // show buttons small device
+    // reset values
+    $('#current-card').text(0);
+    $('#correct').text(0);
+    $('#wrong').text(0);
+
+
+    // reset buttons and card stats
     $('#correct-button-small-device').show();
     $('#answer-button-small-device').show();
     $('#wrong-button-small-device').show();
     $('#shown-cards-stats').show();
 
 
-    // hide buttons large device
+    // hide buttons desktop
     $('#replay-button').hide();
     $('#other-deck-button').hide();
+
 
     // hide buttons small device
     $('#replay-deck-button-small-device').hide();
     $('#other-deck-button-small-device').hide();
 
-    // reset values
-    $('#current-card').text(0);
-    $('#correct').text(0);
-    $('#wrong').text(0);
 
-    // how answer button large device, hide small device
+    // show answer button desktop
     if ($(window).width() > 900) {
         $('#answer-button').show();
     }
-
+    // hide small device
     else {
         $('#answer-button').hide();
     }
 
-    // fire new question on screen
+    
+    // fire first question on screen
     fireQuestion();
 
 }
