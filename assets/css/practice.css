@@ -69,7 +69,6 @@ h3 {
 }
 
 
-
 #load-deck-button, input[type=file]::file-selector-button, #example-deck-button {
     color: whitesmoke;
     border: 1px solid #9C1228;
@@ -307,43 +306,53 @@ input[type=file] {
         margin-right: 10px;
     }
 
+
     #start-screen {
         width: 100%;
         padding: 20px;
     }
 
+
     #flashcard {
         width: 100%;
     }
+
 
     #input-field-div {
         width: 100%;
         padding: 0;
     }
 
+
     #input-small-devices {
         display: block;
     }
+
 
     #buttons-div {
         padding: 0;
     }
 
+
     #input-div {
         display: none;
     }
+
 
     #answer-button {
         display: none;
     }
 
+
     #score {
         margin-top: 20px;
     }
 
+
     #front-side, #back-side {
         min-height: auto;
     }
+
 
     #replay-button {
         background-color: #707070;
@@ -356,6 +365,7 @@ input[type=file] {
         border-radius: 10px;
         border: 0;
     }
+
 
     #other-deck-button {
         background-color: #707070;

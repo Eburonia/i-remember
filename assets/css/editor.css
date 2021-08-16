@@ -24,13 +24,6 @@
 }
 
 
-#editor-div {
-    margin: 0 auto;
-    font-weight: 500;
-    color: #707070;
-}
-
-
 #cards-summary-div, #editor-buttons-div {
     margin: 0px auto;
     box-sizing: border-box;
@@ -62,11 +55,6 @@
 }
 
 
-input[type=file] {
-    width: calc(100% - 10px);
-}
-
-
 .editor-button {
     margin-bottom: 10px;
 }
@@ -78,6 +66,7 @@ input[type=file] {
 
 
 input[type=file] {
+    width: calc(100% - 10px);
     background-color: whitesmoke;
     padding: 6px 2px 6px 10px;
     border-radius: 10px;

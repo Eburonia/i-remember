@@ -2,6 +2,7 @@
 /* Author: Maurice Vossen */
 /* August 2021 */
 
+
 * {
     margin: 0;
     padding: 0;
@@ -106,6 +107,7 @@ p {
     color: whitesmoke;
 }
 
+
 #toggle-menu > ul > li:hover {
     background-color: #f04a64;
 }
@@ -132,35 +134,41 @@ p {
 /* for tablets and phones */
 @media only screen and (max-width: 900px) { 
 
+
     #navbar-left {
         width: 230px;
     }
+
 
     #iremember-logo > a > img {
         width: 220px;
     }
 
+
     #navbar-right > ul {
         display: none;
     }
+
 
     #toggle-menu, #toggle-menu > ul {
         display: block;
     }
 
+
     #navbar-toggle-button {
         display: block;
     }
 
+
     #active, #active-toggle {
         border-top: 0;
         background-color: #f04a64 !important;
-        
     }
     
     #active > a, #active > a {
         color: whitesmoke !important;
     } 
 
+    
 }
 
