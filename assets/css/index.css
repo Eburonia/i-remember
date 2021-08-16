@@ -16,6 +16,23 @@
 }
 
 
+p {
+    padding-bottom: 20px;
+    line-height: 30px;
+}
+
+
+p > a {
+    text-decoration: none;
+    color: #f04a64;
+}
+
+
+p > a:hover {
+    text-decoration: underline;
+}
+
+
 /* media queries for index.html only */
 
 /* for tablets and phones */
