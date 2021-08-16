@@ -307,7 +307,7 @@ function fireQuestion() {
         $('#answer').css('color', '#707070');
         $('#answer').show();
         $('#answer').text('');
-        $('#answer').append(`Your score is:<br>Correct Answers: ${$('#correct').text()}<br>Wrongs Answers: ${$('#wrong').text()}`);
+        $('#answer').append(`Your score is:<br>Correct Answers: ${$('#correct').text()}<br>Wrong Answers: ${$('#wrong').text()}`);
 
         $('#score').hide();
 
@@ -410,7 +410,7 @@ function replayDeck() {
         $('#answer-button').hide();
     }
 
-    
+
     // fire first question on screen
     fireQuestion();
 
@@ -418,15 +418,15 @@ function replayDeck() {
 
 
 
-/* loads the start screen */
+// function loads the start screen
 openStartScreen();
 
 
 
-/* click events */
+// all click events from here
 
-/* function loads the deck on screen */
-/* Credit: https://usefulangle.com/post/193/javascript-read-local-file */
+// on click, function loads the practice screen 
+// Credit: https://usefulangle.com/post/193/javascript-read-local-file
 document.querySelector("#load-deck-button").addEventListener('click', function() {
 
     let deck;
@@ -434,17 +434,18 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
     let file = document.querySelector("#browse-button").files[0];
     let reader = new FileReader();
 
-    /* check if textfile is selected */
+    //check whether textfile is selected
     if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
        
-        /* clear the screen before loading a deck into the practice screen */
+        // clear the screen before loading the selected deck on screen
         $('#content-practice').empty();
 
-        /* open the practice screen */
+        // load the selected deck on screen
         openPracticeScreen();
 
     }
 
+    // in case no .txt file has been selected
     else {
         alert('select a .txt file');
         return;
@@ -455,22 +456,22 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 
         deck = e.target.result;
 
-        /* load the deck into the storage */
+        // load the selected deck into the memory
         loadDeckIntoMemory(deck);
 
-        /* load the deck description into the practice screen */
+        // load the deck description on screen
         $('#deck-title').text(getDeckDescription(deck).toUpperCase());
 
-        /* load the amount of card in the loaded deck into the practice screen */
+        // load the amount of cards in the deck on screen
         $('#total-cards').text(getNumberOfCardsInDeck(deckMemory));
 
-        /* load the deck's front side of cards description into the practice screen */
+        // load the cards front-side description on screen
         $('#front-side-title').text(getDeckFrontSideDescription(deck));
 
-        /* load the deck's back side of cards description into the practice screen */
+        // load the cards back-side description on screen
         $('#back-side-title').text(getDeckBackSideDescription(deck));
 
-        /* fire first question on practice screen */
+        // fire first question on screen
         fireQuestion();
 
     });
@@ -480,14 +481,17 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 });
 
 
-// on click, show the question answer
+// on click, show the question's answer
 $(document).on('click', '#answer-button', function(){
 
+    // showing the answer is cheating, wrong answer will be incremented
     incrementWrongAnswer();
 
     $('#back-side-title').show();
     $('#answer').text(deckMemory[pullCard].backside);
     $('#answer').css('color', 'deepskyblue').show();
+
+    // focus on input-textbox end-user can type correct answer
     $('#input-textbox').focus();
 
 });
@@ -504,10 +508,11 @@ $(document).on('click', '#replay-button', function() {
 // on click, load other deck on screen to practice
 $(document).on('click', '#other-deck-button', function(){
 
-    // reloads the start screen and empties the memory
+    // reloads the start screen and automatically empties the memory
     location.reload(); 
 
 });
+
 
 // on click, check the user-input answer with the correct answer
 // Credit: https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
@@ -516,7 +521,7 @@ $(document).on('keypress', '#input-textbox',  function(e) {
     // clear the answer field
     $('#answer').hide();
 
-    // when enter key is pressed
+    // when 'enter key' is pressed
     if(e.which == 13) {
         
         // disable input textbox
@@ -527,12 +532,15 @@ $(document).on('keypress', '#input-textbox',  function(e) {
         let inputAnswer = $('#input-textbox').val();
         let correctAnswer = deckMemory[pullCard].backside;
 
+
         // convert input answer and correct answer to lowercase for comparison reasons
+        // in case of correct given answer
         if(inputAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
 
-            // deselect the textbox
+            // disable the textbox
             $("#input-textbox").blur();
 
+            // correct answer
             $('#back-side-title').show();
             $('#answer').text(correctAnswer);
             $('#answer').show().css('color', 'limegreen').show();
@@ -545,6 +553,7 @@ $(document).on('keypress', '#input-textbox',  function(e) {
 
         }
 
+        // in case of wrong given answer
         else
         {
             // disable input textbox
@@ -554,8 +563,7 @@ $(document).on('keypress', '#input-textbox',  function(e) {
             $('#answer').text('Wrong Answer!').css('color', 'red');
             $('#answer').show();
 
-
-            // increment correct score
+            // increment wrong score
             incrementWrongAnswer();
 
         }
@@ -565,7 +573,7 @@ $(document).on('keypress', '#input-textbox',  function(e) {
 });
 
 
-// on click, load the example deck (European Topography)
+// on click, load the example card deck (European Topography)
 $(document).on('click', '#example-deck-button', function(){
 
     // declare card object
@@ -582,18 +590,20 @@ $(document).on('click', '#example-deck-button', function(){
     openPracticeScreen();
 
 
-    // load the deck description into the practice screen
+    // load the deck description on screen
     $('#deck-title').text(('European Capital Cities').toUpperCase());
 
-    // load the amount of card in the loaded deck into the practice screen
+    // load the amount of cards in the deck on screen
     $('#total-cards').text(20);
     
-    // load the deck's front side of cards description into the practice screen
+    // load the cards front-side description on screen
     $('#front-side-title').text('What is the capital of');
     
-    // load the deck's back side of cards description into the practice screen
+    // load the cards back-side description on screen
     $('#back-side-title').text('Answer');
 
+
+    // load 20 cards into memory
 
     // card 1
     cardObj =  {
@@ -794,22 +804,26 @@ $(document).on('click', '#example-deck-button', function(){
 
     deckMemory.push(cardObj);
 
+
+    // fire first question
     fireQuestion();
 
 });
 
 
-// on click, increment wrong answer score, and fire a new card
+// on click, increment wrong answer score on small devices and fire a new card
 $(document).on('click', '#wrong-button-small-device', function() {
 
+    // disable to prevent incrementing wrong answer 2 times
     $('#wrong-button-small-device').prop('disabled', true);
 
     incrementWrongAnswer();
 
+    // change styling
     $('#answer').css('color', 'red');
     $('#wrong-button-small-device').css('background-color', 'crimson');
 
-    /* Timeout 2 seconds before next question will be fired */
+    // Timeout 2 seconds before next question will be fired
     setTimeout(fireQuestion, 2000);
     
 });
@@ -818,38 +832,45 @@ $(document).on('click', '#wrong-button-small-device', function() {
 // on click, show the answer on screen and disable the correct and wrong buttons
 $(document).on('click', '#answer-button-small-device', function() {
 
+    // enable correct and wrong buttons
     $('#correct-button-small-device').prop('disabled', false);
     $('#wrong-button-small-device').prop('disabled', false);
 
 
+    // change styling
     $('#correct-button-small-device').css('background-color', 'limegreen');
     $('#correct-button-small-device').css('color', 'whitesmoke');
-
-
     $('#wrong-button-small-device').css('background-color', 'red');
     $('#wrong-button-small-device').css('color', 'whitesmoke');
 
 
+    // show answer on screen
     $('#back-side-title').show();
     $('#answer').css('color', 'deepskyblue');
     $('#answer').show();
 
+
+    // disable answer button 
     $('#answer-button-small-device').prop('disabled', true);
     $('#answer-button-small-device').css('background-color', 'lightgray');
 
+
+    // change styling
     $('#correct-button-small-device').css('background-color', 'limegreen');
     $('#wrong-button-small-device').css('background-color', 'red');
 
 });
 
 
-// on click, increment correct answer score, and fire a new card
+// on click, increment correct answer score on small devices and fire a new card
 $(document).on('click', '#correct-button-small-device', function() {
 
+    // disable to prevent incrementing correct answer 2 times
     $('#correct-button-small-device').prop('disabled', true);
 
     incrementCorrectAnswer();
 
+    // change styling
     $('#answer').css('color', 'limegreen');
     $('#correct-button-small-device').css('background-color', 'green');
 
@@ -870,7 +891,7 @@ $(document).on('click', '#replay-deck-button-small-device', function() {
 // on click, go to the begin screen to select another deck
 $(document).on('click', '#other-deck-button-small-device', function() {
 
-    // reload the begin screen and empty the memory
+    // reloads the start screen and automatically empties the memory
     location.reload(); 
 
 });
@@ -879,11 +900,18 @@ $(document).on('click', '#other-deck-button-small-device', function() {
 // on change, show load button when a (.txt) file is selected
 $('#browse-button').change(function() {
 
+    // selected file
     let file = document.querySelector("#browse-button").files[0];
 
+
+    // check wheter txt file is selected
     if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
+        
+        // file can be loaded on screen by pressing load deck button
         $('#load-deck-button').show();
     }
+
+    // in case no .txt file is selected
     else {
         alert('please select a .txt file');
     }
