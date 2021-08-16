@@ -1,19 +1,19 @@
 // assets/js/practice.js
-/* Author: Maurice Vossen */
-/* August 2021 */
+// Author: Maurice Vossen
+// August 2021
 
 
-/* declare the memory for the deck */
+// declare the memory for the deck
 let deckMemory = [];
 let pullCard;
 
-/* function loads the start screen of the practice page */
+// function loads the start screen of the practice page
 function openStartScreen() {
 
-        /* clear the screen before loading the practice screen */
+        // clear the screen before loading the practice screen
         $('#content-practice').empty();
 
-        /* load the start screen */
+        // load the start screen
         $('#content-practice').append(`
         
             <div id="start-screen">
@@ -50,14 +50,15 @@ function openStartScreen() {
 }
 
 
-/* function loads the play (practice a deck) screen on the deck.html page */
+// function loads the practice section of the practice page
 function openPracticeScreen() {
 
-    /* clear the screen before loading the practice screen */
+
+    // clear the screen before loading the practice screen
     $('#content-practice').empty();
 
 
-    /* load the practice screen */
+    // load the practice screen
     $('#content-practice').append(`
     
         <div id="practice-flashcards">PRACTICE FLASHCARDS</div>
@@ -79,8 +80,6 @@ function openPracticeScreen() {
 
                 <span id="back-side-title">-</span>
                 <p id="answer"></p>
-
-                
 
             </div>
 
@@ -119,10 +118,11 @@ function openPracticeScreen() {
     `);
 
 
-    /* hide the replay button */
+    // hide buttons desktop
     $('#replay-button').hide();
     $('#other-deck-button').hide();
 
+    // hide buttons small devices
     $('#replay-deck-button-small-device').hide();
     $('#other-deck-button-small-device').hide();
 
@@ -214,17 +214,12 @@ function fireQuestion() {
     $('#answer-button-small-device').css('background-color', 'deepskyblue');
     $('#answer-button-small-device').css('color', 'whitesmoke');
 
-    $('#correct-button-small-device').css('background-color', '#707070');
-    $('#correct-button-small-device').css('color', '#707070');
-
-
-    $('#wrong-button-small-device').css('background-color', '#707070');
-    $('#wrong-button-small-device').css('color', '#707070');
-
-
     $('#correct-button-small-device').prop('disabled', true);
     $('#wrong-button-small-device').prop('disabled', true);
 
+
+    $('#correct-button-small-device').css('background-color', 'lightgray');
+    $('#wrong-button-small-device').css('background-color', 'lightgray');
 
     /* hide answer */
     $('#back-side-title').hide();
@@ -266,7 +261,7 @@ function fireQuestion() {
         /* tell end-user they have finished all cards */
         $('#front-side-title').hide();
 
-        $('#question').html("All cards shown.<br>Press the 'Replay' button below to repeat this deck.<br>Or press 'Other Deck to select an other deck.");
+        $('#question').html("All cards shown.<br>Press the 'Replay' button below to repeat this deck.<br>Or press 'Other Deck' to select an other deck.");
 
         // disable input textbox
         $('#input-textbox').prop('disabled', true);
@@ -797,8 +792,10 @@ $(document).on('click', '#answer-button-small-device', function() {
     $('#answer').show();
 
     $('#answer-button-small-device').prop('disabled', true);
-    $('#answer-button-small-device').css('background-color', '#707070');
-    $('#answer-button-small-device').css('color', '#707070');
+    $('#answer-button-small-device').css('background-color', 'lightgray');
+
+    $('#correct-button-small-device').css('background-color', 'limegreen');
+    $('#wrong-button-small-device').css('background-color', 'red');
 
 });
 
