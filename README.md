@@ -116,11 +116,11 @@ Because this website is made for learning purposes, except for the website logo 
 
 #### Wireframes
 Wireframes belonging to the website's project have been made in [Adobe XD](https://www.adobe.com/products/xd.html). PDF files of them can be found here:
-- Wireframes of the 'Index' Page - [link](assets/wireframes/wireframes-index.pdf)
-- Wireframes of the 'Practice' Page - [link](assets/wireframes/wireframes-practice.pdf)
-- Wireframes of the 'Editor' Page - [link](assets/wireframes/wireframes-editor.pdf)
-- Wireframes of the 'How to use' Page - [link](assets/wireframes/wireframes-how-to-use.pdf)
-- Wireframes of the 'Contact' Page - [link](assets/wireframes/wireframes-contact.pdf)
+- Wireframes of the 'Index' Page - [link](assets/wireframes/wireframes-index.md)
+- Wireframes of the 'Practice' Page - [link](assets/wireframes/wireframes-practice.md)
+- Wireframes of the 'Editor' Page - [link](assets/wireframes/wireframes-editor.md)
+- Wireframes of the 'How to use' Page - [link](assets/wireframes/wireframes-how-to-use.md)
+- Wireframes of the 'Contact' Page - [link](assets/wireframes/wireframes-contact.md)
 
 All wireframes were designed for three different devices:
 - Desktop - Web: maximum viewport width 1920px
