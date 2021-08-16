@@ -814,8 +814,9 @@ $(document).on('click', '#example-deck-button', function(){
 // on click, increment wrong answer score on small devices and fire a new card
 $(document).on('click', '#wrong-button-small-device', function() {
 
-    // disable to prevent incrementing wrong answer 2 times
+    // disable to prevent incrementing wrong answer 2 times or correct answer
     $('#wrong-button-small-device').prop('disabled', true);
+    $('#correct-button-small-device').prop('disabled', true);
 
     incrementWrongAnswer();
 
@@ -865,7 +866,8 @@ $(document).on('click', '#answer-button-small-device', function() {
 // on click, increment correct answer score on small devices and fire a new card
 $(document).on('click', '#correct-button-small-device', function() {
 
-    // disable to prevent incrementing correct answer 2 times
+    // disable to prevent incrementing correct answer 2 times or wrong answer
+    $('#wrong-button-small-device').prop('disabled', true);
     $('#correct-button-small-device').prop('disabled', true);
 
     incrementCorrectAnswer();
