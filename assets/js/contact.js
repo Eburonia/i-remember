@@ -1,9 +1,10 @@
-/* assets/css/contact.js */
-/* Author: Maurice Vossen */
-/* August 2021 */
+// assets/css/contact.js
+// Author: Maurice Vossen
+// August 2021
 
 
-/* Credit: code coming from emailJS example codeInstitude */
+// Credit: code coming from emailJS example codeInstitude
+
 function sendMail(contactForm) {
 
     emailjs.send("service_dgvknqk", "template_brfwkut", {
@@ -17,13 +18,16 @@ function sendMail(contactForm) {
     })
 
     .then(
+
+        // in case of correct response
         function(response) {
+
             console.log("SUCCESS", response);
 
-            /* clear screen when form sent */
+            // clear screen when form is sent
             $('#content-contact').empty();
 
-            /* put message on screen the sending was successful */
+            // put message on screen the sending was successful
             $('#content-contact').append(`
             
                 <div id="sent-message">Your message has been sent!</div>
@@ -31,13 +35,16 @@ function sendMail(contactForm) {
             `);
         },
 
+        // in case of error 
         function(error) {
+
+            // messages failed sending
             console.log("FAILED", error);
             alert('your message has not been sent!');
         }
     );
 
-    return false;  // To block from loading a new page
+    return false;
 
 }
 

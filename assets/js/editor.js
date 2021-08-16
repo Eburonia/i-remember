@@ -1,10 +1,10 @@
-/* assets/css/editor.js */
-/* Author: Maurice Vossen */
-/* August 2021 */
+// assets/css/editor.js
+// Author: Maurice Vossen
+// August 2021
 
 
-/* function start the download procedure */
-/* Credit: https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server */
+// function starts the download procedure
+// Credit: https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server
 function download(filename, text) {
 
     var element = document.createElement('a');
@@ -20,7 +20,7 @@ function download(filename, text) {
 }
   
   
-/* function loads the start screen */
+// function loads the start screen
 function loadStartScreen() {
 
     $('#content-editor').append(`
@@ -32,7 +32,7 @@ function loadStartScreen() {
         <div id="editor-buttons-div">
         
                 <input type="file" id="browse-button" title="Select a deck"/><br>
-                <button class="editor-button" id="read-button" title="Open the deck on screen" aria-label="click this button to open a deck file">Open Deck</button>
+                <button class="editor-button" id="load-deck-button" title="Load the deck on screen" aria-label="click this button to load a deck file">Load Deck</button>
                 <button class="editor-button" id="new-button" title="Start a new deck" aria-label="click this button to create a new deck">New Deck</button>
                 <button class="editor-button" id="add-card" title="Add a card to the deck" aria-label="click this button to add a new card to your deck">Add Card</button>
                 <button class="editor-button" id="export-deck" title="Export the deck to a downloadable file" aria-label="click this button to export your deck to a downloadable file">Export</button>
@@ -41,7 +41,7 @@ function loadStartScreen() {
     `);
 
     // hide load deck button
-    $('#read-button').hide();
+    $('#load-deck-button').hide();
 
     // hide add card button
     $('#add-card').hide();
@@ -53,44 +53,45 @@ function loadStartScreen() {
 }
 
 
-/* load start screen */
+// load the start screen
 loadStartScreen();
 
 
-/* function load the deck on screen */
-/* Credit: https://usefulangle.com/post/193/javascript-read-local-file */
-document.querySelector("#read-button").addEventListener('click', function() {
+// function load the deck on screen
+// Credit: https://usefulangle.com/post/193/javascript-read-local-file
+document.querySelector("#load-deck-button").addEventListener('click', function() {
 
         let deck;
 
 		let file = document.querySelector("#browse-button").files[0];
 		let reader = new FileReader();
 
-        /* check if textfile is selected */
+        // check whether textfile is selected
         if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
-           /* a txt file is selected */
+           // .txt file is selected
         }
+
         else {
+            // no .txt file is selected
             alert('select a .txt file');
             return;
         }
 
 		reader.addEventListener('load', function(e) {
 
-
-            /* load file content into storage */
+            // load file content into storage
             deck = e.target.result;
 
 
-            /* clear the screen before loading a deck on screen */
+            // clear the screen before loading a deck on screen
             $('#cards-summary-div').empty();
 
 
-            /* load deckname on screen */
+            // load the deckname on screen
             $('#cards-summary-div').append(`<div id="deck-title" class="change-field" aria-label="click this text field to adjust the deck description">${getDeckDescription(deck)}</div>`);
     
 
-            /* load card front and backside description on screen */
+            // load the card front and back-side description on screen
             $('#deck-title').after(`
             
                 <div id="cards-description-div">
@@ -100,58 +101,65 @@ document.querySelector("#read-button").addEventListener('click', function() {
 
             `);
 
-            /* loads the cards on screen */
+            // load the cards on screen
             loadCardsOnScreen(deck);
 
 		});
 
 		reader.readAsText(file);
 
-        // show add card button on screen
+        // show 'Add Card' button on screen
         $('#add-card').show();
 
-        // show export button
+        // show 'Export' button
         $('#export-deck').show();
 
-
-        // open deck button
-        $('#read-button').hide();
+        // hide 'Open Deck' button
+        $('#load-deck-button').hide();
         
 });
 
 
-/* on click deck will be exported to a txt file */
+
+
+// all click events from here
+
+//on click, deck will be exported to a txt file
 $('#export-deck').on('click', function(){
 
+    // add deck name
     let exportDeck = `<deckname>${$('#deck-title').text()}</deckname>\n\n`;
+
     let cards = '';
     let numberOfCardsOnScreen = $('.card-frontside').length;
 
-
+    // add cards front-side and back-side descriptions
     exportDeck = exportDeck + `<front-title>${$('#cards-title-frontside').text()}</front-title>\n`;
     exportDeck = exportDeck + `<back-title>${$('#cards-title-backside').text()}</back-title>\n\n`;
 
-
+    // add all cards
     for(let i = 0; i < numberOfCardsOnScreen; i++) {
         cards = cards + $('.card-frontside').eq(i).text() + '+' + $('.card-backside').eq(i).text() + '|\n';
     }
 
-
+    // remove last two characters
     cards = cards.substring(0, cards.length-2);
+
     exportDeck = exportDeck + `<deck>\n${cards}\n</deck>`;
 
-
+    // show alert on screen
     alert('this deck will be downloaded as a .txt file');
 
+    // save as .txt file
     let docName = $('#deck-title').text() + '.txt';
 
-    /* Start deck export to .txt file, to be saved on your device */
+    // start to export deck to .txt file, will be saved on your device
     download(docName, exportDeck);
 
 });
 
 
-/* function loads the deck description */
+// function returns the deck's description
 function getDeckDescription(importFile) {
 
     let start = importFile.indexOf('<deckname>');
@@ -162,7 +170,7 @@ function getDeckDescription(importFile) {
 }
 
 
-/* function loads the deck's cards front side description */
+// function returns the card's front-side description
 function getDeckFrontSideDescription(importFile) {
 
     let start = importFile.indexOf('<front-title>');
@@ -173,7 +181,7 @@ function getDeckFrontSideDescription(importFile) {
 }
 
 
-/* function loads the deck's cards back side description */
+// function returns the card's back-side description
 function getDeckBackSideDescription(importFile) {
 
   let start = importFile.indexOf('<back-title>');
@@ -184,19 +192,24 @@ function getDeckBackSideDescription(importFile) {
 }
 
 
-/* function loads the deck's cards on screen */
+// function loads the selected deck's cards on screen
 function loadCardsOnScreen(importFile) {
 
     let start = importFile.indexOf('<deck>');
     let end = importFile.indexOf('</deck>');
   
+    // store all cards from file
     let cards = importFile.substring(start + 6, end);
   
+    // remove new lines from file
     cards = cards.replace(/(\r\n|\n|\r)/gm, "");
+
+    // remove tabs from file
     cards = cards.replace('\t', '');
   
     let card = cards.split('|');
 
+    // import all cards on screen
     for(let i in card) {
   
         let frontside = card[i].slice(0, card[i].indexOf('+'));
@@ -218,15 +231,14 @@ function loadCardsOnScreen(importFile) {
 // on click, a new deck will be created
 $('#new-button').on('click', function(){
 
-     /* clear the screen before loading a deck on screen */
-     $('#cards-summary-div').empty();
+    // clear the screen before creating a new deck on screen
+    $('#cards-summary-div').empty();
 
-    /* load deckname on screen */
+    // load empty deckname on screen
     $('#cards-summary-div').append(`<div id="deck-title" class="change-field" aria-label="click this text field to adjust the deck description">Deck name</div>`);
     
-
-    /* load card front and backside description on screen */
-     $('#deck-title').after(`
+    // load card front and back-side description on screen
+    $('#deck-title').after(`
                  
         <div id="cards-description-div">
             <div id="cards-title-frontside" class="change-field" aria-label="click this field to adjust the front side card description">Front side</div>
@@ -235,19 +247,16 @@ $('#new-button').on('click', function(){
      
     `);
 
-    // focus on div to prevent button staying active on phone
-    $('#editor-buttons-div').focus();
-
-    // show add card button on screen
+    // show 'Add Card' button on screen
     $('#add-card').show();
 
-    // show export button
+    // show 'Export' button
     $('#export-deck').show();
 
 });
 
 
-/* on click a new card will be added to the deck */
+// on click, a new card will be added on screen
 $('#add-card').on('click', function(){
 
     $('#cards-description-div').after(`
@@ -261,13 +270,13 @@ $('#add-card').on('click', function(){
 });
 
 
-/* on click a card can be adjusted */
+// on click, a card can be adjusted
 $(document).on('click', '.change-field', function() {
 
     let change = prompt("Change description", $(this).text());
     let stopChange = false;
 
-    /* check wheter certain characters are used, these are blocked because they are used as special characters in the txt file */
+    // check wheter certain characters are used, these are blocked because they are used as special characters in the saved .txt file
     for(let i in change) {
 
         switch(change[i]) {
@@ -296,7 +305,7 @@ $(document).on('click', '.change-field', function() {
 
     }
 
-    /* change the textfield when no special character is used */
+    // change the textfield when no special characters are used
     if(!stopChange) {
 
         if(change) {
@@ -308,7 +317,7 @@ $(document).on('click', '.change-field', function() {
 });
 
 
-/* on click the card will be deleted */
+// on click, the card will be deleted
 $(document).on('click', '.delete-card', function(){
 
     // show confirm screen to be sure you want to delete the card
@@ -317,7 +326,7 @@ $(document).on('click', '.delete-card', function(){
     // if pressed OK
     if(isExecuted) {
 
-        // delete the fields at pressed index
+        // delete the card (3x fields) at pressed index
         $('.card-frontside').eq($('.delete-card').index(this)).remove();
         $('.card-backside').eq($('.delete-card').index(this)).remove();
         $('.delete-card').eq($('.delete-card').index(this)).remove();
@@ -328,14 +337,21 @@ $(document).on('click', '.delete-card', function(){
 
 
 
-/* show load button when .txt file is selected */
+// on change, show load button when a (.txt) file is selected
 $('#browse-button').change(function() {
 
+    // selected file
     let file = document.querySelector("#browse-button").files[0];
 
+
+    // check wheter txt file is selected
     if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
-        $('#read-button').show();
+
+        // file can be loaded on screen by pressing load deck button
+        $('#load-deck-button').show();
     }
+
+    // in case no .txt file is selected
     else {
         alert('please select a .txt file');
     }

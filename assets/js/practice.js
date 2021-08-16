@@ -143,7 +143,7 @@ function loadDeckIntoMemory(importFile) {
     let start = importFile.indexOf('<deck>');
     let end = importFile.indexOf('</deck>');
 
-    // store all cards from file in variable
+    // store all cards from file
     let cards = importFile.substring(start + 6, end);
 
     let frontside = '';
@@ -293,7 +293,7 @@ function fireQuestion() {
     // when al cards are shown of screen
     else {
 
-        /* tell end-user they have finished all cards */
+        // tell end-user they have finished all cards
         $('#front-side-title').hide();
 
         $('#question').html("All cards shown.<br>Press the 'Replay' button below to repeat this deck.<br>Or press 'Other Deck' to select an other deck.");
