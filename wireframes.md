@@ -1,0 +1,1 @@
+<img src="assets/wireframes/wireframes-index.png" alt="Responsive Design of Website">
