@@ -42,7 +42,7 @@ function openStartScreen() {
                     <h3>Example Deck</h3>
 
                     <p>To show an example deck, please click the 'example deck' button below.</p>
-                    <p>With this deck you can practice your knowledge about European capital cities and consists out of 30 cards.</p>
+                    <p>With this deck, you can practice your knowledge about European capital cities and consists out of 30 cards.</p>
 
                     <button id="example-deck-button" title="Load an example deck" aria-label="click this button to load an example deck">Example Deck</button>
 
@@ -160,8 +160,9 @@ function loadDeckIntoMemory(importFile) {
     let card = cards.split('|');
 
     // store all cards in card object and add them to memory 
-    for(let i in card) {
+    for(let i = 0; i < card.length; i++) {
   
+
         frontside = card[i].slice(0, card[i].indexOf('+'));
         backside = card[i].slice(card[i].indexOf('+') + 1, card[i].length);
   
@@ -171,7 +172,7 @@ function loadDeckIntoMemory(importFile) {
             backside: backside,
             show: true
   
-        }
+        };
   
         // add card object to memory 
         deckMemory.push(cardObj);
