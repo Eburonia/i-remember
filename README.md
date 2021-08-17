@@ -342,7 +342,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 
 ### Usability Testing
-- Family and friends were asked to test the website and to navigate through all four website pages. Buttons, links, and forms were tested by them.
+- Family and friends were asked to test the website and to navigate through all website pages. Buttons, links, and contact form were tested by them.
 
 
 ### Compatibility Testing
@@ -376,7 +376,6 @@ W3C Markup Validator, results of English language pages:
 * [contact.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fcontact.html)
 * [404.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Feburonia.github.io%2Fi-remember%2F404.html)
 
-**CHECK**
 No errors found.
 
 
@@ -393,8 +392,9 @@ W3C CSS Validator, results of the style sheets:
 * [404.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2F404.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 
-**CHECK**
-No errors found.
+Errors found:
+- practice.css/editor.css: Styling the Browse button of the input file tag is not recognized by the validator. Styling of the button still works.
+- practice.css/editor.css: CSS code for preventing to select text in divisions is not recognized by the validator. Code still works.
 
 
 **ADD JAVASCRIPT CHECKER**
