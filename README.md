@@ -272,7 +272,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 #### Common
 - Check aria labels. **(checked)**
 - Check alternative 'alt' text. **(checked)**
-- Check the spelling of the page content. **(checked)**
+- Check the spelling of the page content. **(checked as much as possible)**
 
 
 #### Header/Navigation Bar
@@ -280,7 +280,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - Check whether the iRemember logo links back to the index page. **(checked)**
 - Check the 'Active' page in the navigation bar and the remaining links change colour while hovering. **(checked)**
 - Check for dead links. **(checked)**
-- Check the responsiveness of the navigation bar (change to hamburger-style navigation). **(checked)**
+- Check the responsiveness of the navigation bar (change to hamburger-style navigation) (min. 320px). **(checked)**
 - Check whether there is no overflow while reducing the screen size. **(checked)**
 
 
@@ -289,17 +289,34 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - Check whether all social media links are working properly and are opening a new blank page. **(checked)**
 - Check whether the social media links change colour while being hovered. **(checked)**
 - Check for dead links. **(checked)**
-- Check the responsiveness of the footer when changing the size of the viewport. **(checked)**
+- Check the responsiveness of the footer when changing the size of the viewport (min. 320px). **(checked)**
 
 
 #### Index Page
 - Check for dead links. **(checked)**
-- Check the responsiveness of the sections when changing the size of the viewport. **(checked)**
+- Check the responsiveness when changing the size of the viewport (min. 320px). **(checked)**
 
 
 #### Practice Page
-- Check the responsiveness of the menu sections when changing the size of the viewport. **(checked)**
-- ...
+- Check the responsiveness of the page when changing the size of the viewport (min. 320px). **(checked)**
+- Check change of colour while hovering the buttons. **(checked)**
+- Check whether files van be selected when 'Browse' button is clicked **(checked)**
+- Check whether warning alert shows on screen when no .txt file is selected. **(checked)**
+- Check whether 'Load Deck' button shows up when .txt file is selected. **(checked)**
+- Check whether 'Load Deck' button loads the practice screen and loads the deck properly. **(checked)**
+- Check whether the 'Example Deck' button loads the example deck on the practice screen properly. **(checked)**
+- Check whether the answer textbox is not caps sensitive. **(checked)**
+- Check whether the 'Replay' button resets the deck properly. **(checked)**
+- Check whether the 'Show Answer' button show the answer properly on dekstop screen. **(checked)**
+- Check whether the 'Show Answer' button show the answer properly on smaller devices screen. **(checked)**
+- Check whether the 'Other Deck' button opens the start screen on dekstop of the practice page. **(checked)**
+- Check whether the 'Other Deck' button opens the start screen on smaller devices of the practice page. **(checked)**
+- Check whether deck description is loaded properly on screen. **(checked)**
+- Check whether flashcard front-side description is loaded properly on screen. **(checked)**
+- Check whether flashcard back-side description is loaded properly on screen. **(checked)**
+- Check whether the score is correctly calculated after all cards are shown to the end-user. **(checked)**
+- Check whether the scoreboard (correct and wrong answers) does not have strange behavior. **(checked)**
+- Check whether the 'answer', 'correct' and 'wrong' buttons show strange behavior on smaller devices. **(checked)**
 
 
 #### Editor Page
