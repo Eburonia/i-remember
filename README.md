@@ -99,6 +99,8 @@ The following colours were used throughout the webpage:
       - Colour used in 'wrong' button (pressed) on practice page.
    - Hex: #00FF00: limegreen colour
       - Colour used in scoreboard (correct answers), and 'correct' button (pressed) on practice page.
+   - Hex: #9C1228: dark red
+      - Colour used in border colour of buttons.
 
 
 <img src="assets/images-readme/colour-scheme.png" alt="colour scheme"><br>
@@ -197,26 +199,28 @@ Proper styling has been done regarding the colours, see 'colour scheme' section 
 
 ### How to Use Page
 On the 'How to use' page, the end-user can find a small manual on how to use the website. Special attention is given to the 'Practice' and 'Editor' pages. Images are implemented to help the end-user easily understand how the website works. The page is responsive on smaller devices.
+Proper styling has been done regarding the colours, see 'colour scheme' section in this README file for more information.
 
 
 ### Contact Page
-On the 'contact' page you can find a submission form including 3 text fields (first name, last name, e-mail address) and a text area (your message). All fields are mandatory fields and need to be filled in before you can press the 'Submit' button. When done correctly, a message will be shown on the screen telling the end-user the form input has been sent or not.
+On the 'Contact' page you can find a submission form including 3 text fields (first name, last name, e-mail address) and a text area (your message). All fields are mandatory fields and need to fill before you can press the 'Submit' button. When done correctly, a message will be shown on the screen telling the end-user the form has been sent or not.
+Proper styling has been done regarding the colours, see 'colour scheme' section in this README file for more information.
 
 
 ### h2 Heading
-Every page as a h2 heading added describing the main purpose of the page. For consistency, sizing and colour (dark gray) of the h2 heading are chosen all the same on every page.
+Every page as an h2 heading added including a [fontawesome](https://www.fontawesome.com/) icon describing the main purpose of the page. For consistency, sizing and colour (dark gray) of the h2 heading are chosen all the same on every page.
 
 
 ### Paragraphs
-For consistency, sizing and colour (dark gray) of the <p> paragraphs are chosen all the same on every page.
+For consistency, sizing and colour (dark gray) of the paragraphs are chosen all the same on every page.
 
 
 ### Links
-The only links on the website you can find are in the navigation bar/menu.
+Anchor links are introduced in the navigation bar and on the 'Index' and 'How to use' pages. Having a pink-orange colour as described in the 'Colour scheme' section of this README file.
 
 
 ### Buttons
-For consistency, all buttons are sized and styled the same way. A dark red colour for the border, an orange/pink background colour, and a smokewhite colour for the fonts are used. 
+For consistency, all buttons are sized and styled the same way. A dark red colour for the border, an orange-pink background colour, and a smokewhite colour for the fonts are used as described in the 'Colour scheme' section in this README file.
 
 <img src="assets/images-readme/button.png" alt="typical call for action button"><br>
 <sub>Typical call for action button</sub>
