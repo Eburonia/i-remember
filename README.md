@@ -114,11 +114,11 @@ The following colours were used throughout the webpage:
 
 
 #### Imagery
-BThe website is created for learning purposes. Except for the website logo and images on the manual page, no additional images are implemented on the website. The website logo is responsive for smaller devices.
+The website is created for learning purposes. Except for the website logo and images on the manual page, no additional images are implemented on the website. The website logo is responsive for smaller devices.
 
 
 #### Wireframes
-Wireframes belonging to the website's project have been made in [Adobe XD](https://www.adobe.com/products/xd.html). PDF files of them can be found here:
+Wireframes belonging to the website's project have been made in [Adobe XD](https://www.adobe.com/products/xd.html). Images are implemented in markdown files and can be found here:
 - Wireframes of the 'Index' Page - [link](assets/wireframes/wireframes-index.md)
 - Wireframes of the 'Practice' Page - [link](assets/wireframes/wireframes-practice.md)
 - Wireframes of the 'Editor' Page - [link](assets/wireframes/wireframes-editor.md)
