@@ -397,10 +397,13 @@ Errors found:
 - practice.css/editor.css: CSS code for preventing to select text in divisions is not recognized by the validator. Code still works.
 
 
-**ADD JAVASCRIPT CHECKER**
+#### JSHint JavaScript Analysis Tool
 
-
-
+JSHint, results of the JavaScript files:
+* contact.js - Generates two not relevant errors, the page includes emailJS Javascript code.
+* editor.js - No errors found
+* header.js - No errors found
+* practice.js - No errors found
 
 
 ### Testing Grammar and Spelling 
@@ -490,6 +493,7 @@ Errors found:
 ## Known Bugs
 - The W3C Markup Validator generates an error when aria-labels are added to divisions functioning like a button (see Editor page). For that reason, no aria-labels have been added to divisions that function as buttons.
 - The wireframe PDF files are not loaded correctly on screen in the GitHub repository (the first page won't show up). To see the full content of the PDF file, press the download button.
+- See JSHint JavaScript Analysis Tool section for some not relevant errors in the JavaScript code.
 
 
 **CHECK**
