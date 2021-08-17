@@ -335,6 +335,9 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - Check the responsiveness of the menu sections when changing the size of the viewport. **(checked)**
 - ...
 
+<img src="assets/images-readme/emailjs.png" alt="received email from emailJS"><br>
+<sub>The received email from emailJS in the website creator's mailbox</sub>
+
 
 #### 404 Page
 - Check whether 404 page loads when entering a wrong link address. **(checked)**
@@ -492,13 +495,9 @@ JSHint, results of the JavaScript files:
 <a id="bugs"></a>
 ## Known Bugs
 - The W3C Markup Validator generates an error when aria-labels are added to divisions functioning like a button (see Editor page). For that reason, no aria-labels have been added to divisions that function as buttons.
-- The wireframe PDF files are not loaded correctly on screen in the GitHub repository (the first page won't show up). To see the full content of the PDF file, press the download button.
 - See JSHint JavaScript Analysis Tool section for some not relevant errors in the JavaScript code.
-
-
-**CHECK**
-<img src="assets/readme-images/..." alt="Screen capture of hero image bug">
-
+- Not a real bug, but it is still possible to cheat using the practice page. When pressing the answer button on the practice page for small devices  (width < 900 px) you know the answer, and then you can fill it in the answer textbox on the desktop version page (width > 900 px) and getting a correct score for it.
+- The website does not recognize whether the content of a .txt file is related to a flashcard set or not, see also the Future Features section.
 
 
 <!-- Deployment -->
