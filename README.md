@@ -149,7 +149,7 @@ A footer has been added on the bottom of every page and exists out of social med
 
 
 ### Index Page
-The index page is a simple page that tells the end-user what the purpose of the website is. For that reason, an 'about' section has been added to the index page.
+On the 'Index' page, the end-user gets an introduction to the website and its purpose. Some background about the website is given in the 'About' section and also emphasizes the end-user to read the manual on the 'How to use' page first. External links are opened on a blank page. And it's also mentioned how the end-user can contact the website owner.
 
 
 ### Practice Page
@@ -196,7 +196,7 @@ Proper styling has been done regarding the colours, see 'colour scheme' section 
 
 
 ### How to Use Page
-The 'how to use page' tells the end-user how the 'practice' and 'editor' pages function utilizing a small manual including images.
+On the 'How to use' page, the end-user can find a small manual on how to use the website. Special attention is given to the 'Practice' and 'Editor' pages. Images are implemented to help the end-user easily understand how the website works. The page is responsive on smaller devices.
 
 
 ### Contact Page
