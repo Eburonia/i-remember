@@ -300,7 +300,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 #### Practice Page
 - Check the responsiveness of the page when changing the size of the viewport (min. 320px). **(checked)**
 - Check change of colour while hovering the buttons. **(checked)**
-- Check whether files van be selected when 'Browse' button is clicked **(checked)**
+- Check whether files can be selected when 'Browse' button is clicked **(checked)**
 - Check whether warning alert shows on screen when no .txt file is selected. **(checked)**
 - Check whether 'Load Deck' button shows up when .txt file is selected. **(checked)**
 - Check whether 'Load Deck' button loads the practice screen and loads the deck properly. **(checked)**
@@ -321,7 +321,9 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 #### Editor Page
 - Check the responsiveness of the menu sections when changing the size of the viewport. **(checked)**
-- ...
+- Check change of colour while hovering the buttons. **(checked)**
+- Check whether files can be selected when 'Browse' button is clicked **(checked)**
+- Check whether warning alert shows on screen when no .txt file is selected. **(checked)**
 
 
 #### Manual Page
@@ -341,11 +343,6 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 ### Usability Testing
 - Family and friends were asked to test the website and to navigate through all four website pages. Buttons, links, and forms were tested by them.
-
-
-**CHECK**
-<img src="assets/readme-images/..." alt="iPhone 5 screenshot"><br>
-<sub>iPhone 5 screenshot</sub>
 
 
 ### Compatibility Testing
