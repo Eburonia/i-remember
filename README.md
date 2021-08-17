@@ -1,7 +1,7 @@
 <h1 align="center">iRemember Spaced Repetition</h1>
 
 <!-- Responsive Image -->
-<img src="assets/readme-images/xxx.png" alt="Responsive Design of Website">
+<img src="assets/images-readme/responsive.png" alt="responsive design of website">
 
 
 <!-- Links -->
