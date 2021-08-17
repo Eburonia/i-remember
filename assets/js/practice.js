@@ -822,7 +822,7 @@ $(document).on('click', '#wrong-button-small-device', function() {
 
     // change styling
     $('#answer').css('color', 'red');
-    $('#wrong-button-small-device').css('background-color', 'crimson');
+    $('#wrong-button-small-device').css('background-color', '#990000');
 
     // Timeout 2 seconds before next question will be fired
     setTimeout(fireQuestion, 2000);
