@@ -168,9 +168,31 @@ On smaller devices, the practice interface looks different.
 Typing answers on smaller devices is not really convenient for the end-user, and for that reason, the 'answer-textbox' is replaced with 3 buttons: the 'Wrong' button, 'Answer' button, and 'Correct' button. Here the end-user has to tell the system whether he knew the correct answer or not.
 By guessing the answer and comparing it with the back-side of the card (by pressing the 'Answer' button), the end-user has then to press the 'Wrong' or 'Correct' button.
 
+Proper styling has been done regarding the colours, see 'colour scheme' section in this README file for more information.
 
 ### Editor Page
-On the 'Editor' page you can create your own flashcard sets or import existing flashcard sets and adjust them. By clicking the 'Browse' button you can select a flashcard set .txt file and then import it on the 'Editor' page by clicking the 'Open Deck' button. When a flashcard set has been imported, you can add cards by clicking the 'Add Card' button or delete cards by clicking the 'Recycle Bin' button next to the card which you want to delete. By clicking on a card's front-side or back-side field you can adjust the card's question or answer. By clicking the top field you can adjust the flashcard set's name, and below there are two fields where you can adjust the front-side and back-side's flashcard title. To save the flashcard set, an 'Export' button has been added. By pressing this button, a pop-up screen will appear and a .txt file of the flashcard set will be saved on your local drive when giving permission.
+To create or modify flashcard sets, the end-user has to open the 'Editor' page. Modifying an existing flashcard set is done by pressing the 'Browse' button, then select a deck file (.txt), and then press the 'Load Deck' button to import the deck on the editor screen.
+
+
+Creating a new deck is done by pressing the 'New Deck' button.
+The end-user can change the following fields in the deck editor:
+   * Deck name (description of deck and file name)
+   * Front-side (description of flashcards front-side, will show-up in practice screen)
+   * Back-side (description of flashcards back-side, will show-up in practice screen)
+   * Flashcards (front-side and back-side)
+
+New flashcards will be added by pressing the 'Add Card' button.
+For every flashcard, the end-user can adjust the front-side, and back-side.
+
+Some special characters cannot be used because they are part of creating the deck file, these are |, +, <, >.
+
+Deleting flashcards can be done by pressing the button with the 'Recycle Bin' icon on it.
+
+When all necessary deck information and flashcards are added, the end-user can generate a deck by pressing the 'Export' button. A deck (.txt) file will be generated and the end-user can save it then.
+
+By opening the 'Practice' page, the generated deck can then be imported.
+
+Proper styling has been done regarding the colours, see 'colour scheme' section in this README file for more information.
 
 
 ### How to Use Page
