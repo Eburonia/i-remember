@@ -90,13 +90,13 @@ The following colours were used throughout the webpage:
    - Hex: #b33649: dark red colour
       - Colour used for button hover.
    - Hex: #32cd32: green colour
-      - Colour used in 'correct' button on practice page.
+      - Colour used in 'correct' button (pressed) on practice page.
    - Hex: #ff0000: red colour
       - Colour used in scoreboard (wrong answers), and 'wrong' button on practice page.
    - Hex: #00bfff: deepskyblue colour
-      - Colour used in scoreboard (show answer), and 'show answer' button on practice page, and answer field on practice page.
+      - Colour used in 'show answer' button, and answer field on practice page.
    - Hex: #990000: crimson colour
-      - Colour used in 'wrong' button (pressed) practice page.
+      - Colour used in 'wrong' button (pressed) on practice page.
    - Hex: #00FF00: limegreen colour
       - Colour used in scoreboard (correct answers), and 'correct' button (pressed) on practice page.
 
