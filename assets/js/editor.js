@@ -210,7 +210,7 @@ function loadCardsOnScreen(importFile) {
     let card = cards.split('|');
 
     // import all cards on screen
-    for(let i in card) {
+    for(let i = 0; i < card.length; i++) {
   
         let frontside = card[i].slice(0, card[i].indexOf('+'));
         let backside = card[i].slice(card[i].indexOf('+') + 1, card[i].length);
@@ -276,8 +276,9 @@ $(document).on('click', '.change-field', function() {
     let change = prompt("Change description", $(this).text());
     let stopChange = false;
 
+
     // check wheter certain characters are used, these are blocked because they are used as special characters in the saved .txt file
-    for(let i in change) {
+    for(let i = 0; i < change.length; i++) {
 
         switch(change[i]) {
 
