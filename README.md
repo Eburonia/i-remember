@@ -508,7 +508,7 @@ JSHint, results of the JavaScript files:
 ### Publishing
 'GitHub Pages' was used for publishing the website. The procedure was as follows:
 1. Login to the [GitHub](https://www.github.com/) website.
-2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
+2. On the left side of your screen, you can find a summary of all repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
 3. You can find a ribbon on the top of your screen. In the ribbon, click on 'Settings'.
 4. In the selection menu on the left side of your screen, click on 'Pages'.
 5. Beneath 'Source' you will find a small pull-down menu. Click on it and select 'main', then press the 'Save' button.
@@ -522,7 +522,7 @@ JSHint, results of the JavaScript files:
 ### Forking
 If you want to make a copy of the repository you can Fork it without changing the original repository by following the next procedure:
 1. Login to the [GitHub](https://www.github.com/) website.
-2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
+2. On the left side of your screen, you can find a summary of all repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
 3. On the right side of your screen, next to 'Unwatch' pull-down menu, and the 'Star' button, you can find the 'Fork' button.
 4. By clicking this button, it will create a copy of the website in your repository.
 
@@ -532,7 +532,7 @@ If you want to make a copy of the repository you can Fork it without changing th
 ### Cloning
 You can clone the repository by following the next procedure:
 1. Login to the [GitHub](https://www.github.com/) website.
-2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
+2. On the left side of your screen, you can find a summary of all repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
 3. Click on the 'Code' button next to the Green 'GitPod' button.
 4. Click on 'HTTPS' and copy the hyperlink below it.
 5. Go to the repository where you want to make a clone of the website. Or create a new repository.
@@ -545,7 +545,7 @@ You can clone the repository by following the next procedure:
 ### Downloading
 You can download the repository by following the next procedure:
 1. Login to the [GitHub](https://www.github.com/) website.
-2. On the left side of your screen, you can find a summary of all your repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
+2. On the left side of your screen, you can find a summary of all repositories. Select [Eburonia/i-remember](https://github.com/Eburonia/i-remember)
 3. Click on the 'Code' button next to the Green 'GitPod' button and then click on 'Download ZIP'.
 4. A .zip file of the repository content will be downloaded. 
 
@@ -557,11 +557,13 @@ You can download the repository by following the next procedure:
 ## Credits
 
 ### Code
-- Most of all HTML, CSS, jQuery and JavaScript code was written by the website creator: Maurice Vossen
-- The generate a file and download it on the 'Editor' page has been copied from [here](https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server). The code has been adjusted by the website creator. 
+- Most of all HTML, CSS, jQuery, and JavaScript code was written by the website creator: Maurice Vossen
+- The generate a file and download it on the 'Editor' page has been copied from [here](https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server). The code has been adjusted by the website creator.
 - The submission form JavaScript code on the 'Contact' page is coming from the Code Institude's webinar about EmailJS.
 - The JavaScript code for importing a .txt file content on the 'Practice' and 'Editor' page has been copied from [here](https://usefulangle.com/post/193/javascript-read-local-file). The code has been adjusted by the website creator.
-- Many jQuery code examples were found on the internet which gave the website creator information on how to implement certain code on this website, especially the [stackoverflow](https://www.stackoverflow.com) website gave a lot of information.
+- Disabling selecting text in divisions CSS code is coming from [here](https://www.arungudelli.com/tutorial/css/disable-text-selection-in-html-using-user-select-css-property/).
+- Many jQuery code examples were found on the internet which gave the website creator information on how to implement certain code on this website, especially the [stackoverflow](https://www.stackoverflow.com/) website and the [jQuery website](https://api.jquery.com/) itself gave a lot of information.
+- The code of the event for detecting which key has been pressed is coming from [here](https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery).
 
 
 ### Content
