@@ -419,8 +419,8 @@ No errors found.
 
 
 <!-- Known Bugs -->
-## Known Bugs
 <a id="bugs"></a>
+## Known Bugs
 - Aria labels in division buttons are not accepted in the W3C Markup Validator, a warning is shown (Possible misuse of aria-label). These aria-labels are removed from the code.
 - The wireframe PDF files are not loaded correctly on screen in the GitHub repository (the first page won't show up). To see the full content of the PDF file, press the download button.
 
