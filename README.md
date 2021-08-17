@@ -114,7 +114,7 @@ The following colours were used throughout the webpage:
 
 
 #### Imagery
-Because this website is made for learning purposes, except for the website logo and the manual no more images have been added to the website. The website logo is responsive for smaller devices.
+BThe website is created for learning purposes. Except for the website logo and images on the manual page, no additional images are implemented on the website. The website logo is responsive for smaller devices.
 
 
 #### Wireframes
