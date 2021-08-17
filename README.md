@@ -561,7 +561,7 @@ You can download the repository by following the next procedure:
 - The generate a file and download it on the 'Editor' page has been copied from [here](https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server). The code has been adjusted by the website creator.
 - The submission form JavaScript code on the 'Contact' page is coming from the Code Institude's webinar about EmailJS.
 - The JavaScript code for importing a .txt file content on the 'Practice' and 'Editor' page has been copied from [here](https://usefulangle.com/post/193/javascript-read-local-file). The code has been adjusted by the website creator.
-- Disabling selecting text in divisions CSS code is coming from [here](https://www.arungudelli.com/tutorial/css/disable-text-selection-in-html-using-user-select-css-property/).
+- CSS code for Disabling selecting text in divisions is coming from [here](https://www.arungudelli.com/tutorial/css/disable-text-selection-in-html-using-user-select-css-property/).
 - Many jQuery code examples were found on the internet which gave the website creator information on how to implement certain code on this website, especially the [stackoverflow](https://www.stackoverflow.com/) website and the [jQuery website](https://api.jquery.com/) itself gave a lot of information.
 - The code of the event for detecting which key has been pressed is coming from [here](https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery).
 
@@ -569,15 +569,15 @@ You can download the repository by following the next procedure:
 ### Content
 
 #### README file
-For the sake of consistency, the README file of the website creator's previous project ([Japanese Restaurant Shibuya](https://github.com/Eburonia/japanese-restaurant-shibuya)) was used as a basis for the README file of this project.
+For consistency reasons, the README file of the website creator's previous project ([Japanese Restaurant Shibuya](https://github.com/Eburonia/japanese-restaurant-shibuya)) was used as a basis for the README file of this project.
 
 
 #### Index Page
 All content on the 'Index' page was written by the website creator.
 
 
-#### Manual Page
-All content on the 'Manual' page was written by the website creator.
+#### How to Use Page
+All content on the 'How to Use' page was written by the website creator.
 
 
 ### Media
@@ -585,9 +585,10 @@ All content on the 'Manual' page was written by the website creator.
 #### Images
 - The website logo was created by the website creator.
 - All images on the 'How to Use' page were created by the website creator.
+- All images in this README file were created by the website creator.
 
-<img src="assets/images/..." alt="..."><br>
-<sub>....</sub>
+<img src="assets/images/logo.png" alt="website logo"><br>
+<sub>Logo of the website</sub>
 
 
 ### Acknowledgements
