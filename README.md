@@ -78,27 +78,27 @@ Download the flashcard set and practice them on the 'Practice' page or adjust th
 #### Colour Scheme
 The following colours were used throughout the webpage:
    - Hex: #D5D8CF: light green colour
-      - Main colour on website, used for header, footer, and main content.
+      - Main colour on website, used in header, footer, and main content.
    - Hex: #707070: dark gray colour
-      - Colour used for heading, website logo, paragraphs, navigation bar, footer, and deck editor.
-   - Hex: #f04a64: orange/pink colour
-      - Colour used for buttons, website logo, hover colour, and division border.
-   - Hex: #F5F5F5: whitesmoke colour
-      - Colour used in division sections, and text of buttons.
-   - Hex: #9C1229: dark red colour
-      - Colour used for button borders.
+      - Colour used in navigation bar, website logo, headings, paragraphs,  footer, practice page, and deck editor page.
+   - Hex: #f04a64: orange-pink colour
+      - Colour used in buttons, website logo, links, hover colour, and active page links.
+   - Hex: #f5f5f5: whitesmoke colour
+      - Colour used as background colour in division sections, and text of buttons.
+   - Hex: #d3d3d3: lightgray colour
+      - Colour used in disabled buttons practice page.
    - Hex: #b33649: dark red colour
       - Colour used for button hover.
-   - Hex: #32cd32: limegreen colour
-      - Colour used in scoreboard (correct answers), and 'correct' button small devices.
+   - Hex: #32cd32: green colour
+      - Colour used in 'correct' button on practice page.
    - Hex: #ff0000: red colour
-      - Colour used in scoreboard (wrong answers), and 'wrong' button small devices.
+      - Colour used in scoreboard (wrong answers), and 'wrong' button on practice page.
    - Hex: #00bfff: deepskyblue colour
-      - Colour used in scoreboard (show answer), and 'show answer' button small devices.
-   - Hex: #dc143c: crimson colour
-      - Colour used in scoreboard (wrong answers), and 'wrong' button (pressed) smaller devices.
-   - Hex: #00ff00: green colour
-      - Colour used in scoreboard (correct answers), and 'correct' button (pressed) smaller devices.
+      - Colour used in scoreboard (show answer), and 'show answer' button on practice page, and answer field on practice page.
+   - Hex: #990000: crimson colour
+      - Colour used in 'wrong' button (pressed) practice page.
+   - Hex: #00FF00: limegreen colour
+      - Colour used in scoreboard (correct answers), and 'correct' button (pressed) on practice page.
 
 
 <img src="assets/images-readme/colour-scheme.png" alt="colour scheme"><br>
