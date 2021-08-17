@@ -232,12 +232,13 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 ### Accessibility
 * All images have been foreseen with an alternative (alt) text in case the image cannot be loaded. This also helps the screen readers.
-* Aria-labels have been introduced where needed to give important information to the screen readers.
+* Aria-labels have been introduced where needed to give important information to the screen readers. The W3C Markup Validator generates an error when aria-labels are added to divisions functioning like a button (see Editor page). For that reason, no aria-labels have been added to divisions that function as buttons.
 
 
 ### Future Features
-* The project is very basically executed at this moment, a future feature could be working with a database so the end-user can save his flashcard sets over there. This is to avoid the not so user-friendly way of storing your flashcard sets right now (every time downloading when you have created a new flashcard set or when you have adjusted your flashcard set).
-* Also, the statistics at the moment are not spectacular and can be expanded and stored in a database. You could think of how many times a card has been shown to the end-user or decrease the amounts of cards that will be shown to the end-user in case the end-user always guests the answer correctly. 
+* A future feature could be working with a database so the end-user can store flashcard sets externally to avoid the not-so user-friendly way of storing your flashcard sets right now. At the moment, you have to download every time your newly created flashcard sets and also when you have adjusted them.
+* The statistics at the moment are also not spectacular and can be expanded and even stored in a database in the future.
+* The website does not recognize whether the content of a .txt file is related to a flashcard set or not. It only checks whether a .txt file is selected, and the end-user has to be sure the data of a generated flashcard set is inside the file. Programmatically can be solved in the future.
 
 
 <!-- Technologies Used -->
@@ -473,7 +474,7 @@ No errors found.
 <!-- Known Bugs -->
 <a id="bugs"></a>
 ## Known Bugs
-- Aria labels in division buttons are not accepted in the W3C Markup Validator, a warning is shown (Possible misuse of aria-label). These aria-labels are removed from the code.
+- The W3C Markup Validator generates an error when aria-labels are added to divisions functioning like a button (see Editor page). For that reason, no aria-labels have been added to divisions that function as buttons.
 - The wireframe PDF files are not loaded correctly on screen in the GitHub repository (the first page won't show up). To see the full content of the PDF file, press the download button.
 
 
