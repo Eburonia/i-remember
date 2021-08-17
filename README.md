@@ -153,20 +153,20 @@ The index page is a simple page that tells the end-user what the purpose of the 
 
 
 ### Practice Page
-The practice page exists out of two sections. In the first section, you have to import a flashcard set into the system by first clicking the 'Browse' button, then select a text-file (.txt), and then by clicking the 'Load Deck' button, then the second section will be shown on the screen which is the practice screen. You can also press the 'Example Deck' button. It will show the end-user an example flashcard deck in the practice section.
+The practice page exists out of two sections. In the first section, you have to import a flashcard set into the system by first clicking the 'Browse' button, then select a deck (text-file .txt), and then by clicking the 'Load Deck' button, the second section will be shown on the screen which is the practice screen. You can also press the 'Example Deck' button. It will show the end-user an example flashcard set in the practice section.
 
 When the end-user has loaded a deck, the practice interface will show up on the screen. It starts with the title 'PRACTICE FLASHCARDS' telling the end-user is in the practice section of the page.
 
-Below that is the 'Deck name' indicated and is equal to the imported file (.txt) name. Then indicated, we have the 'shown card number' and the 'total amount of cards' inside the deck. Every time a new card shows up on the screen, the 'shown card number' will increase by one until it reaches the 'total amount of cards.'
+Below that is the 'Deck name' indicated and is equal to the imported file (.txt) name. Then indicated, we have the 'shown card number' and the 'total amount of cards' inside the deck. Every time a new card shows up on the screen, the 'shown card number' will increase by 1 until it reaches the 'total amount of cards.'
 
 We have a 'question field' and an 'answer field' nested in one division.
-The 'question field' has a title that is equal to the card front-side title you will find in the editor and the 'answer field' has a title that is equal to the card back-side title which you will also find in the editor.
+The 'question field' has a title that is equal to the card's front-side title which you can change in the editor and the 'answer field' has a title that is equal to the card back-side title which you can also change in the editor.
 
-Then we have the 'answer textbox' and a 'show answer' button. When pressed, it shows the answer to the question. Above the 'answer textbox,' a scoreboard is indicated. Telling the end-user how many cards guessed 'correct' and how many guessed 'wrong.'
+Then we have the 'answer textbox' and a 'show answer' button. When pressing the button, it shows the answer to the question. Above the 'answer textbox,' a scoreboard is indicated. Telling the end-user how many cards guessed 'correct' and how many guessed 'wrong.'
 
 On smaller devices, the practice interface looks different. 
 Typing answers on smaller devices is not really convenient for the end-user, and for that reason, the 'answer-textbox' is replaced with 3 buttons: the 'Wrong' button, 'Answer' button, and 'Correct' button. Here the end-user has to tell the system whether he knew the correct answer or not.
-By guessing the answer and comparing it with the back-side of the card by pressing the 'Answer' button, the end-user has then to press the 'Wrong' or 'Correct' button.
+By guessing the answer and comparing it with the back-side of the card (by pressing the 'Answer' button), the end-user has then to press the 'Wrong' or 'Correct' button.
 
 
 ### Editor Page
