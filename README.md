@@ -371,6 +371,10 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - Check whether the message has ended up in the website creator's mailbox. **(checked)**
 
 
+<img src="assets/images-readme/contact-form.png" alt="contact form before submitting"><br>
+<sub>Contact form before submitting</sub><br><br><br>
+
+
 <img src="assets/images-readme/message-success.png" alt="confirmation screen message has been sent"><br>
 <sub>Confirmation screen message has been sent</sub><br><br><br>
 
