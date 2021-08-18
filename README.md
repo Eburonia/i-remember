@@ -283,6 +283,9 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - Check the responsiveness of the navigation bar (change to hamburger-style navigation) (min. 320px). **(checked)**
 - Check whether there is no overflow while reducing the screen size. **(checked)**
 
+<img src="assets/images-readme/hamburger-navbar.png" alt="hamburger-style navigation bar"><br>
+<sub>Hamburger-style navigation bar</sub><br><br><br>
+
 
 #### Footer
 - Check whether the footer is always at the bottom of the page. **(checked)**
