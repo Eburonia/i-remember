@@ -355,6 +355,9 @@ $('#browse-button').change(function() {
     // in case no .txt file is selected
     else {
         alert('please select a .txt file');
+
+        // hide load button
+        $('#load-deck-button').hide();
     }
 
 });
