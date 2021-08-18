@@ -302,6 +302,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - Check change of colour while hovering the buttons. **(checked)**
 - Check whether files can be selected when 'Browse' button is clicked **(checked)**
 - Check whether warning alert shows on screen when no .txt file is selected. **(checked)**
+- Check whether non-deck related .txt files will be blocked from loading on the practice page. **(checked)**
 - Check whether 'Load Deck' button shows up when .txt file is selected. **(checked)**
 - Check whether 'Load Deck' button loads the practice screen and loads the deck properly. **(checked)**
 - Check whether the 'Example Deck' button loads the example deck on the practice screen properly. **(checked)**
@@ -324,9 +325,31 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - Check change of colour while hovering the buttons. **(checked)**
 - Check whether files can be selected when 'Browse' button is clicked **(checked)**
 - Check whether warning alert shows on screen when no .txt file is selected. **(checked)**
+- Check whether non-deck related .txt files will be blocked from loading on the editor page. **(checked)**
+- Check whether 'Load Deck' button shows up when .txt file is selected. **(checked)**
+- Check whether 'Load Deck' button loads the editor screen and loads the deck properly. **(checked)**
+- Check whether 'New Deck' button functions properly. **(checked)**
+- Check whether special characters for generating deck files will be blocked. **(checked)**
+- Check whether all added text to the text fields will not overflow the field. **(checked)**
+- Check whether the 'Garbage Bin' button deletes the selected card. **(checked)**
+- Check whether it opens deck .txt files properly. **(checked)**
+- Check whether the deck will be exported to a .txt file properly. **(checked)**
 
 
-#### Manual Page
+<img src="assets/images-readme/interface-editor.png" alt="interface of editor page"><br>
+<sub>Interface of Editor page</sub>
+
+
+<img src="assets/images-readme/deck-file.png" alt="typical content of a .txt deck file"><br>
+<sub>Typical content of a .txt deck file</sub>
+
+
+<img src="assets/images-readme/non-deck-selected.png" alt="text file witout deck content selected"><br>
+<sub>Text file witout deck content selected</sub>
+
+
+
+#### How to Use Page
 - Check the responsiveness of the menu sections when changing the size of the viewport. **(checked)**
 - ...
 
@@ -407,6 +430,8 @@ JSHint, results of the JavaScript files:
 * editor.js - No errors found
 * header.js - No errors found
 * practice.js - No errors found
+
+JSHint [website](https://www.jshint.com/)
 
 
 ### Testing Grammar and Spelling 
