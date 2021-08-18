@@ -37,12 +37,20 @@ a {
 }
 
 
+a:hover {
+    text-decoration: underline;
+}
+
+
 p > a:hover {
     text-decoration: underline;
 }
 
 
-
+li {
+    list-style-type: none;
+    padding: 4px 0;
+}
 
 .manual-image {
     border: 1px solid #707070;
