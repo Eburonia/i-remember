@@ -300,7 +300,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 #### Practice Page
 - Check the responsiveness of the page when changing the size of the viewport (min. 320px). **(checked)**
 - Check change of colour while hovering the buttons. **(checked)**
-- Check whether files can be selected when 'Browse' button is clicked **(checked)**
+- Check whether files can be selected when 'Browse' button is clicked. **(checked)**
 - Check whether warning alert shows on screen when no .txt file is selected. **(checked)**
 - Check whether non-deck related .txt files will be blocked from loading on the practice page. **(checked)**
 - Check whether 'Load Deck' button shows up when .txt file is selected. **(checked)**
@@ -308,10 +308,10 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - Check whether the 'Example Deck' button loads the example deck on the practice screen properly. **(checked)**
 - Check whether the answer textbox is not caps sensitive. **(checked)**
 - Check whether the 'Replay' button resets the deck properly. **(checked)**
-- Check whether the 'Show Answer' button show the answer properly on dekstop screen. **(checked)**
-- Check whether the 'Show Answer' button show the answer properly on smaller devices screen. **(checked)**
-- Check whether the 'Other Deck' button opens the start screen on dekstop of the practice page. **(checked)**
-- Check whether the 'Other Deck' button opens the start screen on smaller devices of the practice page. **(checked)**
+- Check whether the 'Show Answer' button show the answer properly on screen (desktop only). **(checked)**
+- Check whether the 'Show Answer' button show the answer properly on screen (smaller devices only). **(checked)**
+- Check whether the 'Other Deck' button opens the start screen of the practice page (desktop only). **(checked)**
+- Check whether the 'Other Deck' button opens the start screen on the practice page (smaller devices only). **(checked)**
 - Check whether deck description is loaded properly on screen. **(checked)**
 - Check whether flashcard front-side description is loaded properly on screen. **(checked)**
 - Check whether flashcard back-side description is loaded properly on screen. **(checked)**
@@ -319,11 +319,22 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - Check whether the scoreboard (correct and wrong answers) does not have strange behavior. **(checked)**
 - Check whether the 'answer', 'correct' and 'wrong' buttons show strange behavior on smaller devices. **(checked)**
 
+<img src="assets/images-readme/interface-practice.png" alt="interface of practice page"><br>
+<sub>Interface of Practice page</sub><br><br><br>
+
+
+<img src="assets/images-readme/interface-practice-small.png" alt="interface of practice page smaller devices"><br>
+<sub>Interface of Practice page smalles devices</sub><br><br><br>
+
+
+<img src="assets/images-readme/end-screen-practice.png" alt="end screen practice session"><br>
+<sub>Your score at end of practice session</sub><br><br><br>
+
 
 #### Editor Page
 - Check the responsiveness of the menu sections when changing the size of the viewport. **(checked)**
 - Check change of colour while hovering the buttons. **(checked)**
-- Check whether files can be selected when 'Browse' button is clicked **(checked)**
+- Check whether files can be selected when 'Browse' button is clicked. **(checked)**
 - Check whether warning alert shows on screen when no .txt file is selected. **(checked)**
 - Check whether non-deck related .txt files will be blocked from loading on the editor page. **(checked)**
 - Check whether 'Load Deck' button shows up when .txt file is selected. **(checked)**
