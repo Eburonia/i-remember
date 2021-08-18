@@ -337,15 +337,15 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 
 <img src="assets/images-readme/interface-editor.png" alt="interface of editor page"><br>
-<sub>Interface of Editor page</sub>
+<sub>Interface of Editor page</sub><br><br><br>
 
 
 <img src="assets/images-readme/deck-file.png" alt="typical content of a .txt deck file"><br>
-<sub>Typical content of a .txt deck file</sub>
+<sub>Typical content of a .txt deck file</sub><br><br><br>
 
 
 <img src="assets/images-readme/non-deck-selected.png" alt="text file witout deck content selected"><br>
-<sub>Text file witout deck content selected</sub>
+<sub>Text file witout deck content selected</sub><br><br><br>
 
 
 
@@ -360,7 +360,6 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 <img src="assets/images-readme/emailjs.png" alt="received email from emailJS"><br>
 <sub>The received email from emailJS in the website creator's mailbox</sub>
-
 
 #### 404 Page
 - Check whether 404 page loads when entering a wrong link address. **(checked)**
