@@ -549,6 +549,7 @@ JSHint [website](https://www.jshint.com/)
 - See JSHint JavaScript Analysis Tool section for some not relevant errors in the JavaScript code.
 - Not a real bug, but it is still possible to cheat using the practice page. When pressing the answer button on the practice page for small devices  (width < 900 px) you know the answer, and then you can fill it in the answer textbox on the desktop version page (width > 900 px) and getting a correct score for it.
 - The website does not 100% recognize whether the content of a .txt file is related to a flashcard set or not. Although code has been added trying to check as much as possible, making it almost impossible to select a .txt file which does not contain a deck file.
+- Not sure whether the website functions on an Apple computer has not been tested.
 
 
 <!-- Deployment -->
