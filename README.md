@@ -332,7 +332,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 
 #### Editor Page
-- Check the responsiveness of the menu sections when changing the size of the viewport. **(checked)**
+- Check the responsiveness of the page when changing the size of the viewport. **(checked)**
 - Check change of colour while hovering the buttons. **(checked)**
 - Check whether files can be selected when 'Browse' button is clicked. **(checked)**
 - Check whether warning alert shows on screen when no .txt file is selected. **(checked)**
@@ -359,22 +359,32 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 <sub>Text file witout deck content selected</sub><br><br><br>
 
 
-
 #### How to Use Page
-- Check the responsiveness of the menu sections when changing the size of the viewport. **(checked)**
-- ...
+- Check for dead links. **(checked)**
+- Check the responsiveness of the page when changing the size of the viewport. **(checked)**
 
 
 #### Contact Page
-- Check the responsiveness of the menu sections when changing the size of the viewport. **(checked)**
-- ...
+- Check the responsiveness of the page when changing the size of the viewport. **(checked)**
+- Check functionality of required fields. (checked). **(checked)**
+- Check whether 'Your message has been sent!' screen show up when a message has been sent. **(checked)**
+- Check whether the message has ended up in the website creator's mailbox. **(checked)**
+
+
+<img src="assets/images-readme/message-success.png" alt="confirmation screen message has been sent"><br>
+<sub>Confirmation screen message has been sent</sub><br><br><br>
+
 
 <img src="assets/images-readme/emailjs.png" alt="received email from emailJS"><br>
-<sub>The received email from emailJS in the website creator's mailbox</sub>
+<sub>The received email from emailJS in the website creator's mailbox</sub><br><br><br>
+
 
 #### 404 Page
 - Check whether 404 page loads when entering a wrong link address. **(checked)**
 - Check the 'back to homepage' anchor link is going to the index page'. **(checked)**
+
+<img src="assets/images-readme/404-page.png" alt="404-page error message"><br>
+<sub>404 page error message</sub><br><br><br>
 
 
 ### Usability Testing
