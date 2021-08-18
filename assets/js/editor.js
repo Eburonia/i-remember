@@ -66,7 +66,7 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 		let file = document.querySelector("#browse-button").files[0];
 		let reader = new FileReader();
 
-        // check whether textfile is selected
+        // check whether textfile is selected and has deck content
         if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
            // .txt file is selected
         }
@@ -82,6 +82,55 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
             // load file content into storage
             deck = e.target.result;
 
+
+            // check whether there is deck content inside the .txt file
+            if(!deck.includes('<deck>')) {
+                alert('.txt file is not a deck file');
+                console.log('missing <deck> inside deck');
+                return;
+            }
+
+            else if(!deck.includes('</deck>')) {
+                alert('.txt file is not a deck file');
+                console.log('missing </deck> inside deck');
+                return;
+            }
+
+            else if(!deck.includes('<deckname>')) {
+                alert('.txt file is not a deck file');
+                console.log('missing <deckname> inside deck');
+                return;
+            }
+
+            else if(!deck.includes('</deckname>')) {
+                alert('.txt file is not a deck file');
+                console.log('missing </deckname> inside deck');
+                return;
+            }
+
+            else if(!deck.includes('<front-title>')) {
+                alert('.txt file is not a deck file');
+                console.log('missing <front-title> inside deck');
+                return;
+            }
+
+            else if(!deck.includes('</front-title>')) {
+                alert('.txt file is not a deck file');
+                console.log('missing </front-title> inside deck');
+                return;
+            }
+
+            else if(!deck.includes('<back-title>')) {
+                alert('.txt file is not a deck file');
+                console.log('missing <back-title> inside deck');
+                return;
+            }
+
+            else if(!deck.includes('</back-title>')) {
+                alert('.txt file is not a deck file');
+                console.log('missing </back-title> inside deck');
+                return;
+            }
 
             // clear the screen before loading a deck on screen
             $('#cards-summary-div').empty();

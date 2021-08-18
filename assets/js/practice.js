@@ -437,13 +437,7 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 
     //check whether textfile is selected
     if(file.name.substring(file.name.length-4, file.name.length) === '.txt') {
-       
-        // clear the screen before loading the selected deck on screen
-        $('#content-practice').empty();
-
-        // load the selected deck on screen
-        openPracticeScreen();
-
+       // .txt file selected
     }
 
     // in case no .txt file has been selected
@@ -457,28 +451,50 @@ document.querySelector("#load-deck-button").addEventListener('click', function()
 
         deck = e.target.result;
 
-        // load the selected deck into the memory
-        loadDeckIntoMemory(deck);
+            // check whether there is deck content inside the .txt file
+            if(!deck.includes('<deckname>') || !deck.includes('<front-title>') || !deck.includes('<back-title>') || !deck.includes('<deck>')) {
 
-        // load the deck description on screen
-        $('#deck-title').text(getDeckDescription(deck).toUpperCase());
+                alert('.txt file is not a deck file');
+                return;
+            }
 
-        // load the amount of cards in the deck on screen
-        $('#total-cards').text(getNumberOfCardsInDeck(deckMemory));
+            else if(!deck.includes('</deckname>') || !deck.includes('</front-title>') || !deck.includes('</back-title>') || !deck.includes('</deck>')) {
+                alert('.txt file is not a deck file');
+                return;
+            }
 
-        // load the cards front-side description on screen
-        $('#front-side-title').text(getDeckFrontSideDescription(deck));
+            else {
 
-        // load the cards back-side description on screen
-        $('#back-side-title').text(getDeckBackSideDescription(deck));
+                // clear the screen before loading the selected deck on screen
+                $('#content-practice').empty();
 
-        // fire first question on screen
-        fireQuestion();
+                // load the selected deck on screen
+                openPracticeScreen();
 
+                // load the selected deck into the memory
+                loadDeckIntoMemory(deck);
+
+                // load the deck description on screen
+                $('#deck-title').text(getDeckDescription(deck).toUpperCase());
+
+                // load the amount of cards in the deck on screen
+                $('#total-cards').text(getNumberOfCardsInDeck(deckMemory));
+
+                // load the cards front-side description on screen
+                $('#front-side-title').text(getDeckFrontSideDescription(deck));
+
+                // load the cards back-side description on screen
+                $('#back-side-title').text(getDeckBackSideDescription(deck));
+
+                // fire first question on screen
+                fireQuestion();
+            }
     });
 
+
+
     reader.readAsText(file);
- 
+
 });
 
 
