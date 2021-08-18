@@ -16,6 +16,32 @@
 }
 
 
+h3 {
+    color: #707070;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+
+p {
+    padding-bottom: 20px;
+    line-height: 30px;
+}
+
+
+p > a {
+    text-decoration: none;
+    color: #f04a64;
+}
+
+
+p > a:hover {
+    text-decoration: underline;
+}
+
+
+
 /* media queries for manual.html only */
 
 /* for tablets and phones */
