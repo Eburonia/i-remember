@@ -30,7 +30,8 @@ p {
 }
 
 
-p > a {
+a {
+    font-size: 18px;
     text-decoration: none;
     color: #f04a64;
 }
@@ -41,6 +42,12 @@ p > a:hover {
 }
 
 
+
+
+.manual-image {
+    border: 1px solid #707070;
+    width: 100%;
+}
 
 /* media queries for manual.html only */
 
