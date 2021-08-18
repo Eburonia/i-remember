@@ -238,7 +238,6 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 ### Future Features
 * A future feature could be working with a database so the end-user can store flashcard sets externally to avoid the not-so user-friendly way of storing your flashcard sets right now. At the moment, you have to download every time your newly created flashcard sets and also when you have adjusted them.
 * The statistics at the moment are also not spectacular and can be expanded and even stored in a database in the future.
-* The website does not recognize whether the content of a .txt file is related to a flashcard set or not. It only checks whether a .txt file is selected, and the end-user has to be sure the data of a generated flashcard set is inside the file. Programmatically can be solved in the future.
 
 
 <!-- Technologies Used -->
@@ -549,7 +548,7 @@ JSHint [website](https://www.jshint.com/)
 - The W3C Markup Validator generates an error when aria-labels are added to divisions functioning like a button (see Editor page). For that reason, no aria-labels have been added to divisions that function as buttons.
 - See JSHint JavaScript Analysis Tool section for some not relevant errors in the JavaScript code.
 - Not a real bug, but it is still possible to cheat using the practice page. When pressing the answer button on the practice page for small devices  (width < 900 px) you know the answer, and then you can fill it in the answer textbox on the desktop version page (width > 900 px) and getting a correct score for it.
-- The website does not recognize whether the content of a .txt file is related to a flashcard set or not, see also the Future Features section.
+- The website does not 100% recognize whether the content of a .txt file is related to a flashcard set or not. Although code has been added trying to check as much as possible, making it almost impossible to select a .txt file which does not contain a deck file.
 
 
 <!-- Deployment -->
