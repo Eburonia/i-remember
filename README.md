@@ -83,7 +83,7 @@ The following colours were used throughout the webpage:
    - Hex: #D5D8CF: light green colour
       - Main colour on website, used in header, footer, and main content.
    - Hex: #707070: dark gray colour
-      - Colour used in navigation bar, website logo, headings, paragraphs,  footer, practice page, and deck editor page.
+      - Colour used in navigation bar, website logo, headings, paragraphs,  footer, 'Practice' page, and 'Deck Editor' page.
    - Hex: #f04a64: orange-pink colour
       - Colour used in buttons, website logo, links, hover colour, and active page links.
    - Hex: #f5f5f5: whitesmoke colour
@@ -93,15 +93,15 @@ The following colours were used throughout the webpage:
    - Hex: #b33649: dark red colour
       - Colour used for button hover.
    - Hex: #32cd32: green colour
-      - Colour used in 'correct' button (pressed) on practice page.
+      - Colour used in 'Correct' button (pressed) on 'Practice' page.
    - Hex: #ff0000: red colour
-      - Colour used in scoreboard (wrong answers), and 'wrong' button on practice page.
+      - Colour used in scoreboard (wrong answers), and 'Wrong' button on 'Practice' page.
    - Hex: #00bfff: deepskyblue colour
-      - Colour used in 'show answer' button, and answer field on practice page.
+      - Colour used in 'Show Answer' button, and answer field on 'Practice' page.
    - Hex: #990000: crimson colour
-      - Colour used in 'wrong' button (pressed) on practice page.
+      - Colour used in 'Wrong' button (pressed) on 'Practice' page.
    - Hex: #00FF00: limegreen colour
-      - Colour used in scoreboard (correct answers), and 'correct' button (pressed) on practice page.
+      - Colour used in scoreboard (correct answers), and 'Correct' button (pressed) on 'Practice' page.
    - Hex: #9C1228: dark red
       - Colour used in border colour of buttons.
 
