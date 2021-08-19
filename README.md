@@ -259,7 +259,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - [Github](https://github.com/) - The project code has been stored on the Github website.
 - [GitPod](https://www.gitpod.io/) - GitPod was used for creating the code, testing of the website, commiting, and pushing the code to the github repository. 
 - [Adobe XD](https://www.adobe.com/products/xd.html) - Adobe XD was used to create the website's Wireframes. To see the Wireframes, go to the Design section above to see the results.
-- [Photopea.com](https://www.photopea.com/) - The Photopea website is used for creating the website logo and README files images.
+- [Photopea.com](https://www.photopea.com/) - The Photopea website is used for creating the website logo, 'Manual' page images and README images.
 - [EmailJS](https://www.emailjs.com/) - EmailJS is used to send emails from the 'Contact' page form to the website owner's e-mail address directly from the client-side JavaScript code.
 
 
@@ -416,7 +416,7 @@ The website is designed for a minimum viewport width of 320px (iPhone 5 size).
 
 
 ### Testing Code
-The following online validators were used to check whether the website generated any html and CSS syntax errors:
+The following online validators were used to check whether the website generated any Javascript, html and CSS syntax errors:
 
 #### W3C Markup Validator
 
@@ -437,25 +437,28 @@ W3C CSS Validator, results of the style sheets:
 * [header.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2Fheader.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 * [footer.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2Ffooter.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 * [index.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2Findex.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-* [practice.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2Fpractice.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-* [editor.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2Feditor.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [practice.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2Fpractice.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) (error)
+* [editor.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2Feditor.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) (error)
 * [manual.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2Fmanual.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 * [contact.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2Fcontact.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 * [404.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feburonia.github.io%2Fi-remember%2Fassets%2Fcss%2F404.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 
 Errors found:
-- practice.css/editor.css: Styling the Browse button of the input file tag is not recognized by the validator. Styling of the button still works.
-- practice.css/editor.css: CSS code for preventing to select text in divisions is not recognized by the validator. Code still works.
+- practice.css/editor.css: Styling the 'Browse' button of the 'input file' html tag is not recognized by the validator. Styling of the button still works and for that reason the CSS code was not adjusted or removed from the file.
+- practice.css/editor.css: CSS code for preventing to select text in divisions is not recognized by the validator. Code still works and for that reason the CSS code was not adjusted or removed from the file.
 
 
 #### JSHint JavaScript Analysis Tool
 
 JSHint, results of the JavaScript files:
-* contact.js - Generates two not relevant errors, the page includes emailJS Javascript code.
-* editor.js - No errors found
-* header.js - No errors found
-* practice.js - No errors found
+* contact.js (error)
+* editor.js
+* header.js
+* practice.js
+
+Errors found:
+- Generates two not relevant errors, the page includes emailJS Javascript code which communicates with the 'Contact' html page and with emailJS.
 
 JSHint [website](https://www.jshint.com/)
 
