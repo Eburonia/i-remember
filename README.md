@@ -260,7 +260,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - [GitPod](https://www.gitpod.io/) - GitPod was used for creating the code, testing of the website, commiting, and pushing the code to the github repository. 
 - [Adobe XD](https://www.adobe.com/products/xd.html) - Adobe XD was used to create the website's Wireframes. To see the Wireframes, go to the Design section above to see the results.
 - [Photopea.com](https://www.photopea.com/) - The Photopea website is used for creating the website logo and README files images.
-- [EmailJS](https://www.emailjs.com/) - EmailJS is used to send emails from the contact page form to the website owner's e-mail address directly from the client-side JavaScript code.
+- [EmailJS](https://www.emailjs.com/) - EmailJS is used to send emails from the 'Contact' page form to the website owner's e-mail address directly from the client-side JavaScript code.
 
 
 <!-- Testing -->
@@ -402,8 +402,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 The following browsers were used for compatibility testing:
 - Firefox
 - Google Chrome
-- Microsoft Edge  
-See 'Known Bugs' section for more information about the outcome.
+- Microsoft Edge
 
 
 ### Further Testing
@@ -551,7 +550,7 @@ JSHint [website](https://www.jshint.com/)
 - See JSHint JavaScript Analysis Tool section for some not relevant errors in the JavaScript code.
 - Not a real bug, but it is still possible to cheat using the practice page. When pressing the answer button on the practice page for small devices  (width < 900 px) you know the answer, and then you can fill it in the answer textbox on the desktop version page (width > 900 px) and getting a correct score for it.
 - The website does not 100% recognize whether the content of a .txt file is related to a flashcard set or not. Although code has been added trying to check as much as possible, making it almost impossible to select a .txt file which does not contain a deck file.
-- Not sure whether the website functions on an Apple computer has not been tested.
+- Not sure whether the website functions on an Apple computer, it has not been tested.
 
 
 <!-- Deployment -->
