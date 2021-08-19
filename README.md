@@ -613,19 +613,19 @@ You can download the repository by following the next procedure:
 ## Credits
 
 ### Code
-- Most of all HTML, CSS, jQuery, and JavaScript code was written by the website creator: Maurice Vossen
-- The generate a file and download it on the 'Editor' page has been copied from [here](https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server). The code has been adjusted by the website creator.
+- Most of all HTML, CSS, jQuery, and JavaScript code was written by the website creator: Maurice Vossen.
+- The 'generate a file and download it' on the 'Editor' page has been copied from [here](https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server). The code has been adjusted by the website creator.
 - The submission form JavaScript code on the 'Contact' page is coming from the Code Institude's webinar about EmailJS.
-- The JavaScript code for importing a .txt file content on the 'Practice' and 'Editor' page has been copied from [here](https://usefulangle.com/post/193/javascript-read-local-file). The code has been adjusted by the website creator.
-- CSS code for Disabling selecting text in divisions is coming from [here](https://www.arungudelli.com/tutorial/css/disable-text-selection-in-html-using-user-select-css-property/).
+- The JavaScript code for importing .txt file content on the 'Practice' and 'Editor' page has been copied from [here](https://usefulangle.com/post/193/javascript-read-local-file). The code has been adjusted slightly by the website creator.
+- CSS code for disabling selecting text in divisions (html) is coming from [here](https://www.arungudelli.com/tutorial/css/disable-text-selection-in-html-using-user-select-css-property/).
 - Many jQuery code examples were found on the internet which gave the website creator information on how to implement certain code on this website, especially the [stackoverflow](https://www.stackoverflow.com/) website and the [jQuery website](https://api.jquery.com/) itself gave a lot of information.
-- The code of the event for detecting which key has been pressed is coming from [here](https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery).
+- The code for the event detecting which key has been pressed is coming from [here](https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery).
 
 
 ### Content
 
 #### README file
-For consistency reasons, the README file of the website creator's previous project ([Japanese Restaurant Shibuya](https://github.com/Eburonia/japanese-restaurant-shibuya)) was used as a basis for the README file of this project.
+For consistency reasons, the README file of the website creator's previous project [Japanese Restaurant Shibuya](https://github.com/Eburonia/japanese-restaurant-shibuya) was used as a basis for the README file of this project.
 
 
 #### Index Page
