@@ -15,9 +15,9 @@ The purpose of this website is to help students to memorize certain information 
 
 Some people are not familiar with the flashcard system. Back in the days when there were no computers, students used [flashcards](https://en.wikipedia.org/wiki/Flashcard) to learn another language.
 
-A flashcard has a question side (front side) and an answer side (back side). By showing the question on the front side, the student has to guess the answer indicated on the backside of the flashcard.
+A flashcard has a question side (front-side) and an answer side (back-side). By showing the question on the front-side, the student has to guess the answer indicated on the back-side of the flashcard.
 
-For example, the question could be, what is the French translation of the English word 'Car'? The answer is 'Voiture'. 'Car' is mentioned on the front and 'Voiture' on the back side of the flashcard.
+For example, the question could be, what is the French translation of the English word 'Car'? The answer is 'Voiture'. 'Car' is mentioned on the front and 'Voiture' on the back-side of the flashcard.
 
 By repeating these flashcards over a certain amount of time, students start to remember the answers to the questions. This is called [spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition).
 
@@ -102,7 +102,7 @@ The following colours were used throughout the webpage:
       - Colour used in 'Wrong' button (pressed) on 'Practice' page.
    - Hex: #00FF00: limegreen colour
       - Colour used in scoreboard (correct answers), and 'Correct' button (pressed) on 'Practice' page.
-   - Hex: #9C1228: dark red
+   - Hex: #9C1228: dark red colour
       - Colour used in border colour of buttons.
 
 
@@ -154,64 +154,62 @@ A footer has been added on the bottom of every page and exists out of social med
 
 
 ### Index Page
-On the 'Index' page, the end-user gets an introduction to the website and its purpose. Some background about the website is given in the 'About' section and also emphasizes the end-user to read the manual on the 'How to use' page first. External links are opened on a blank page. And it's also mentioned how the end-user can contact the website owner.
+On the 'Index' page, the end-user gets an introduction to the website and its purpose. Some background about the website is given in the 'About' section and also emphasizes the end-user to read the manual on the 'How to use' page first. External links are opened on a blank page. And it's also mentioned how the end-user can contact the website's owner.
 
 
 ### Practice Page
-The practice page exists out of two sections. In the first section, you have to import a flashcard set into the system by first clicking the 'Browse' button, then select a deck (text-file .txt), and then by clicking the 'Load Deck' button, the second section will be shown on the screen which is the practice screen. You can also press the 'Example Deck' button. It will show the end-user an example flashcard set in the practice section.
+The practice page exists out of two sections. In the first section, you have to import a flashcard set (deck) into the system by first clicking the 'Browse' button, then select a deck (text file .txt), and then by clicking the 'Load Deck' button, the second section will be shown on the screen which is the practice section. You can also decide to press the 'Example Deck' button. It will load and show the end-user an example flashcard set (deck) in the practice section.
 
-When the end-user has loaded a deck, the practice interface will show up on the screen. It starts with the title 'PRACTICE FLASHCARDS' telling the end-user is in the practice section of the page.
+When the end-user has loaded a flashcard set (deck), the practice interface will show up on the screen. It starts with the deck title 'PRACTICE FLASHCARDS' telling the end-user is in the practice section of the page.
 
-Below that is the 'Deck name' indicated and is equal to the imported file (.txt) name. Then indicated, we have the 'shown card number' and the 'total amount of cards' inside the deck. Every time a new card shows up on the screen, the 'shown card number' will increase by 1 until it reaches the 'total amount of cards.'
+Below that is the 'Deck name' indicated and is equal to the imported file (.txt) name. Then indicated, we have the 'Number of cards shown so far' and the 'Number of cards' inside the deck. Every time a new card shows up on the screen, the 'Number of cards shown so far' will increment by +1 until it reaches the 'Number of cards.'
 
-We have a 'question field' and an 'answer field' nested in one division.
-The 'question field' has a title that is equal to the card's front-side title which you can change in the editor and the 'answer field' has a title that is equal to the card back-side title which you can also change in the editor.
+There is a 'Question field' and an 'Answer field' nested in one division (the flashcard).
+The 'Question field' has a title that is equal to the card's front-side title which you can change in the 'Editor' and the 'Answer field' has a title that is equal to the card back-side title which you can also change in the 'Editor'.
 
-Then we have the 'answer textbox' and a 'show answer' button. When pressing the button, it shows the answer to the question. Above the 'answer textbox,' a scoreboard is indicated. Telling the end-user how many cards guessed 'correct' and how many guessed 'wrong.'
+Then we have the 'Answer textbox' and a 'Show answer' button. When pressing the button, it shows the answer to the question. Above the 'Answer textbox,' a scoreboard is indicated. Telling the end-user how many cards are guessed 'Correct' and how many guessed 'Wrong.'
 
 On smaller devices, the practice interface looks different. 
-Typing answers on smaller devices is not really convenient for the end-user, and for that reason, the 'answer-textbox' is replaced with 3 buttons: the 'Wrong' button, 'Answer' button, and 'Correct' button. Here the end-user has to tell the system whether he knew the correct answer or not.
-By guessing the answer and comparing it with the back-side of the card (by pressing the 'Answer' button), the end-user has then to press the 'Wrong' or 'Correct' button.
+Typing answers on smaller devices is not really convenient for the end-user and user experience. For that reason, the 'Answer-textbox' is replaced with 3 buttons: the 'Wrong' button, 'Answer' button, and 'Correct' button. Here the end-user has to tell the system whether he/she knew the correct answer or not.
+By guessing the answer and comparing it with the back-side of the card (by pressing the 'Answer' button), the end user has then to press the 'Wrong' or 'Correct' button.
 
-Proper styling has been done regarding the colours, see 'colour scheme' section in this README file for more information.
+Proper styling has been done regarding the colours, see 'Colour scheme' section in this README file for more information.
 
 ### Editor Page
-To create or modify flashcard sets, the end-user has to open the 'Editor' page. Modifying an existing flashcard set is done by pressing the 'Browse' button, then select a deck file (.txt), and then press the 'Load Deck' button to import the deck on the editor screen.
-
+To create or modify flashcard sets (decks), the end-user has to open the 'Editor' page. Modifying an existing flashcard set (deck) is done by pressing the 'Browse' button, then select a deck file (.txt), and then press the 'Load Deck' button to import the deck into the editor screen.
 
 Creating a new deck is done by pressing the 'New Deck' button.
-The end-user can change the following fields in the deck editor:
+The end-user can change the following fields in the 'Deck editor':
    * Deck name (description of deck and file name)
    * Front-side (description of flashcards front-side, will show-up in practice screen)
    * Back-side (description of flashcards back-side, will show-up in practice screen)
    * Flashcards (front-side and back-side)
 
 New flashcards will be added by pressing the 'Add Card' button.
-For every flashcard, the end-user can adjust the front-side, and back-side.
+For every (new) flashcard, the end-user can adjust the front-side, and back-side.
 
-Some special characters cannot be used because they are part of creating the deck file, these are |, +, <, >.
+Some special characters cannot be used because they are part of the deck file itself, these are: | + < >
 
-Deleting flashcards can be done by pressing the button with the 'Recycle Bin' icon on it.
+Deleting flashcards can be done by pressing the button with the 'Recycle Bin' icon in it.
 
-When all necessary deck information and flashcards are added, the end-user can generate a deck by pressing the 'Export' button. A deck (.txt) file will be generated and the end-user can save it then.
+When all necessary deck information and flashcards are added, the end-user can then create a deck file by pressing the 'Export' button. A deck (.txt) file will be generated and the end-user can save it then.
 
-By opening the 'Practice' page, the generated deck can then be imported.
+By opening the 'Practice' page, the generated deck can be imported in order to practice the deck.
 
 Proper styling has been done regarding the colours, see 'colour scheme' section in this README file for more information.
 
 
 ### How to Use Page
-On the 'How to use' page, the end-user can find a small manual on how to use the website. Special attention is given to the 'Practice' and 'Editor' pages. Images are implemented to help the end-user easily understand how the website works. The page is responsive on smaller devices.
+On the 'How to Use' page, the end-user can find a small manual about how the website functions. Special attention is given to the 'Practice' and 'Editor' pages. Images are implemented to help the end-user easily understand how the website works. The page is responsive on smaller devices.
 Proper styling has been done regarding the colours, see 'colour scheme' section in this README file for more information.
 
 
 ### Contact Page
-On the 'Contact' page you can find a submission form including 3 text fields (first name, last name, e-mail address) and a text area (your message). All fields are mandatory fields and need to fill before you can press the 'Submit' button. When done correctly, a message will be shown on the screen telling the end-user the form has been sent or not.
-Proper styling has been done regarding the colours, see 'colour scheme' section in this README file for more information.
+On the 'Contact' page you can find a submission form including 3 text fields (first name, last name, e-mail address) and a text area (your message). All fields are mandatory fields and need to be filled before you can press the 'Submit' button. When done correctly, a message will be shown on the screen telling the end-user the form has been sent or not. Proper styling has been done regarding the colours, see 'colour scheme' section in this README file for more information.
 
 
-### h2 Heading
-Every page as an h2 heading added including a [fontawesome](https://www.fontawesome.com/) icon describing the main purpose of the page. For consistency, sizing and colour (dark gray) of the h2 heading are chosen all the same on every page.
+### h2/h3 Heading
+Every page as an h2 heading added including a [fontawesome](https://www.fontawesome.com/) icon describing the main purpose of the page. For consistency, sizing and colour (dark gray) of all h2 and h3 headings are chosen all the same on every page.
 
 
 ### Paragraphs
@@ -219,7 +217,7 @@ For consistency, sizing and colour (dark gray) of the paragraphs are chosen all 
 
 
 ### Links
-Anchor links are introduced in the navigation bar and on the 'Index' and 'How to use' pages. Having a pink-orange colour as described in the 'Colour scheme' section of this README file.
+Anchor links are introduced in the navigation bar and on the 'Index' and 'How to use' pages. Having a orange-pink colour as described in the 'Colour scheme' section of this README file.
 
 
 ### Buttons
@@ -235,12 +233,12 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 ### Accessibility
 * All images have been foreseen with an alternative (alt) text in case the image cannot be loaded. This also helps the screen readers.
-* Aria-labels have been introduced where needed to give important information to the screen readers. The W3C Markup Validator generates an error when aria-labels are added to divisions functioning like a button (see Editor page). For that reason, no aria-labels have been added to divisions that function as buttons.
+* Aria-labels have been introduced where needed to give important information to the screen readers. The W3C Markup Validator generates an error when aria-labels are added to divisions functioning like a editable fields (see Editor page). For that reason, no aria-labels have been added to divisions that function as editable fields.
 
 
 ### Future Features
-* A future feature could be working with a database so the end-user can store flashcard sets externally to avoid the not-so user-friendly way of storing your flashcard sets right now. At the moment, you have to download every time your newly created flashcard sets and also when you have adjusted them.
-* The statistics at the moment are also not spectacular and can be expanded and even stored in a database in the future.
+* A future feature could be working with a database so the end-user can store flashcard sets externally to avoid the not-so user-friendly way of storing your flashcard sets right now. At the moment, you have to download your newly created flashcard sets and also when you have adjusted them.
+* The statistics at the moment are also not spectacular and can be expanded and even stored in a database.
 
 
 <!-- Technologies Used -->
@@ -491,7 +489,7 @@ JSHint [website](https://www.jshint.com/)
 
 
 5. As a first-time visitor of the website, I want to create my own flashcard sets, so I can study whatever I want.
-   * A special 'Editor' page has been implemented on the website. Here you can create a new flashcard set, import and adjust an existing flashcard set, and download your created/adjusted flashcard sets. You can give a description to your flashcard sets, and give a description to the front side and back side of your flashcards.
+   * A special 'Editor' page has been implemented on the website. Here you can create a new flashcard set, import and adjust an existing flashcard set, and download your created/adjusted flashcard sets. You can give a description to your flashcard sets, and give a description to the front-side and back-side of your flashcards.
    * On the 'Practice' page you can import your created flashcard sets by clicking the 'Browse' and 'Load Deck' buttons.
 
 
@@ -510,10 +508,10 @@ JSHint [website](https://www.jshint.com/)
 
 
 9. As a first-time visitor of the website, I want additional information about a flashcard set, so I might not get confused when practicing a specific flashcard set.
-   * On the 'Editor' page, a summary of a flashcard set will be shown to the end-user. Next to the flashcards themselves, 3 additional fields are implemented into the summary: 'Deck description', 'Front side description', and 'Back side description'. This gives the end-user additional information about the flashcard set. Not only on the 'Editor' page but this information will also be shown on the 'Practice' page when you have loaded a deck on screen. These fields can be for example: 
+   * On the 'Editor' page, a summary of a flashcard set will be shown to the end-user. Next to the flashcards themselves, 3 additional fields are implemented into the summary: 'Deck description', 'Front-side description', and 'Back-side description'. This gives the end-user additional information about the flashcard set. Not only on the 'Editor' page but this information will also be shown on the 'Practice' page when you have loaded a deck on screen. These fields can be for example: 
       * Deck description: Vocabulary English-Spanish
-      * Front side description: English
-      * Back side description: Spanish
+      * Front-side description: English
+      * Back-side description: Spanish
 
 
 10. As a first-time visitor of the website, I want to know how long it takes to get through a flashcard set, so I might not get frustrated because I have no idea how much time it will take.
@@ -549,7 +547,7 @@ JSHint [website](https://www.jshint.com/)
 <!-- Known Bugs -->
 <a id="bugs"></a>
 ## Known Bugs
-- The W3C Markup Validator generates an error when aria-labels are added to divisions functioning like a button (see Editor page). For that reason, no aria-labels have been added to divisions that function as buttons.
+- The W3C Markup Validator generates an error when aria-labels are added to divisions functioning like editable fields (see Editor page). For that reason, no aria-labels have been added to divisions that function as editable fields.
 - See JSHint JavaScript Analysis Tool section for some not relevant errors in the JavaScript code.
 - Not a real bug, but it is still possible to cheat using the practice page. When pressing the answer button on the practice page for small devices  (width < 900 px) you know the answer, and then you can fill it in the answer textbox on the desktop version page (width > 900 px) and getting a correct score for it.
 - The website does not 100% recognize whether the content of a .txt file is related to a flashcard set or not. Although code has been added trying to check as much as possible, making it almost impossible to select a .txt file which does not contain a deck file.
