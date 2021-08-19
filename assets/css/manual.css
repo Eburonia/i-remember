@@ -58,10 +58,19 @@ li {
     padding: 4px 0;
 }
 
+
 .manual-image {
     border: 1px solid #707070;
     width: 100%;
 }
+
+
+#interface-practice-small-image {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
 
 /* media queries for manual.html only */
 
