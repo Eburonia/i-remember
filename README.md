@@ -319,8 +319,8 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 - Check whether flashcard front-side description is loaded properly on screen. **(checked)**
 - Check whether flashcard back-side description is loaded properly on screen. **(checked)**
 - Check whether the score is correctly calculated after all cards are shown to the end-user. **(checked)**
-- Check whether the scoreboard (correct and wrong answers) does not have strange behavior. **(checked)**
-- Check whether the 'answer', 'correct' and 'wrong' buttons show strange behavior on smaller devices. **(checked)**
+- Check whether the scoreboard (correct and wrong answers) does not show strange behavior. **(checked)**
+- Check whether the 'Answer', 'Correct' and 'Wrong' buttons show strange behavior on smaller devices. **(checked)**
 
 <img src="assets/images-readme/interface-practice.png" alt="interface of practice page"><br>
 <sub>Interface of Practice page</sub><br><br><br>
@@ -365,6 +365,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 #### How to Use Page
 - Check for dead links. **(checked)**
 - Check the responsiveness of the page when changing the size of the viewport. **(checked)**
+- Check whether images are clickable **(checked)**
 
 
 #### Contact Page
