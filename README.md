@@ -111,11 +111,11 @@ The following colours were used throughout the webpage:
 
 
 #### Typography
-- Not much attention is given to selecting a proper font-type as long it's a well-readable font. 'Segoe UI' is the only font-type used throughout the website and is a well-readable font type. 'Tahoma'; 'Geneva'; 'Verdana'; and 'sans-serif' set as a fallback font-type.
+- Not much attention is given in selecting a proper font-type as long it's a well-readable font. 'Segoe UI' is the only font-type used throughout the website and is a well-readable font type. 'Tahoma'; 'Geneva'; 'Verdana'; and 'sans-serif' are set as a fallback font-type.
 - The website logo was created by using the 'Glacial Indifference' font-type.
 
 <img src="assets/images-readme/font-type.png" alt="segoe UI font-type"><br>
-<sub>Segoe UI font-type</sub>
+<sub>Segoe UI font-type</sub><br>
 
 
 #### Imagery
