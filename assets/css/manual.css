@@ -3,6 +3,12 @@
 /* August 2021 */
 
 
+html {
+    scroll-behavior: smooth;
+    
+}
+
+
 #content-manual {
     text-align: left;
     border-radius: 18px;
