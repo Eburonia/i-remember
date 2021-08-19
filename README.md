@@ -2,7 +2,7 @@
 
 <!-- Responsive Image -->
 <img src="assets/images-readme/responsive.png" alt="responsive design of website">
-<sub>Responsive design of website</sub>
+
 
 <!-- Links -->
 View the Live project [link](https://eburonia.github.io/i-remember/)<br>
