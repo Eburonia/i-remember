@@ -365,7 +365,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 #### How to Use Page
 - Check for dead links. **(checked)**
 - Check the responsiveness of the page when changing the size of the viewport. **(checked)**
-- Check whether images are clickable **(checked)**
+- Check whether images are clickable. **(checked)**
 
 
 #### Contact Page
