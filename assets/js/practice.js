@@ -388,6 +388,7 @@ function replayDeck() {
     // reset buttons and card stats
     $('#correct-button-small-device').show();
     $('#answer-button-small-device').show();
+    $('#answer-button').show();
     $('#wrong-button-small-device').show();
     $('#shown-cards-stats').show();
 

@@ -2,7 +2,7 @@
 
 <!-- Responsive Image -->
 <img src="assets/images-readme/responsive.png" alt="responsive design of website">
-
+<sub>Responsive design of website</sub>
 
 <!-- Links -->
 View the Live project [link](https://eburonia.github.io/i-remember/)<br>
@@ -223,8 +223,8 @@ Anchor links are introduced in the navigation bar and on the 'Index' and 'How to
 ### Buttons
 For consistency, all buttons are sized and styled the same way. A dark red colour for the border, an orange-pink background colour, and a smokewhite colour for the fonts are used as described in the 'Colour scheme' section in this README file.
 
-<img src="assets/images-readme/button.png" alt="typical call for action button"><br>
-<sub>Typical call for action button</sub>
+<img src="assets/images-readme/button.png" alt="typical button"><br>
+<sub>Typical button</sub>
 
 
 ### Responsiveness
@@ -327,11 +327,11 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 
 <img src="assets/images-readme/interface-practice-small.png" alt="interface of practice page smaller devices"><br>
-<sub>Interface of Practice page smalles devices</sub><br><br><br>
+<sub>Interface of Practice page small devices</sub><br><br><br>
 
 
 <img src="assets/images-readme/end-screen-practice.png" alt="end screen practice session"><br>
-<sub>Your score at end of practice session</sub><br><br><br>
+<sub>Your score at end of a practice session</sub><br><br><br>
 
 
 #### Editor Page
@@ -359,7 +359,7 @@ All pages are responsive on all devices. Designed for minimum viewport width of:
 
 
 <img src="assets/images-readme/non-deck-selected.png" alt="text file witout deck content selected"><br>
-<sub>Text file witout deck content selected</sub><br><br><br>
+<sub>Text file without deck content selected</sub><br><br><br>
 
 
 #### How to Use Page
