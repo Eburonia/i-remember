@@ -11,20 +11,23 @@ View the GitHub Repository [link](https://github.com/Eburonia/i-remember/)
 
 <!-- About -->
 ## About
-The purpose of this website is to create a so-called [spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition) system. In this system, using flashcards will help memorize certain information for the end-user by using spaced repetition. This information could be about languages (vocabulary) or other information.
+The purpose of this website is to help students to memorize certain information by using so-called flashcards. This information could be about a language (vocabulary) or other information (e.g. topography).
 
-There already exist spaced repetition systems on the internet. One of the most well-known is '[Anki](https://apps.ankiweb.net/)'. The desktop version of the application is popular among language learners and is also of high quality. You have to pay for the smartphone version of the application, but it is not that impressive.
+Some people are not familiar with the flashcard system. Back in the days when there were no computers, students used [flashcards](https://en.wikipedia.org/wiki/Flashcard) to learn another language.
 
-The idea of the website creator was to create a free version of a spaced repetition system that end-users can use on a desktop or smaller devices.
+A flashcard has a question side (front side) and an answer side (back side). By showing the question on the front side, the student has to guess the answer indicated on the backside of the flashcard.
 
-The front side of a flashcard will show a question to the end-user on the screen. Then the end-user has to guess what has been written (answer) on the backside of the flashcard.
+For example, the question could be, what is the French translation of the English word 'Car'? The answer is 'Voiture'. 'Car' is mentioned on the front and 'Voiture' on the back side of the flashcard.
 
-You add the answer to the system by using an input textbox on the desktop. The system will compare your answer with the information indicated on the backside of the flashcard. Typing on smaller devices works not very convenient. For this reason, the end-user has to tell the system whether the guessed answer to the question was correct by pressing the 'Correct' or 'Wrong' button.
+By repeating these flashcards over a certain amount of time, students start to remember the answers to the questions. This is called [spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition).
 
-A scoreboard is introduced into the system to keep track of the progress of the end-user.
+There already exist flashcard/spaced repetition systems on the internet. One of the most well-known is '[Anki](https://apps.ankiweb.net/)'. The desktop version of the application is popular among language learners and is also of high quality. You have to pay for the smartphone version of the application, but it is not that impressive.
 
-End-users can create their own flashcard sets by using the 'Editor' page.
-Download the flashcard set and practice them on the 'Practice' page or adjust them on the 'Editor' page.
+The idea of the website creator was to create a free version of a flashcard system that end-users can use on a desktop or smaller devices.
+
+Creating flashcards can be done on the 'Editor' and learning on the 'Practice' page.
+
+See the 'How to Use' page on the website for more information about how the website functions.
 
 
 <!-- Table of Contents -->
