@@ -230,6 +230,17 @@ function fireQuestion() {
     let currentCard = $('#current-card').text();
 
 
+        // show answer button desktop
+        if ($(window).width() > 900) {
+            $('#answer-button').show();
+        }
+         // hide small device
+        else {
+            $('#answer-button').hide();
+        }
+
+
+
     // enable answer button + css styling small devices
     $('#answer-button-small-device').prop('disabled', false);
     $('#answer-button-small-device').css('background-color', 'deepskyblue');
@@ -403,14 +414,7 @@ function replayDeck() {
     $('#other-deck-button-small-device').hide();
 
 
-    // show answer button desktop
-    if ($(window).width() > 900) {
-        $('#answer-button').show();
-    }
-    // hide small device
-    else {
-        $('#answer-button').hide();
-    }
+
 
 
     // fire first question on screen
@@ -942,6 +946,30 @@ $('#browse-button').change(function() {
 });
 
 
+
+// on resize, show answer button or hide button
+$(window).resize(function() {
+    
+    // show answer button desktop
+    if ($(window).width() <= 900) {
+       $('#answer-button').hide();
+    }
+    else {
+        $('#answer-button').show();
+    }
+
+    // hide answer button when input textbox is visible
+    if($('#input-textbox').is(":visible")){
+        $('#answer-button').show();
+    }
+
+    // hide answer button when replay button is visible
+    if($('#replay-button').is(":visible")){
+        $('#answer-button').hide();
+    }
+
+
+});
 
 
 

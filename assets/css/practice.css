@@ -297,6 +297,17 @@ input[type=file] {
 /* media queries for practice.html only */
 
 /* for tablets and phones */
+
+@media only screen and (min-width: 900px) {
+
+   #answer-button {
+
+        display: inline-block;
+
+    } 
+}
+
+
 @media only screen and (max-width: 900px) { 
 
     #content-practice {
@@ -380,3 +391,4 @@ input[type=file] {
     }
 
 }
+
