@@ -26,7 +26,7 @@ function openStartScreen() {
                     <h2>Practice <i class="fas fa-play-circle"></i></i></h2>
                     <h3>Open Deck</h3>
 
-                    <p>Click the 'browse' button below and select a deck (.txt file)</p>
+                    <p>Click the 'Browse' button below and select a deck (.txt file).</p>
 
                     <div id="browse-button-div">
 
@@ -41,8 +41,7 @@ function openStartScreen() {
 
                     <h3>Example Deck</h3>
 
-                    <p>To show an example deck, please click the 'example deck' button below.</p>
-                    <p>With this deck, you can practice your knowledge about European capital cities and consists out of 30 cards.</p>
+                    <p>Click the 'Example Deck' button below to import an example flashcard set (deck) into the 'Practice' screen. The purpose is to practice your knowledge of the capital cities of Europe and consists out of 20 flashcards.</p>
 
                     <button id="example-deck-button" title="Load an example deck" aria-label="click this button to load an example deck">Example Deck</button>
 
